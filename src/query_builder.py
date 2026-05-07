@@ -40,7 +40,7 @@ def format_keyword(keyword):
     Example:
         "climate change" -> '"climate change"'
         "climate" -> 'climate'
-        "climat*" -> '"climat*"'
+        "climat*" -> 'climat*'
     """
     if " " in keyword or "*" in keyword or "?" in keyword:
         return f'"{keyword}"'
@@ -120,6 +120,9 @@ def to_semantic_scholar(query_string):
     Convert a source-agnostic AND/OR query string to Semantic Scholar syntax.
     AND -> +
     OR  -> |
+
+    Semantic Scholar format available here: https://api.semanticscholar.org/api-docs/#tag/Paper-Data/operation/get_graph_paper_bulk_search
+
     """
     result = re.sub(r'\bAND\b', '+', query_string)
     result = re.sub(r'\bOR\b', '|', result)

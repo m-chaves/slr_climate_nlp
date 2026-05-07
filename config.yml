@@ -1,8 +1,10 @@
 search:
-  date_start: 01-01-2010
-  date_end: 01-05-2026
+  date_start: 2020-01-01
+  date_end: 2026-05-01
 
 semantic_scholar:
+# All fields available in "Details about a paper" here: https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper
+
   # Fields for lightweight exploration queries
   fields_lite:
     - paperId
