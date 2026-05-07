@@ -1,0 +1,27 @@
+search:
+  date_start: 01-01-2010
+  date_end: 01-05-2026
+
+semantic_scholar:
+  # Fields for lightweight exploration queries
+  fields_lite:
+    - paperId
+    - title
+    - year
+    - venue
+    - citationCount
+
+  # Fields for the main full collection query
+  fields_full:
+    - paperId
+    - externalIds
+    - title
+    - year
+    - publicationDate
+    - abstract
+    - publicationVenue
+    - journal
+    - citationCount
+    - s2FieldsOfStudy
+    - publicationTypes
+    - authors

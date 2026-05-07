@@ -1,0 +1,6 @@
+# python environment
+project_venv/
+__pycache__/
+
+# environment variables
+.env

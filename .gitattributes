@@ -1,0 +1,4 @@
+data/raw/semantic_scholar/sets/social_media.jsonl filter=lfs diff=lfs merge=lfs -text
+data/raw/semantic_scholar/sets/nlp.jsonl filter=lfs diff=lfs merge=lfs -text
+data/raw/semantic_scholar/sets/climate.jsonl filter=lfs diff=lfs merge=lfs -text
+data/raw/semantic_scholar/sets/nlp_AND_social_media.jsonl filter=lfs diff=lfs merge=lfs -text
