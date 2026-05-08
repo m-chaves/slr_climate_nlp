@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-05-08T13:47:51.194714",
+  "query": "(\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/x | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | \"tweet*\" | \"post*\" | \"user comment\" | \"user comments\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda) + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
+  "fields": [
+    "paperId",
+    "title",
+    "year",
+    "venue",
+    "citationCount"
+  ],
+  "date_start": "2020-01-01",
+  "date_end": "2026-05-01",
+  "api_key_used": true,
+  "total_downloaded": 174,
+  "base_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+}

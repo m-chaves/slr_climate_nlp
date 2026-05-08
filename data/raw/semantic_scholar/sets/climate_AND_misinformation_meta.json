@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-05-08T13:24:47.021223",
+  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda)",
+  "fields": [
+    "paperId",
+    "title",
+    "year",
+    "venue",
+    "citationCount"
+  ],
+  "date_start": "2020-01-01",
+  "date_end": "2026-05-01",
+  "api_key_used": true,
+  "total_downloaded": 957,
+  "base_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+}
