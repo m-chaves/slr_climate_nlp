@@ -16,10 +16,6 @@ def load_config(config_path="../config.yml"):
         return yaml.safe_load(f)
 
 
-# def load_api_key(env_path="../.env"):
-#     load_dotenv(env_path)
-#     return os.getenv("SEMANTIC_SCHOLAR_API_KEY", "")
-
 # ─────────────────────────────────────────────
 # BASE EXTRACTION FUNCTION
 # ─────────────────────────────────────────────
@@ -32,7 +28,7 @@ def collect_semantic_scholar_data(
     date_end,
     api_key="",
     max_retries=5,
-    backoff_factor=3,
+    backoff_factor=4,
 ):
     """
     Fetch Semantic Scholar bulk search results and stream to JSONL.

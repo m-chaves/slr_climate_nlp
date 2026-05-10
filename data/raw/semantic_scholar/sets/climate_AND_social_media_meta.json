@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T13:24:42.818002",
+  "timestamp": "2026-05-09T04:40:00.803894",
   "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/x | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | \"tweet*\" | \"post*\" | \"user comment\" | \"user comments\")",
   "fields": [
     "paperId",
@@ -11,6 +11,7 @@
   "date_start": "2020-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 22358,
-  "base_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+  "total_downloaded": 22367,
+  "grand_total": 22367,
+  "error": null
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T12:57:06.487804",
+  "timestamp": "2026-05-09T13:13:53.820380",
   "query": "(\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\")",
   "fields": [
     "paperId",
@@ -11,6 +11,7 @@
   "date_start": "2020-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 487995,
-  "base_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+  "total_downloaded": 2414532,
+  "grand_total": 2414555,
+  "error": null
 }

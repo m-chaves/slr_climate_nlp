@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T13:10:12.224581",
+  "timestamp": "2026-05-10T00:59:05.972263",
   "query": "(\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/x | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | \"tweet*\" | \"post*\" | \"user comment\" | \"user comments\")",
   "fields": [
     "paperId",
@@ -11,6 +11,7 @@
   "date_start": "2020-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 259998,
-  "base_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+  "total_downloaded": 4082864,
+  "grand_total": 4083218,
+  "error": null
 }

@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-08T13:47:31.414563",
+  "timestamp": "2026-05-09T05:01:46.244337",
   "query": "(\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda) + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
   "fields": [
     "paperId",
@@ -12,5 +12,6 @@
   "date_end": "2026-05-01",
   "api_key_used": true,
   "total_downloaded": 253,
-  "base_url": "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
+  "grand_total": 253,
+  "error": null
 }
