@@ -7,3 +7,7 @@ __pycache__/
 
 # deleteme files
 deleteme.*
+
+# temporary files
+*.tmp
+**/tmp/*
