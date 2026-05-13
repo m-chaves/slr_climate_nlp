@@ -8,7 +8,6 @@ semantic_scholar:
   # Fields for lightweight exploration queries
   fields_lite:
     - paperId
-    - title
     - year
     - venue
     - citationCount
