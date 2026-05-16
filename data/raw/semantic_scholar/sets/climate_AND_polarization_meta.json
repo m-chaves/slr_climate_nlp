@@ -1,17 +1,16 @@
 {
-  "timestamp": "2026-05-09T04:40:08.067018",
+  "timestamp": "2026-05-12T16:38:08.318415",
   "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
   "fields": [
     "paperId",
-    "title",
     "year",
     "venue",
     "citationCount"
   ],
-  "date_start": "2020-01-01",
+  "date_start": "2010-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 961,
-  "grand_total": 961,
+  "total_downloaded": 1632,
+  "grand_total": 1632,
   "error": null
 }

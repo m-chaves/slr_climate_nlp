@@ -1,17 +1,16 @@
 {
-  "timestamp": "2026-05-09T13:42:49.787503",
+  "timestamp": "2026-05-12T16:40:40.914852",
   "query": "(\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
   "fields": [
     "paperId",
-    "title",
     "year",
     "venue",
     "citationCount"
   ],
-  "date_start": "2020-01-01",
+  "date_start": "2010-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 6661,
-  "grand_total": 6662,
+  "total_downloaded": 8550,
+  "grand_total": 8551,
   "error": null
 }

@@ -1,17 +1,16 @@
 {
-  "timestamp": "2026-05-09T04:38:50.177455",
+  "timestamp": "2026-05-12T16:35:47.920244",
   "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\")",
   "fields": [
     "paperId",
-    "title",
     "year",
     "venue",
     "citationCount"
   ],
-  "date_start": "2020-01-01",
+  "date_start": "2010-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 19046,
-  "grand_total": 19046,
+  "total_downloaded": 21824,
+  "grand_total": 21824,
   "error": null
 }

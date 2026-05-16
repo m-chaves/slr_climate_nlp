@@ -1,17 +1,16 @@
 {
-  "timestamp": "2026-05-09T13:26:37.535396",
+  "timestamp": "2026-05-12T16:34:45.150299",
   "query": "(polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
   "fields": [
     "paperId",
-    "title",
     "year",
     "venue",
     "citationCount"
   ],
-  "date_start": "2020-01-01",
+  "date_start": "2010-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 193200,
-  "grand_total": 193201,
+  "total_downloaded": 455684,
+  "grand_total": 455687,
   "error": null
 }

@@ -1,17 +1,16 @@
 {
-  "timestamp": "2026-05-09T05:00:55.393884",
+  "timestamp": "2026-05-12T16:47:49.408924",
   "query": "(\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda) + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
   "fields": [
     "paperId",
-    "title",
     "year",
     "venue",
     "citationCount"
   ],
-  "date_start": "2020-01-01",
+  "date_start": "2010-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 1599,
-  "grand_total": 1599,
+  "total_downloaded": 1981,
+  "grand_total": 1981,
   "error": null
 }

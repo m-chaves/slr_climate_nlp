@@ -1,17 +1,120 @@
 {
-  "timestamp": "2026-05-10T00:59:05.972263",
+  "timestamp": "2026-05-16T19:47:23.168687",
   "query": "(\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/x | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | \"tweet*\" | \"post*\" | \"user comment\" | \"user comments\")",
   "fields": [
     "paperId",
-    "title",
     "year",
     "venue",
     "citationCount"
   ],
-  "date_start": "2020-01-01",
+  "date_start": "2010-01-01",
   "date_end": "2026-05-01",
   "api_key_used": true,
-  "total_downloaded": 4082864,
-  "grand_total": 4083218,
-  "error": null
+  "total_downloaded": 9893708,
+  "grand_total": 9990057,
+  "error": null,
+  "per_year": {
+    "2010": {
+      "total_downloaded": 428835,
+      "grand_total": 457230,
+      "date_start": "2010-01-01",
+      "date_end": "2010-12-31"
+    },
+    "2011": {
+      "total_downloaded": 430874,
+      "grand_total": 498400,
+      "date_start": "2011-01-01",
+      "date_end": "2011-12-31"
+    },
+    "2012": {
+      "total_downloaded": 546088,
+      "grand_total": 546102,
+      "date_start": "2012-01-01",
+      "date_end": "2012-12-31"
+    },
+    "2013": {
+      "total_downloaded": 593539,
+      "grand_total": 593567,
+      "date_start": "2013-01-01",
+      "date_end": "2013-12-31"
+    },
+    "2014": {
+      "total_downloaded": 617043,
+      "grand_total": 617074,
+      "date_start": "2014-01-01",
+      "date_end": "2014-12-31"
+    },
+    "2015": {
+      "total_downloaded": 626938,
+      "grand_total": 626946,
+      "date_start": "2015-01-01",
+      "date_end": "2015-12-31"
+    },
+    "2016": {
+      "total_downloaded": 624547,
+      "grand_total": 624573,
+      "date_start": "2016-01-01",
+      "date_end": "2016-12-31"
+    },
+    "2017": {
+      "total_downloaded": 640887,
+      "grand_total": 640891,
+      "date_start": "2017-01-01",
+      "date_end": "2017-12-31"
+    },
+    "2018": {
+      "total_downloaded": 645268,
+      "grand_total": 645277,
+      "date_start": "2018-01-01",
+      "date_end": "2018-12-31"
+    },
+    "2019": {
+      "total_downloaded": 652330,
+      "grand_total": 652336,
+      "date_start": "2019-01-01",
+      "date_end": "2019-12-31"
+    },
+    "2020": {
+      "total_downloaded": 690460,
+      "grand_total": 690470,
+      "date_start": "2020-01-01",
+      "date_end": "2020-12-31"
+    },
+    "2021": {
+      "total_downloaded": 650611,
+      "grand_total": 650872,
+      "date_start": "2021-01-01",
+      "date_end": "2021-12-31"
+    },
+    "2022": {
+      "total_downloaded": 578196,
+      "grand_total": 578203,
+      "date_start": "2022-01-01",
+      "date_end": "2022-12-31"
+    },
+    "2023": {
+      "total_downloaded": 591947,
+      "grand_total": 591960,
+      "date_start": "2023-01-01",
+      "date_end": "2023-12-31"
+    },
+    "2024": {
+      "total_downloaded": 634492,
+      "grand_total": 634497,
+      "date_start": "2024-01-01",
+      "date_end": "2024-12-31"
+    },
+    "2025": {
+      "total_downloaded": 728422,
+      "grand_total": 728427,
+      "date_start": "2025-01-01",
+      "date_end": "2025-12-31"
+    },
+    "2026": {
+      "total_downloaded": 213231,
+      "grand_total": 213232,
+      "date_start": "2026-01-01",
+      "date_end": "2026-05-01"
+    }
+  }
 }
