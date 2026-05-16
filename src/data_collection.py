@@ -48,8 +48,6 @@ def collect_semantic_scholar_data(
 
     """
 
-    print("Function version 5")
-
     base_url = "https://api.semanticscholar.org/graph/v1/paper/search/bulk"
 
     headers = {"x-api-key": api_key} if api_key else {}
@@ -75,6 +73,7 @@ def collect_semantic_scholar_data(
     # Better structured error info
     error_info = None
 
+    # Write results to file as we go. Rewrite the file if append=False, otherwise add to it.
     with open(output_path, "w", encoding="utf-8") as f:
 
         while has_more:
@@ -99,6 +98,18 @@ def collect_semantic_scholar_data(
 
                     payload = response.json()
 
+                    # Check HTTP-level errors
+                    if response.status_code != 200:
+                        print(f"Status code: {response.status_code}")
+
+                    # Check for API-level error fields
+                    if "error" in payload:
+                        print(f"API Error: {payload['error']}")
+                    if "message" in payload:
+                        print(f"API Message: {payload['message']}")
+                    if "warnings" in payload:
+                        print(f"Warnings: {payload['warnings']}")
+                    
                     # First batch only
                     if total_downloaded == 0:
                         grand_total = payload.get("total", "unknown")
@@ -106,7 +117,8 @@ def collect_semantic_scholar_data(
                             f"Total papers to retrieve: {grand_total}"
                         )
 
-                    papers_batch = payload.get("data", [])
+                    # Process papers in current batch
+                    papers_batch = payload.get("data") or []
 
                     for paper in papers_batch:
                         f.write(json.dumps(paper) + "\n")
@@ -115,6 +127,7 @@ def collect_semantic_scholar_data(
 
                     # pagination
                     next_token = payload.get("token")
+                    # print(f"  Next token: {next_token!r}")
 
                     if next_token:
                         query_params["token"] = next_token
@@ -139,7 +152,7 @@ def collect_semantic_scholar_data(
                     # Retry transient server-side errors
                     # 429, Too Many Requests. You've hit the rate limit, slow down your requests.
                     # 500, Internal Server Error. Something went wrong on the server’s side.
-                    retryable = status_code in [429, 500]
+                    retryable = status_code == 429 or status_code >= 500
 
                     print(
                         f"HTTP error ({status_code}) "
@@ -149,10 +162,10 @@ def collect_semantic_scholar_data(
                     if retryable and attempt < max_retries:
 
                         if status_code == 429:
-                            print("Rate limit hit — sleeping 60s")
-                            time.sleep(60)
+                            print("Rate limit hit — sleeping 90s")
+                            time.sleep(90)
                             continue
-                        elif status_code == 500:
+                        elif status_code >= 500:
                             wait = backoff_factor ** (attempt - 1)
                             print(f"Retrying in {wait} seconds...")
                             time.sleep(wait)
@@ -176,14 +189,11 @@ def collect_semantic_scholar_data(
                     requests.exceptions.ConnectionError,
                 ) as err:
 
-                    print(
-                        f"Network error [attempt {attempt}/{max_retries}]: {err}"
-                    )
+                    print(f"Network error [attempt {attempt}/{max_retries}]: {err}")
+                    print(f"Error: {type(err).__name__}: {err}")
 
                     if attempt < max_retries:
-
                         wait = backoff_factor ** (attempt - 1)
-
                         print(f"Retrying in {wait} seconds...")
                         time.sleep(wait)
 
@@ -214,10 +224,6 @@ def collect_semantic_scholar_data(
                     has_more = False
                     break
 
-            # stop outer loop if all retries failed
-            if not success and error_info:
-                break
-
     # metadata sidecar
     meta_path = output_path.with_name(
         output_path.stem + "_meta.json"
@@ -238,8 +244,14 @@ def collect_semantic_scholar_data(
     with open(meta_path, "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2)
 
-    print(
-        f"Done — {total_downloaded} papers saved to {output_path}\n"
-    )
+    if grand_total and total_downloaded < grand_total:
+        print(
+            f"WARNING: downloaded {total_downloaded} of {grand_total} expected papers. "
+            f"API stopped pagination early (no token returned). Check {meta_path}.\n"
+        )
+    else:
+        print(
+            f"Done — {total_downloaded} papers saved to {output_path}\n"
+        )
 
     return total_downloaded, grand_total
