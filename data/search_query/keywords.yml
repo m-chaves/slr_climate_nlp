@@ -74,8 +74,10 @@ social_media:
 - "MeWe"
 - "Snapchat"
 - "LinkedIn"
-- "tweet*"
-- "post*"
+- "tweet"
+- "tweets"
+- "post"
+- "posts"
 - "user comment"
 - "user comments"
 
@@ -92,7 +94,7 @@ misinformation:
   - "fallac*"
   - "rumor*"
   - "malinformat*"
-  - "Propaganda"
+  - "propaganda"
 
 polarization:
   - "polarisation"
