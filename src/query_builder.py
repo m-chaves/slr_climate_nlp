@@ -128,9 +128,8 @@ def to_semantic_scholar(query_string):
     result = re.sub(r'\bOR\b', '|', result)
     return result
 
-
 # ─────────────────────────────────────────────
-# MAIN ENTRY POINT
+# Semanctic Scholar QUERY BUILDING
 # ─────────────────────────────────────────────
 
 def build_semantic_scholar_query(logic_string, keywords_path):
@@ -143,3 +142,123 @@ def build_semantic_scholar_query(logic_string, keywords_path):
     groups = load_keywords(keywords_path)
     generic_query = build_query(logic_string, groups)
     return to_semantic_scholar(generic_query)
+
+# ─────────────────────────────────────────────
+# ACL ANTHOLOGY TEXT MATCHING
+# ─────────────────────────────────────────────
+
+def keyword_to_regex(keyword):
+    """
+    Convert a keyword (possibly with a trailing * wildcard) to a compiled regex.
+    Anchored at word boundaries.
+
+    Case sensitivity: if the keyword contains any uppercase letter, matching is
+    case-sensitive (e.g. "Discord" matches "Discord" but not "discord"). If the
+    keyword is all-lowercase, matching is case-insensitive.
+
+    Examples:
+        "transformer*"   -> case-insensitive prefix (matches transformer, Transformer, transformers...)
+        "Discord"        -> case-sensitive (matches Discord, not discord)
+        "climate change" -> case-insensitive phrase (matches climate change, Climate Change, Climate change...)
+        "NLP"            -> case-sensitive (matches NLP, not nlp)
+    """
+    kw = keyword.strip('"')
+    flags = 0 if any(c.isupper() for c in kw) else re.IGNORECASE
+    if kw.endswith("*") and kw.count("*") == 1:
+        stem = re.escape(kw[:-1])
+        pattern = rf"\b{stem}\w*\b"
+    else:
+        pattern = rf"\b{re.escape(kw)}\b"
+    return re.compile(pattern, flags)
+
+
+def build_acl_text_matcher(logic_string, groups):
+    """
+    Build a text-matching function from a boolean keyword logic string.
+
+    The returned function takes a plain text string and returns True if the text
+    satisfies the boolean expression. Each group name in the logic string is
+    treated as a condition that is True when any keyword in that group is found
+    in the text.
+
+    Keyword matching details:
+    - Wildcards: a trailing * matches any suffix, e.g. "transformer*" matches
+      "transformer", "transformers", "transformer-based", etc.
+    - Case sensitivity: keywords with any uppercase letter are matched
+      case-sensitively (e.g. "Discord" matches "Discord" but not "discord").
+      All-lowercase keywords are matched case-insensitively.
+    - Word boundaries: matches must start and end at a word boundary, so
+      "climate" will not match "climated" (unless written as "climate*").
+
+    Operator precedence: AND binds tighter than OR, matching standard boolean
+    logic. So "A AND B OR C" is equivalent to "(A AND B) OR C". Use explicit
+    parentheses to override, e.g. "A AND (B OR C)".
+
+    Args:
+        logic_string: Boolean expression over group names, e.g.
+            "climate AND nlp"
+            "climate AND (misinformation OR polarization)"
+        groups: dict mapping each group name to a list of keyword strings,
+            e.g. {"climate": ["climate change", "global warming"],
+                  "nlp": ["NLP", "transformer*"]}
+
+    Returns:
+        A callable (text: str) -> bool
+
+    Example:
+        >>> groups = {"climate": ["climate change"], "nlp": ["NLP", "transformer*"]}
+        >>> matcher = build_acl_text_matcher("climate AND nlp", groups)
+        >>> matcher("A study on climate change using transformer models")
+        True
+        >>> matcher("Climate change policy without any NLP methods")
+        False
+    """
+    
+    tokens = tokenize_logic_string(logic_string)
+    valid_ops = {"AND", "OR", "(", ")"}
+    for tok in tokens:
+        if tok not in valid_ops and tok not in groups:
+            raise ValueError(
+                f"Unrecognized token '{tok}'. "
+                f"Expected AND, OR, parentheses, or one of: {list(groups.keys())}"
+            )
+    compiled = {
+        name: [keyword_to_regex(kw) for kw in groups[name]]
+        for name in tokens if name in groups
+    }
+
+    def make_matcher(toks):
+        pos = 0
+
+        def parse_binary(parse_child, op, combine_fn):
+            nonlocal pos
+            left = parse_child()
+            while pos < len(toks) and toks[pos] == op:
+                pos += 1
+                r = parse_child()
+                left = (lambda l, r: lambda t: combine_fn(l(t), r(t)))(left, r)
+            return left
+
+        def parse_expr():
+            return parse_binary(parse_term, "OR", lambda a, b: a or b)
+
+        def parse_term():
+            return parse_binary(parse_factor, "AND", lambda a, b: a and b)
+
+        def parse_factor():
+            nonlocal pos
+            if toks[pos] == "(":
+                pos += 1
+                inner = parse_expr()
+                if pos >= len(toks) or toks[pos] != ")":
+                    raise ValueError("Unmatched parenthesis in logic string")
+                pos += 1
+                return inner
+            name = toks[pos]
+            pos += 1
+            pats = compiled[name]
+            return lambda t, p=pats: any(pat.search(t) for pat in p)
+
+        return parse_expr()
+
+    return make_matcher(tokens)
