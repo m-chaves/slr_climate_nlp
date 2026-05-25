@@ -1,6 +1,6 @@
 search:
   date_start: 2010-01-01
-  date_end: 2026-05-01
+  date_end: 2026-04-30
 
 semantic_scholar:
 # All fields available in "Details about a paper" here: https://api.semanticscholar.org/api-docs/graph#tag/Paper-Data/operation/get_graph_get_paper
@@ -26,3 +26,32 @@ semantic_scholar:
     - s2FieldsOfStudy
     - publicationTypes
     - authors
+
+acl:
+  # Local path to the Anthology data/ directory (the one containing xml/, yaml/, etc.).
+  # If null, the library clones the ACL Anthology repo from GitHub on first run
+  # (~1 GB) and caches it in the user data directory.
+  anthology_dir: null
+
+  fields_lite:
+    - full_id          # ACL Anthology paper ID (e.g. "2022.emnlp-main.1")
+    - title
+    - year
+    - venue_acronym   # e.g. "ACL", "EMNLP"       
+
+  fields_full:
+    - full_id          # ACL Anthology paper ID (e.g. "2022.emnlp-main.1")
+    - title
+    - abstract
+    - year
+    - authors         # List of {first, last, affiliation} dicts (affiliation often null)
+    - doi
+    - language        # ISO 639-2 code, may be null
+    - journal_title   # Non-null for journal papers only
+    - paper_type      # "paper", "frontmatter", or "backmatter"
+    - volume_type     # "journal" or "proceedings"
+    - volume_title    # Proceedings/journal title. Usually includes the volume number. May be equal to journal_title. 
+    - venue_ids       # List of venue ID strings
+    - venue_acronym   # e.g. "ACL", "EMNLP"
+    - venue_full_id   # Volume full ID, e.g. "2022.emnlp-main"
+
