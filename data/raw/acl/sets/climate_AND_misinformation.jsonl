@@ -1,0 +1,23 @@
+{"full_id": "2022.acl-long.222", "title": "Misinfo Reaction Frames: Reasoning about Readers\u2019 Reactions to News Headlines", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.findings-naacl.72", "title": "MM-Claims: A Dataset for Multimodal Claim Detection in Social Media", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.findings-emnlp.532", "title": "Logical Fallacy Detection", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.naacl-main.110", "title": "Twitter-COMMs: Detecting Climate, COVID, and Military Multimodal Misinformation", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2024.climatenlp-1.4", "title": "Generative Debunking of Climate Misinformation", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.14", "title": "Unlearning Climate Misinformation in Large Language Models", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.18", "title": "Granular Analysis of Social Media Users\u2019 Truthfulness Stances Toward Climate Change Factual Claims", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.cpss-1.4", "title": "A Few Hypocrites: Few-Shot Learning and Subtype Definitions for Detecting Hypocrisy Accusations in Online Climate Change Debates", "year": "2024", "venue_acronym": "cpss"}
+{"full_id": "2024.eacl-long.156", "title": "Leveraging fine-tuned Large Language Models with LoRA for Effective Claim, Claimer, and Claim Object Detection", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.findings-naacl.211", "title": "Simulating Opinion Dynamics with Networks of LLM-based Agents", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2025.acl-long.1513", "title": "PolyNarrative: A Multilingual, Multilabel, Multi-domain Dataset for Narrative Extraction from News Articles", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.climatenlp-1.11", "title": "Detecting Hyperpartisanship and Rhetorical Bias in Climate Journalism: A Sentence-Level Italian Dataset", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.15", "title": "CPIQA: Climate Paper Image Question Answering Dataset for Retrieval-Augmented Generation with Context-based Query Expansion", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.findings-emnlp.1112", "title": "NarratEX Dataset: Explaining the Dominant Narratives in News Texts", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.naacl-long.34", "title": "Fine-grained Fallacy Detection with Human Label Variation", "year": "2025", "venue_acronym": "NAACL"}
+{"full_id": "2025.sdp-1.5", "title": "The ClimateCheck Dataset: Mapping Social Media Claims About Climate Change to Corresponding Scholarly Articles", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.24", "title": "The ClimateCheck Shared Task: Scientific Fact-Checking of Social Media Claims about Climate Change", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.28", "title": "ClimateCheck2025: Multi-Stage Retrieval Meets LLMs for Automated Scientfic Fact-Checking", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.semeval-1.21", "title": "GateNLP at SemEval-2025 Task 10: Hierarchical Three-Step Prompting for Multilingual Narrative Classification", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.209", "title": "Howard University-AI4PC at SemEval-2025 Task 10: Ensembling LLMs for Multi-lingual Multi-Label and Multi-Class Meta-Classification", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.215", "title": "NarrativeMiners at SemEval-2025 Task 10: Combating Manipulative Narratives in Online News", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.331", "title": "SemEval 2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2026.eacl-srw.29", "title": "Communication as a Complex System: Modeling the Feedback Dynamics of Trust and Credibility", "year": "2026", "venue_acronym": "EACL"}

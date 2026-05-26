@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T17:28:07.915856",
+  "logic_string": "misinformation",
+  "human_readable_query": "(\"misinform*\" OR \"disinform*\" OR \"fake news\" OR \"conspiracy theory\" OR \"conspiracy theories\" OR debunking OR \"claim verification\" OR deception OR \"hoax*\" OR \"fallac*\" OR \"rumor*\" OR \"malinformat*\" OR propaganda)",
+  "fields": [
+    "full_id",
+    "title",
+    "year",
+    "venue_acronym"
+  ],
+  "date_start": "2010-01-01",
+  "date_end": "2026-04-30",
+  "anthology_dir": null,
+  "total_matched": 1249,
+  "total_scanned": 122137,
+  "error": null
+}

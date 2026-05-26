@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T17:46:08.921225",
+  "logic_string": "climate AND misinformation AND polarization",
+  "human_readable_query": "(\"global warming\" OR \"climate change\" OR \"climate science\" OR \"climate denial\" OR \"climate crisis\" OR \"climate skeptic\" OR \"climate skepticism\" OR \"climate skeptics\" OR \"climate skepticist\" OR \"climate action\" OR \"climate misinformation\" OR \"climate disinformation\") AND (\"misinform*\" OR \"disinform*\" OR \"fake news\" OR \"conspiracy theory\" OR \"conspiracy theories\" OR debunking OR \"claim verification\" OR deception OR \"hoax*\" OR \"fallac*\" OR \"rumor*\" OR \"malinformat*\" OR propaganda) AND (polarisation OR polarization OR \"echo chamber\" OR \"hyperpartisan*\" OR homophily)",
+  "fields": [
+    "full_id",
+    "title",
+    "year",
+    "venue_acronym"
+  ],
+  "date_start": "2010-01-01",
+  "date_end": "2026-04-30",
+  "anthology_dir": null,
+  "total_matched": 4,
+  "total_scanned": 122137,
+  "error": null
+}

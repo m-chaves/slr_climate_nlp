@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T17:27:33.245875",
+  "logic_string": "social_media",
+  "human_readable_query": "(\"social media\" OR \"social network\" OR \"social networks\" OR \"social platform\" OR \"social platforms\" OR \"online community\" OR \"online communities\" OR \"alternative platform\" OR \"alternative platforms\" OR alt-tech OR Youtube OR Rumble OR Bitchute OR Odysee OR Twitch OR Quora OR Facebook OR Instagram OR Tiktok OR Whatsapp OR Telegram OR Signal OR WeChat OR Discord OR Threads OR Mastodon OR Reddit OR X OR Twitter/X OR Twitter OR Bluesky OR 4chan OR 8kun OR 8chan OR Parler OR Gab OR \"Truth Social\" OR MeWe OR Snapchat OR LinkedIn OR tweet OR tweets OR \"user comment\" OR \"user comments\")",
+  "fields": [
+    "full_id",
+    "title",
+    "year",
+    "venue_acronym"
+  ],
+  "date_start": "2010-01-01",
+  "date_end": "2026-04-30",
+  "anthology_dir": null,
+  "total_matched": 5748,
+  "total_scanned": 122137,
+  "error": null
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T17:28:29.719417",
+  "logic_string": "polarization",
+  "human_readable_query": "(polarisation OR polarization OR \"echo chamber\" OR \"hyperpartisan*\" OR homophily)",
+  "fields": [
+    "full_id",
+    "title",
+    "year",
+    "venue_acronym"
+  ],
+  "date_start": "2010-01-01",
+  "date_end": "2026-04-30",
+  "anthology_dir": null,
+  "total_matched": 145,
+  "total_scanned": 122137,
+  "error": null
+}

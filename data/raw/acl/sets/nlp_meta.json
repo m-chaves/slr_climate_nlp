@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T17:26:23.611422",
+  "logic_string": "nlp",
+  "human_readable_query": "(\"natural language processing\" OR NLP OR \"machine learning\" OR \"LLM*\" OR AI OR \"artificial intelligence\" OR \"language model\" OR \"language models\" OR \"neural network\" OR \"neural networks\" OR GenAI OR \"Generative AI\" OR \"text mining\" OR \"text processing\" OR \"text classification\" OR \"deep learning\" OR \"transformer*\" OR \"argument mining\" OR \"sentiment analysis\")",
+  "fields": [
+    "full_id",
+    "title",
+    "year",
+    "venue_acronym"
+  ],
+  "date_start": "2010-01-01",
+  "date_end": "2026-04-30",
+  "anthology_dir": null,
+  "total_matched": 42785,
+  "total_scanned": 122137,
+  "error": null
+}

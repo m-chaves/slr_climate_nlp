@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-05-25T17:54:52.548345",
+  "logic_string": "climate AND nlp AND social_media AND polarization",
+  "human_readable_query": "(\"global warming\" OR \"climate change\" OR \"climate science\" OR \"climate denial\" OR \"climate crisis\" OR \"climate skeptic\" OR \"climate skepticism\" OR \"climate skeptics\" OR \"climate skepticist\" OR \"climate action\" OR \"climate misinformation\" OR \"climate disinformation\") AND (\"natural language processing\" OR NLP OR \"machine learning\" OR \"LLM*\" OR AI OR \"artificial intelligence\" OR \"language model\" OR \"language models\" OR \"neural network\" OR \"neural networks\" OR GenAI OR \"Generative AI\" OR \"text mining\" OR \"text processing\" OR \"text classification\" OR \"deep learning\" OR \"transformer*\" OR \"argument mining\" OR \"sentiment analysis\") AND (\"social media\" OR \"social network\" OR \"social networks\" OR \"social platform\" OR \"social platforms\" OR \"online community\" OR \"online communities\" OR \"alternative platform\" OR \"alternative platforms\" OR alt-tech OR Youtube OR Rumble OR Bitchute OR Odysee OR Twitch OR Quora OR Facebook OR Instagram OR Tiktok OR Whatsapp OR Telegram OR Signal OR WeChat OR Discord OR Threads OR Mastodon OR Reddit OR X OR Twitter/X OR Twitter OR Bluesky OR 4chan OR 8kun OR 8chan OR Parler OR Gab OR \"Truth Social\" OR MeWe OR Snapchat OR LinkedIn OR tweet OR tweets OR \"user comment\" OR \"user comments\") AND (polarisation OR polarization OR \"echo chamber\" OR \"hyperpartisan*\" OR homophily)",
+  "fields": [
+    "full_id",
+    "title",
+    "year",
+    "venue_acronym"
+  ],
+  "date_start": "2010-01-01",
+  "date_end": "2026-04-30",
+  "anthology_dir": null,
+  "total_matched": 0,
+  "total_scanned": 122137,
+  "error": null
+}

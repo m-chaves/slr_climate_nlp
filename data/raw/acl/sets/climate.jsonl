@@ -1,0 +1,115 @@
+{"full_id": "2020.findings-emnlp.296", "title": "Detecting Stance in Media On Global Warming", "year": "2020", "venue_acronym": "Findings"}
+{"full_id": "2021.case-1.13", "title": "IIITT at CASE 2021 Task 1: Leveraging Pretrained Language Models for Multilingual Protest Detection", "year": "2021", "venue_acronym": "CASE"}
+{"full_id": "2021.ltedi-1.13", "title": "IIITT@LT-EDI-EACL2021-Hope Speech Detection: There is always hope in Transformers", "year": "2021", "venue_acronym": "LTEDI"}
+{"full_id": "2021.naacl-main.175", "title": "Automatic Classification of Neutralization Techniques in the Narrative of Climate Change Scepticism", "year": "2021", "venue_acronym": "NAACL"}
+{"full_id": "2021.nlp4posimpact-1.2", "title": "The Climate Change Debate and Natural Language Processing", "year": "2021", "venue_acronym": "NLP4PI"}
+{"full_id": "2021.sigdial-1.40", "title": "What to Fact-Check: Guiding Check-Worthy Information Detection in News Articles through Argumentative Discourse Structure", "year": "2021", "venue_acronym": "SIGDIAL"}
+{"full_id": "2022.acl-long.222", "title": "Misinfo Reaction Frames: Reasoning about Readers\u2019 Reactions to News Headlines", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.acl-srw.35", "title": "Towards Fine-grained Classification of Climate Change related Social Media Text", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.alta-1.16", "title": "Automatic Explanation Generation For Climate Science Claims", "year": "2022", "venue_acronym": "ALTA"}
+{"full_id": "2022.clib-1.1", "title": "OntoPopulis, a System for Learning Semantic Classes", "year": "2022", "venue_acronym": "CLIB"}
+{"full_id": "2022.coling-1.583", "title": "Detecting Minority Arguments for Mutual Understanding: A Moderation Tool for the Online Climate Change Debate", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.emnlp-main.460", "title": "Help me write a poem: Instruction Tuning as a Vehicle for Collaborative Poetry Writing", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.findings-naacl.72", "title": "MM-Claims: A Dataset for Multimodal Claim Detection in Social Media", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.findings-emnlp.532", "title": "Logical Fallacy Detection", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.lrec-1.658", "title": "GerCCT: An Annotated Corpus for Mining Arguments in German Tweets on Climate Change", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.723", "title": "FGraDA: A Dataset and Benchmark for Fine-Grained Domain Adaptation in Machine Translation", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.naacl-main.110", "title": "Twitter-COMMs: Detecting Climate, COVID, and Military Multimodal Misinformation", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2022.salld-1.5", "title": "Correlating Facts and Social Media Trends on Environmental Quantities Leveraging Commonsense Reasoning and Human Sentiments", "year": "2022", "venue_acronym": "SALLD"}
+{"full_id": "2023.acl-long.486", "title": "Conflicts, Villains, Resolutions: Towards models of Narrative Media Framing", "year": "2023", "venue_acronym": "ACL"}
+{"full_id": "2023.clasp-1.11", "title": "Linguistic Pattern Analysis in the Climate Change-Related Tweets from UK and Nigeria", "year": "2023", "venue_acronym": "CLASP"}
+{"full_id": "2023.emnlp-main.229", "title": "Deep Natural Language Feature Learning for Interpretable Prediction", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-demo.3", "title": "CHATREPORT: Democratizing Sustainability Disclosure Analysis through LLM-based Tools", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.findings-emnlp.941", "title": "Arabic Mini-ClimateGPT : A Climate Change and Sustainability Tailored Arabic LLM", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.latechclfl-1.11", "title": "Constructing a Credible Estimation for Overreporting of Climate Adaptation Funds in the Creditor Reporting System", "year": "2023", "venue_acronym": "LaTeCH-CLfL"}
+{"full_id": "2023.nlp4dh-1.10", "title": "Efficient and reliable utilization of automated data collection applied to news on climate change", "year": "2023", "venue_acronym": "NLP4DH-IWCLUL"}
+{"full_id": "2023.wassa-1.42", "title": "Communicating Climate Change: A Comparison Between Tweets and Speeches by German Members of Parliament", "year": "2023", "venue_acronym": "WASSA"}
+{"full_id": "2024.acl-long.600", "title": "Measuring Political Bias in Large Language Models: What Is Said and How It Is Said", "year": "2024", "venue_acronym": "ACL"}
+{"full_id": "2024.case-1.12", "title": "HAMiSoN-MTL at ClimateActivism 2024: Detection of Hate Speech, Targets, and Stance using Multi-task Learning", "year": "2024", "venue_acronym": "CASE"}
+{"full_id": "2024.case-1.13", "title": "NLPDame at ClimateActivism 2024: Mistral Sequence Classification with PEFT for Hate Speech, Targets and Stance Event Detection", "year": "2024", "venue_acronym": "CASE"}
+{"full_id": "2024.case-1.14", "title": "AAST-NLP at ClimateActivism 2024: Ensemble-Based Climate Activism Stance and Hate Speech Detection : Leveraging Pretrained Language Models", "year": "2024", "venue_acronym": "CASE"}
+{"full_id": "2024.case-1.20", "title": "CUET_Binary_Hackers at ClimateActivism 2024: A Comprehensive Evaluation and Superior Performance of Transformer-Based Models in Hate Speech Event Detection and Stance Classification for Climate Activism", "year": "2024", "venue_acronym": "CASE"}
+{"full_id": "2024.case-1.33", "title": "Stance and Hate Event Detection in Tweets Related to Climate Activism - Shared Task at CASE 2024", "year": "2024", "venue_acronym": "CASE"}
+{"full_id": "2024.clicit-1.48", "title": "NYTAC-CC: A Climate Change Subcorpus of New York Times Articles", "year": "2024", "venue_acronym": "CLiC-it"}
+{"full_id": "2024.clicit-1.69", "title": "Understanding the Future Green Workforce through a Corpus of Curricula Vitae from Recent Graduates", "year": "2024", "venue_acronym": "CLiC-it"}
+{"full_id": "2024.climatenlp-1.2", "title": "Informing climate risk analysis using textual information - A research agenda", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.3", "title": "My Climate Advisor: An Application of NLP in Climate Adaptation for Agriculture", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.4", "title": "Generative Debunking of Climate Misinformation", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.5", "title": "Decoding Climate Disagreement: A Graph Neural Network-Based Approach to Understanding Social Media Dynamics", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.11", "title": "Large Scale Narrative Messaging around Climate Change: A Cross-Cultural Comparison", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.12", "title": "Challenges in End-to-End Policy Extraction from Climate Action Plans", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.14", "title": "Unlearning Climate Misinformation in Large Language Models", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.15", "title": "Statements: Universal Information Extraction from Tables with Large Language Models for ESG KPIs", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.16", "title": "CLIMATELI: Evaluating Entity Linking on Climate Change Data", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.18", "title": "Granular Analysis of Social Media Users\u2019 Truthfulness Stances Toward Climate Change Factual Claims", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.climatenlp-1.20", "title": "Assessing the Effectiveness of GPT-4o in Climate Change Evidence Synthesis and Systematic Assessments: Preliminary Insights", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.cpss-1.4", "title": "A Few Hypocrites: Few-Shot Learning and Subtype Definitions for Detecting Hypocrisy Accusations in Online Climate Change Debates", "year": "2024", "venue_acronym": "cpss"}
+{"full_id": "2024.eacl-long.156", "title": "Leveraging fine-tuned Large Language Models with LoRA for Effective Claim, Claimer, and Claim Object Detection", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.eacl-tutorials.3", "title": "Language + Molecules", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.emnlp-main.969", "title": "ClimRetrieve: A Benchmarking Dataset for Information Retrieval from Corporate Climate Disclosures", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.findings-naacl.211", "title": "Simulating Opinion Dynamics with Networks of LLM-based Agents", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.finnlp-1.14", "title": "ESG-FTSE: A Corpus of News Articles with ESG Relevance Labels and Use Cases", "year": "2024", "venue_acronym": "FinNLP"}
+{"full_id": "2024.lrec-main.88", "title": "Analyzing the Dynamics of Climate Change Discourse on Twitter: A New Annotated Corpus and Multi-Aspect Classification", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.485", "title": "EcoVerse: An Annotated Twitter Dataset for Eco-Relevance Classification, Environmental Impact Analysis, and Stance Detection", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.756", "title": "Ideological Knowledge Representation: Framing Climate Change in EcoLexicon", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.1327", "title": "STEntConv: Predicting Disagreement between Reddit Users with Stance Detection and a Signed Graph Convolutional Network", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.1517", "title": "What Can Diachronic Contexts and Topics Tell Us about the Present-Day Compositionality of English Noun Compounds?", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.nlp4pi-1.10", "title": "Efficient Aspect-Based Summarization of Climate Change Reports with Small Language Models", "year": "2024", "venue_acronym": "NLP4PI"}
+{"full_id": "2024.nlp4pi-1.27", "title": "MultiClimate: Multimodal Stance Detection on Climate Change Videos", "year": "2024", "venue_acronym": "NLP4PI"}
+{"full_id": "2024.nlperspectives-1.7", "title": "Moral Disagreement over Serious Matters: Discovering the Knowledge Hidden in the Perspectives", "year": "2024", "venue_acronym": "NLPerspectives"}
+{"full_id": "2024.swisstext-1.22", "title": "Climate Change Chatbot", "year": "2024", "venue_acronym": "SwissText"}
+{"full_id": "2025.acl-long.1513", "title": "PolyNarrative: A Multilingual, Multilabel, Multi-domain Dataset for Narrative Extraction from News Articles", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-demo.7", "title": "My Climate CoPilot: A Question Answering System for Climate Adaptation in Agriculture", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.climatenlp-1.1", "title": "Enhancing Retrieval for ESGLLM via ESG-CID: A Disclosure Content Index Finetuning Dataset for Mapping GRI and ESRS", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.3", "title": "Bridging AI and Carbon Capture: A Dataset for LLMs in Ionic Liquids and CBE Research", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.4", "title": "Applying the Character-Role Narrative Framework with LLMs to Investigate Environmental Narratives in Scientific Editorials and Tweets", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.5", "title": "Integrating Expert Labels into LLM-based Emission Goal Detection: Example Selection vs Automatic Prompt Design", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.6", "title": "ClimateIE: A Dataset for Climate Science Information Extraction", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.8", "title": "AI and Climate Change Discourse: What Opinions Do Large Language Models Present?", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.9", "title": "Evaluating Retrieval Augmented Generation to Communicate UK Climate Change Information", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.11", "title": "Detecting Hyperpartisanship and Rhetorical Bias in Climate Journalism: A Sentence-Level Italian Dataset", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.12", "title": "Scaling Species Diversity Analysis in Carbon Credit Projects with Large-Context LLMs", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.13", "title": "ClimateEval: A Comprehensive Benchmark for NLP Tasks Related to Climate Change", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.14", "title": "Bidirectional Topic Matching: Quantifying Thematic Intersections Between Climate Change and Climate Mitigation News Corpora Through Topic Modelling", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.15", "title": "CPIQA: Climate Paper Image Question Answering Dataset for Retrieval-Augmented Generation with Context-based Query Expansion", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.17", "title": "Listen to the Context: Towards Faithful Large Language Models for Retrieval Augmented Generation on Climate Questions", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.19", "title": "Transforming adaptation tracking: benchmarking Transformer-based NLP approaches to retrieve adaptation-relevant information from climate policy text", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.climatenlp-1.21", "title": "Can Reasoning LLMs Synthesize Complex Climate Statements?", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.coling-main.523", "title": "Extrapolating to Unknown Opinions Using LLMs", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.754", "title": "Human Interest Framing across Cultures: A Case Study on Climate Change", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.emnlp-demos.9", "title": "Automated Evidence Extraction and Scoring for Corporate Climate Policy Engagement: A Multilingual RAG Approach", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.findings-acl.17", "title": "Entity Framing and Role Portrayal in the News", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.207", "title": "WXImpactBench: A Disruptive Weather Impact Understanding Benchmark for Evaluating Large Language Models", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.223", "title": "Taxonomy-Driven Knowledge Graph Construction for Domain-Specific Scientific Applications", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.477", "title": "Narrative Media Framing in Political Discourse", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.286", "title": "What Media Frames Reveal About Stance: A Dataset and Study about Memes in Climate Change Discourse", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.857", "title": "Post-hoc Study of Climate Microtargeting on Social Media Ads with LLMs: Thematic Insights and Fairness Evaluation", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.1112", "title": "NarratEX Dataset: Explaining the Dominant Narratives in News Texts", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.luhme-1.11", "title": "Climate Change Discourse Over Time: A Topic-Sentiment Perspective", "year": "2025", "venue_acronym": "LUHME"}
+{"full_id": "2025.naacl-long.34", "title": "Fine-grained Fallacy Detection with Human Label Variation", "year": "2025", "venue_acronym": "NAACL"}
+{"full_id": "2025.nlp4ecology-1.7", "title": "Large Language Models as Annotators of Named Entities in Climate Change and Biodiversity: A Preliminary Study", "year": "2025", "venue_acronym": "NLP4Ecology"}
+{"full_id": "2025.nlp4ecology-1.12", "title": "Entity Linking using LLMs for Automated Product Carbon Footprint Estimation", "year": "2025", "venue_acronym": "NLP4Ecology"}
+{"full_id": "2025.nlp4pi-1.4", "title": "CliME: Evaluating Multimodal Climate Discourse on Social Media and the Climate Alignment Quotient (CAQ)", "year": "2025", "venue_acronym": "NLP4PI"}
+{"full_id": "2025.nlp4pi-1.11", "title": "Insights into Climate Change Narratives: Emotional Alignment and Engagement Analysis on TikTok", "year": "2025", "venue_acronym": "NLP4PI"}
+{"full_id": "2025.nlp4pi-1.14", "title": "AfD-CCC: Analyzing the Climate Change Discourse of a German Right-wing Political Party", "year": "2025", "venue_acronym": "NLP4PI"}
+{"full_id": "2025.sdp-1.1", "title": "Overview of the Fifth Workshop on Scholarly Document Processing", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.5", "title": "The ClimateCheck Dataset: Mapping Social Media Claims About Climate Change to Corresponding Scholarly Articles", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.24", "title": "The ClimateCheck Shared Task: Scientific Fact-Checking of Social Media Claims about Climate Change", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.25", "title": "Winning ClimateCheck: A Multi-Stage System with BM25, BGE-Reranker Ensembles, and LLM-based Analysis for Scientific Abstract Retrieval", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.27", "title": "AlexUNLP-FMT at ClimateCheck Shared Task: Hybrid Retrieval with Adaptive Similarity Graph-based Reranking for Climate-related Social Media Claims Fact Checking", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.28", "title": "ClimateCheck2025: Multi-Stage Retrieval Meets LLMs for Automated Scientfic Fact-Checking", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.semeval-1.21", "title": "GateNLP at SemEval-2025 Task 10: Hierarchical Three-Step Prompting for Multilingual Narrative Classification", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.24", "title": "UNEDTeam at SemEval-2025 Task 10: Zero-Shot Narrative Classification", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.58", "title": "NCLTeam at SemEval-2025 Task 10: Enhancing Multilingual, multi-class, and Multi-Label Document Classification via Contrastive Learning Augmented Cascaded UNet and Embedding based Approaches", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.92", "title": "LATE-GIL-nlp at Semeval-2025 Task 10: Exploring LLMs and transformers for Characterization and extraction of narratives from online news", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.209", "title": "Howard University-AI4PC at SemEval-2025 Task 10: Ensembling LLMs for Multi-lingual Multi-Label and Multi-Class Meta-Classification", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.215", "title": "NarrativeMiners at SemEval-2025 Task 10: Combating Manipulative Narratives in Online News", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.286", "title": "TECHSSN at SemEval-2025 Task 10: A Comparative Analysis of Transformer Models for Dominant Narrative-Based News Summarization", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.331", "title": "SemEval 2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2026.eacl-srw.29", "title": "Communication as a Complex System: Modeling the Feedback Dynamics of Trust and Credibility", "year": "2026", "venue_acronym": "EACL"}
+{"full_id": "2026.findings-eacl.104", "title": "Actors, Frames and Arguments: A Multi-Decade Computational Analysis of Climate Discourse in Financial News using Large Language Models", "year": "2026", "venue_acronym": "Findings"}
+{"full_id": "D18-1372", "title": "Causal Explanation Analysis on Social Media", "year": "2018", "venue_acronym": "EMNLP"}
+{"full_id": "E14-3001", "title": "Literature-based discovery for Oceanographic climate science", "year": "2014", "venue_acronym": "EACL"}
+{"full_id": "N19-4003", "title": "Enabling Search and Collaborative Assembly of Causal Interactions Extracted from Multilingual and Multi-domain Free Text", "year": "2019", "venue_acronym": "NAACL"}
+{"full_id": "W17-4205", "title": "Comparing Attitudes to Climate Change in the Media using sentiment analysis based on Latent Dirichlet Allocation", "year": "2017", "venue_acronym": ""}
+{"full_id": "W17-4509", "title": "Topic Model Stability for Hierarchical Summarization", "year": "2017", "venue_acronym": ""}

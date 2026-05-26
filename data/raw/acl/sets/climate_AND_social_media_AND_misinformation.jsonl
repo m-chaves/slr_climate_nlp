@@ -1,0 +1,9 @@
+{"full_id": "2022.findings-naacl.72", "title": "MM-Claims: A Dataset for Multimodal Claim Detection in Social Media", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.naacl-main.110", "title": "Twitter-COMMs: Detecting Climate, COVID, and Military Multimodal Misinformation", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2024.climatenlp-1.18", "title": "Granular Analysis of Social Media Users\u2019 Truthfulness Stances Toward Climate Change Factual Claims", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.cpss-1.4", "title": "A Few Hypocrites: Few-Shot Learning and Subtype Definitions for Detecting Hypocrisy Accusations in Online Climate Change Debates", "year": "2024", "venue_acronym": "cpss"}
+{"full_id": "2024.eacl-long.156", "title": "Leveraging fine-tuned Large Language Models with LoRA for Effective Claim, Claimer, and Claim Object Detection", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2025.naacl-long.34", "title": "Fine-grained Fallacy Detection with Human Label Variation", "year": "2025", "venue_acronym": "NAACL"}
+{"full_id": "2025.sdp-1.5", "title": "The ClimateCheck Dataset: Mapping Social Media Claims About Climate Change to Corresponding Scholarly Articles", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.24", "title": "The ClimateCheck Shared Task: Scientific Fact-Checking of Social Media Claims about Climate Change", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.28", "title": "ClimateCheck2025: Multi-Stage Retrieval Meets LLMs for Automated Scientfic Fact-Checking", "year": "2025", "venue_acronym": "sdp"}

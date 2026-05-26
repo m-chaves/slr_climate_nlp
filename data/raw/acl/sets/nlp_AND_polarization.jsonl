@@ -1,0 +1,86 @@
+{"full_id": "2020.acl-main.633", "title": "Out of the Echo Chamber: Detecting Countering Debate Speeches", "year": "2020", "venue_acronym": "ACL"}
+{"full_id": "2020.coling-main.19", "title": "Regrexit or not Regrexit: Aspect-based Sentiment Analysis in Polarized Contexts", "year": "2020", "venue_acronym": "COLING"}
+{"full_id": "2020.osact-1.14", "title": "Multitask Learning for Arabic Offensive Language and Hate-Speech Detection", "year": "2020", "venue_acronym": "OSACT"}
+{"full_id": "2021.case-1.3", "title": "Keynote Abstract: Machine Learning in Conflict Studies: Reflections on Ethics, Collaboration, and Ongoing Challenges", "year": "2021", "venue_acronym": "CASE"}
+{"full_id": "2021.findings-emnlp.181", "title": "Detecting Polarized Topics Using Partisanship-aware Contextualized Topic Embeddings", "year": "2021", "venue_acronym": "Findings"}
+{"full_id": "2021.findings-emnlp.398", "title": "Predicting Anti-Asian Hateful Users on Twitter during COVID-19", "year": "2021", "venue_acronym": "Findings"}
+{"full_id": "2021.ranlp-1.62", "title": "On the Usefulness of Personality Traits in Opinion-oriented Tasks", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.ranlp-1.140", "title": "Masking and Transformer-based Models for Hyperpartisanship Detection in News", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.semeval-1.26", "title": "UPB at SemEval-2021 Task 5: Virtual Adversarial Training for Toxic Spans Detection", "year": "2021", "venue_acronym": "SemEval"}
+{"full_id": "2022.coling-1.593", "title": "CommunityLM: Probing Partisan Worldviews from Language Models", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.emnlp-main.506", "title": "GREENER: Graph Neural Networks for News Media Profiling", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.emnlp-main.682", "title": "Sentence-level Media Bias Analysis Informed by Discourse Structures", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.emnlp-main.824", "title": "PAR: Political Actor Representation Learning with Social Context and Expert Knowledge", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.findings-naacl.41", "title": "Modeling Ideological Salience and Framing in Polarized Online Groups with Graph Neural Networks and Structured Sparsity", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.lrec-1.200", "title": "The Engage Corpus: A Social Media Dataset for Text-Based Recommender Systems", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.naacl-main.304", "title": "KCD: Knowledge Walks and Textual Cues Enhanced Political Perspective Detection in News Media", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2022.politicalnlp-1.11", "title": "Don\u2019t Burst Blindly: For a Better Use of Natural Language Processing to Fight Opinion Bubbles in News Recommendations", "year": "2022", "venue_acronym": "PoliticalNLP"}
+{"full_id": "2022.socialnlp-1.8", "title": "OK Boomer: Probing the socio-demographic Divide in Echo Chambers", "year": "2022", "venue_acronym": "SocialNLP"}
+{"full_id": "2023.acl-long.656", "title": "From Pretraining Data to Language Models to Downstream Tasks: Tracking the Trails of Political Biases Leading to Unfair NLP Models", "year": "2023", "venue_acronym": "ACL"}
+{"full_id": "2023.emnlp-main.539", "title": "Regulation and NLP (RegNLP): Taming Large Language Models", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.findings-emnlp.579", "title": "COUNT: COntrastive UNlikelihood Text Style Transfer for Text Detoxification", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.ranlp-1.117", "title": "From Fake to Hyperpartisan News Detection Using Domain Adaptation", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2023.ranlp-1.127", "title": "Predicting Sentence-Level Factuality of News and Bias of Media Outlets", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2024.acl-long.600", "title": "Measuring Political Bias in Large Language Models: What Is Said and How It Is Said", "year": "2024", "venue_acronym": "ACL"}
+{"full_id": "2024.case-1.2", "title": "Fine-Tuning Language Models on Dutch Protest Event Tweets", "year": "2024", "venue_acronym": "CASE"}
+{"full_id": "2024.clicit-1.63", "title": "Leveraging Advanced Prompting Strategies in LLaMA3-8B for Enhanced Hyperpartisan News Detection", "year": "2024", "venue_acronym": "CLiC-it"}
+{"full_id": "2024.eacl-long.117", "title": "Polarized Opinion Detection Improves the Detection of Toxic Language", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.emnlp-main.327", "title": "The Computational Anatomy of Humility: Modeling Intellectual Humility in Online Public Discourse", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.eurali-1.8", "title": "An Evaluation of Language Models for Hyperpartisan Ideology Detection in Persian Twitter", "year": "2024", "venue_acronym": "EURALI"}
+{"full_id": "2024.findings-naacl.34", "title": "Which Modality should I use - Text, Motif, or Image? : Understanding Graphs with Large Language Models", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.findings-naacl.211", "title": "Simulating Opinion Dynamics with Networks of LLM-based Agents", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.findings-emnlp.265", "title": "Improving Argument Effectiveness Across Ideologies using Instruction-tuned Large Language Models", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.inlg-main.13", "title": "German Voter Personas Can Radicalize LLM Chatbots via the Echo Chamber Effect", "year": "2024", "venue_acronym": "INLG"}
+{"full_id": "2024.lrec-main.613", "title": "Exploring the Usability of Persuasion Techniques for Downstream Misinformation-related Classification Tasks", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.884", "title": "Large Language Models Are Echo Chambers", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.parlaclarin-1.5", "title": "Resources and Methods for Analysing Political Rhetoric and Framing in Parliamentary Debates", "year": "2024", "venue_acronym": "ParlaCLARIN"}
+{"full_id": "2024.sicon-1.7", "title": "Balancing Transparency and Accuracy: A Comparative Analysis of Rule-Based and Deep Learning Models in Political Bias Classification", "year": "2024", "venue_acronym": "SICon"}
+{"full_id": "2024.wassa-1.10", "title": "Polarization of Autonomous Generative AI Agents Under Echo Chambers", "year": "2024", "venue_acronym": "WASSA"}
+{"full_id": "2024.yrrsds-1.24", "title": "Innovative Approaches to Enhancing Safety and Ethical AI Interactions in Digital Environments", "year": "2024", "venue_acronym": "YRRSDS"}
+{"full_id": "2025.arabicnlp-main.29", "title": "Toward Culturally-Aware Arabic Debate Platforms with NLP Support", "year": "2025", "venue_acronym": "ArabicNLP"}
+{"full_id": "2025.climatenlp-1.11", "title": "Detecting Hyperpartisanship and Rhetorical Bias in Climate Journalism: A Sentence-Level Italian Dataset", "year": "2025", "venue_acronym": "ClimateNLP"}
+{"full_id": "2025.coling-main.64", "title": "HyperIDP: Customizing Temporal Hypergraph Neural Networks for Multi-Scale Information Diffusion Prediction", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.264", "title": "Decoding Echo Chambers: LLM-Powered Simulations Revealing Polarization in Social Networks", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.539", "title": "Summarization of Opinionated Political Documents with Varied Perspectives", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.dravidianlangtech-1.3", "title": "Akatsuki-CIOL@DravidianLangTech 2025: Ensemble-Based Approach Using Pre-Trained Models for Fake News Detection in Dravidian Languages", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.emnlp-main.778", "title": "Journalism-Guided Agentic In-context Learning for News Stance Detection", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1176", "title": "SPARK: Simulating the Co-evolution of Stance and Topic Dynamics in Online Discourse with LLM-based Agents", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1405", "title": "Attacking Misinformation Detection Using Adversarial Examples Generated by Language Models", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1798", "title": "Computational Analysis of Conversation Dynamics through Participant Responsivity", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.findings-acl.928", "title": "iAgent: LLM Agent as a Shield between User and Recommender Systems", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.966", "title": "A Multi-Labeled Dataset for Indonesian Discourse: Examining Toxicity, Polarization, and Demographics Information", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.359", "title": "Investigating Controversy Framing across Topics on Social Media", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.773", "title": "Fair Text-Attributed Graph Representation Learning", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-ijcnlp.4", "title": "Sympathy over Polarization: A Computational Discourse Analysis of Social Media Posts about the July 2024 Trump Assassination Attempt", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.nlp4pi-1.17", "title": "Voices of Her: Analyzing Gender Differences in the AI Publication World", "year": "2025", "venue_acronym": "NLP4PI"}
+{"full_id": "2025.nlperspectives-1.3", "title": "Towards a Perspectivist Understanding of Irony through Rhetorical Figures", "year": "2025", "venue_acronym": "NLPerspectives"}
+{"full_id": "2025.ranlp-1.83", "title": "Investigating Polarization in YouTube Comments via Aspect-Based Sentiment Analysis", "year": "2025", "venue_acronym": "RANLP"}
+{"full_id": "2025.woah-1.18", "title": "Exploring Hate Speech Detection Models for Lithuanian Language", "year": "2025", "venue_acronym": "WOAH"}
+{"full_id": "2025.woah-1.22", "title": "Hate Speech in Times of Crises: a Cross-Disciplinary Analysis of Online Xenophobia in Greece", "year": "2025", "venue_acronym": "WOAH"}
+{"full_id": "2026.eacl-long.53", "title": "PartisanLens: A Multilingual Dataset of Hyperpartisan and Conspiratorial Immigration Narratives in European Media", "year": "2026", "venue_acronym": "EACL"}
+{"full_id": "2026.eacl-long.234", "title": "Persuasion at Play: Understanding Misinformation Dynamics in Demographic-Aware Human-LLM Interactions", "year": "2026", "venue_acronym": "EACL"}
+{"full_id": "2026.eacl-long.344", "title": "An Empirical Study of Collective Behaviors and Social Dynamics in Large Language Model Agents", "year": "2026", "venue_acronym": "EACL"}
+{"full_id": "2026.findings-eacl.137", "title": "Seeing All Sides: Multi-Perspective In-Context Learning for Subjective NLP", "year": "2026", "venue_acronym": "Findings"}
+{"full_id": "2026.propor-1.64", "title": "CoDEl-BR: An Electoral Debate Corpus from Brazilian Municipal Elections", "year": "2026", "venue_acronym": "PROPOR"}
+{"full_id": "2026.silkroadnlp-1.6", "title": "Online Polarization Detection in Persian (Farsi) Social Media", "year": "2026", "venue_acronym": "SilkRoadNLP"}
+{"full_id": "I17-2045", "title": "Using Social Networks to Improve Language Variety Identification with Neural Networks", "year": "2017", "venue_acronym": "IJCNLP"}
+{"full_id": "N19-1304", "title": "Analyzing Polarization in Social Media: Method and Application to Tweets on 21 Mass Shootings", "year": "2019", "venue_acronym": "NAACL"}
+{"full_id": "Q17-1021", "title": "Overcoming Language Variation in Sentiment Analysis with Social Attention", "year": "2017", "venue_acronym": "TACL"}
+{"full_id": "S19-2146", "title": "Team Bertha von Suttner at SemEval-2019 Task 4: Hyperpartisan News Detection using ELMo Sentence Representation Convolutional Network", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2157", "title": "Brenda Starr at SemEval-2019 Task 4: Hyperpartisan News Detection", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2158", "title": "Cardiff University at SemEval-2019 Task 4: Linguistic Features for Hyperpartisan News Detection", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2160", "title": "Dick-Preston and Morbo at SemEval-2019 Task 4: Transfer Learning for Hyperpartisan News Detection", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2162", "title": "Duluth at SemEval-2019 Task 4: The Pioquinto Manterola Hyperpartisan News Detector", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2163", "title": "Fermi at SemEval-2019 Task 4: The sarah-jane-smith Hyperpartisan News Detector", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2164", "title": "Harvey Mudd College at SemEval-2019 Task 4: The Carl Kolchak Hyperpartisan News Detector", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2165", "title": "Harvey Mudd College at SemEval-2019 Task 4: The Clint Buchanan Hyperpartisan News Detector", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2166", "title": "Harvey Mudd College at SemEval-2019 Task 4: The D.X. Beaumont Hyperpartisan News Detector", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2167", "title": "NLP@UIT at SemEval-2019 Task 4: The Paparazzo Hyperpartisan News Detector", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2169", "title": "Rouletabille at SemEval-2019 Task 4: Neural Network Baseline for Identification of Hyperpartisan Publishers", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2173", "title": "Team Fernando-Pessa at SemEval-2019 Task 4: Back to Basics in Hyperpartisan News Detection", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2177", "title": "Team Kermit-the-frog at SemEval-2019 Task 4: Bias Detection Through Sentiment Analysis and Simple Linguistic Features", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2178", "title": "Team Kit Kittredge at SemEval-2019 Task 4: LSTM Voting System", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2180", "title": "Team Peter Brinkmann at SemEval-2019 Task 4: Detecting Biased News Articles Using Convolutional Neural Networks", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2183", "title": "Team Xenophilius Lovegood at SemEval-2019 Task 4: Hyperpartisanship Classification using Convolutional Neural Networks", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2187", "title": "Tom Jumbo-Grumbo at SemEval-2019 Task 4: Hyperpartisan News Detection with GloVe vectors and SVM", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2188", "title": "UBC-NLP at SemEval-2019 Task 4: Hyperpartisan News Detection With Attention-Based Bi-LSTMs", "year": "2019", "venue_acronym": "SemEval"}

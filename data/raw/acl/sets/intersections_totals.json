@@ -1,0 +1,95 @@
+{
+  "climate": {
+    "total_downloaded": 115
+  },
+  "nlp": {
+    "total_downloaded": 42785
+  },
+  "social_media": {
+    "total_downloaded": 5748
+  },
+  "misinformation": {
+    "total_downloaded": 1249
+  },
+  "polarization": {
+    "total_downloaded": 145
+  },
+  "climate AND nlp": {
+    "total_downloaded": 86
+  },
+  "climate AND social_media": {
+    "total_downloaded": 37
+  },
+  "climate AND misinformation": {
+    "total_downloaded": 23
+  },
+  "climate AND polarization": {
+    "total_downloaded": 5
+  },
+  "nlp AND social_media": {
+    "total_downloaded": 3257
+  },
+  "nlp AND misinformation": {
+    "total_downloaded": 787
+  },
+  "nlp AND polarization": {
+    "total_downloaded": 86
+  },
+  "social_media AND misinformation": {
+    "total_downloaded": 386
+  },
+  "social_media AND polarization": {
+    "total_downloaded": 52
+  },
+  "misinformation AND polarization": {
+    "total_downloaded": 27
+  },
+  "climate AND nlp AND social_media": {
+    "total_downloaded": 28
+  },
+  "climate AND nlp AND misinformation": {
+    "total_downloaded": 16
+  },
+  "climate AND nlp AND polarization": {
+    "total_downloaded": 3
+  },
+  "climate AND social_media AND misinformation": {
+    "total_downloaded": 9
+  },
+  "climate AND social_media AND polarization": {
+    "total_downloaded": 0
+  },
+  "climate AND misinformation AND polarization": {
+    "total_downloaded": 4
+  },
+  "nlp AND social_media AND misinformation": {
+    "total_downloaded": 236
+  },
+  "nlp AND social_media AND polarization": {
+    "total_downloaded": 35
+  },
+  "nlp AND misinformation AND polarization": {
+    "total_downloaded": 16
+  },
+  "social_media AND misinformation AND polarization": {
+    "total_downloaded": 10
+  },
+  "climate AND nlp AND social_media AND misinformation": {
+    "total_downloaded": 7
+  },
+  "climate AND nlp AND social_media AND polarization": {
+    "total_downloaded": 0
+  },
+  "climate AND nlp AND misinformation AND polarization": {
+    "total_downloaded": 2
+  },
+  "climate AND social_media AND misinformation AND polarization": {
+    "total_downloaded": 0
+  },
+  "nlp AND social_media AND misinformation AND polarization": {
+    "total_downloaded": 8
+  },
+  "climate AND nlp AND social_media AND misinformation AND polarization": {
+    "total_downloaded": 0
+  }
+}

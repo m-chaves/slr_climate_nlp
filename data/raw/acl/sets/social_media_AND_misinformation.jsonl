@@ -1,0 +1,386 @@
+{"full_id": "2019.icon-1.2", "title": "A Deep Ensemble Framework for Fake News Detection and Multi-Class Classification of Short Political Statements", "year": "2019", "venue_acronym": "ICON"}
+{"full_id": "2020.aacl-main.3", "title": "Rumor Detection on Twitter Using Multiloss Hierarchical BiLSTM with an Attenuation Factor", "year": "2020", "venue_acronym": "AACL"}
+{"full_id": "2020.acl-main.48", "title": "GCAN: Graph-aware Co-Attention Networks for Explainable Fake News Detection on Social Media", "year": "2020", "venue_acronym": "ACL"}
+{"full_id": "2020.acl-main.308", "title": "What Was Written vs. Who Read It: News Media Profiling Using Text Analysis and Social Media Context", "year": "2020", "venue_acronym": "ACL"}
+{"full_id": "2020.acl-main.332", "title": "That is a Known Lie: Detecting Previously Fact-Checked Claims", "year": "2020", "venue_acronym": "ACL"}
+{"full_id": "2020.acl-main.633", "title": "Out of the Echo Chamber: Detecting Countering Debate Speeches", "year": "2020", "venue_acronym": "ACL"}
+{"full_id": "2020.coling-main.473", "title": "Exploiting Microblog Conversation Structures to Detect Rumors", "year": "2020", "venue_acronym": "COLING"}
+{"full_id": "2020.coling-main.476", "title": "Debunking Rumors on Twitter with Tree Transformer", "year": "2020", "venue_acronym": "COLING"}
+{"full_id": "2020.coling-main.477", "title": "Words are the Window to the Soul: Language-based User Representations for Fake News Detection", "year": "2020", "venue_acronym": "COLING"}
+{"full_id": "2020.conll-1.31", "title": "TrClaim-19: The First Collection for Turkish Check-Worthy Claim Detection with Annotator Rationales", "year": "2020", "venue_acronym": "CoNLL"}
+{"full_id": "2020.emnlp-main.108", "title": "Coupled Hierarchical Transformer for Stance-Aware Rumor Verification in Social Media Conversations", "year": "2020", "venue_acronym": "EMNLP"}
+{"full_id": "2020.emnlp-main.621", "title": "Where Are the Facts? Searching for Fact-checked Information to Alleviate the Spread of Fake News", "year": "2020", "venue_acronym": "EMNLP"}
+{"full_id": "2020.emnlp-main.727", "title": "A State-independent and Time-evolving Network for Early Rumor Detection in Social Media", "year": "2020", "venue_acronym": "EMNLP"}
+{"full_id": "2020.emnlp-tutorials.2", "title": "Fact-Checking, Fake News, Propaganda, and Media Bias: Truth Seeking in the Post-Truth Era", "year": "2020", "venue_acronym": "EMNLP"}
+{"full_id": "2020.fever-1.7", "title": "Distilling the Evidence to Augment Fact Verification Models", "year": "2020", "venue_acronym": "FEVER"}
+{"full_id": "2020.lrec-1.748", "title": "RP-DNN: A Tweet Level Propagation Context Based Deep Neural Networks for Early Rumor Detection in Social Media", "year": "2020", "venue_acronym": "LREC"}
+{"full_id": "2020.lrec-1.755", "title": "Fakeddit: A New Multimodal Benchmark Dataset for Fine-grained Fake News Detection", "year": "2020", "venue_acronym": "LREC"}
+{"full_id": "2020.lrec-1.757", "title": "A Real-Time System for Credibility on Twitter", "year": "2020", "venue_acronym": "LREC"}
+{"full_id": "2020.lrec-1.766", "title": "Detecting Troll Tweets in a Bilingual Corpus", "year": "2020", "venue_acronym": "LREC"}
+{"full_id": "2020.lrec-1.775", "title": "French Tweet Corpus for Automatic Stance Detection", "year": "2020", "venue_acronym": "LREC"}
+{"full_id": "2020.nlp4if-1.1", "title": "Two Stage Transformer Model for COVID-19 Fake News Detection and Fact Checking", "year": "2020", "venue_acronym": "NLP4IF"}
+{"full_id": "2020.nlp4if-1.3", "title": "Incorporating Count-Based Features into Pre-Trained Models for Improved Stance Detection", "year": "2020", "venue_acronym": "NLP4IF"}
+{"full_id": "2020.nlpcovid19-acl.17", "title": "NLP-based Feature Extraction for the Detection of COVID-19 Misinformation Videos on YouTube", "year": "2020", "venue_acronym": "NLP-COVID19"}
+{"full_id": "2020.nlpcovid19-2.11", "title": "COVIDLies: Detecting COVID-19 Misinformation on Social Media", "year": "2020", "venue_acronym": "NLP-COVID19"}
+{"full_id": "2020.peoples-1.9", "title": "Topic and Emotion Development among Dutch COVID-19 Twitter Communities in the early Pandemic", "year": "2020", "venue_acronym": "PEOPLES"}
+{"full_id": "2020.rdsm-1.3", "title": "Covid or not Covid? Topic Shift in Information Cascades on Twitter", "year": "2020", "venue_acronym": "RDSM"}
+{"full_id": "2020.rdsm-1.7", "title": "Fake or Real? A Study of Arabic Satirical Fake News", "year": "2020", "venue_acronym": "RDSM"}
+{"full_id": "2020.restup-1.1", "title": "Profiling Bots, Fake News Spreaders and Haters", "year": "2020", "venue_acronym": "ResTUP"}
+{"full_id": "2020.stoc-1.4", "title": "A Privacy Preserving Data Publishing Middleware for Unstructured, Textual Social Media Data", "year": "2020", "venue_acronym": "STOC"}
+{"full_id": "2020.stoc-1.7", "title": "Corpus Development for Studying Online Disinformation Campaign: A Narrative + Stance Approach", "year": "2020", "venue_acronym": "STOC"}
+{"full_id": "2020.wnut-1.31", "title": "\u201cA Little Birdie Told Me ... \u201d - Inductive Biases for Rumour Stance Detection on Social Media", "year": "2020", "venue_acronym": "WNUT"}
+{"full_id": "2020.wnut-1.45", "title": "Siva at WNUT-2020 Task 2: Fine-tuning Transformer Neural Networks for Identification of Informative Covid-19 Tweets", "year": "2020", "venue_acronym": "WNUT"}
+{"full_id": "2021.acl-long.53", "title": "Breaking Down the Invisible Wall of Informal Fallacies in Online Discussions", "year": "2021", "venue_acronym": "ACL-IJCNLP"}
+{"full_id": "2021.acl-long.297", "title": "Towards Propagation Uncertainty: Edge-enhanced Bayesian Graph Convolutional Networks for Rumor Detection", "year": "2021", "venue_acronym": "ACL-IJCNLP"}
+{"full_id": "2021.acl-long.516", "title": "Detecting Propaganda Techniques in Memes", "year": "2021", "venue_acronym": "ACL-IJCNLP"}
+{"full_id": "2021.acl-srw.13", "title": "COVID-19 and Misinformation: A Large-Scale Lexical Analysis on Twitter", "year": "2021", "venue_acronym": "ACL-IJCNLP"}
+{"full_id": "2021.acl-srw.28", "title": "CMTA: COVID-19 Misinformation Multilingual Analysis on Twitter", "year": "2021", "venue_acronym": "ACL-IJCNLP"}
+{"full_id": "2021.bionlp-1.15", "title": "Claim Detection in Biomedical Twitter Posts", "year": "2021", "venue_acronym": "BioNLP"}
+{"full_id": "2021.case-1.10", "title": "Automatic Fake News Detection in Political Platforms - A Transformer-based Approach", "year": "2021", "venue_acronym": "CASE"}
+{"full_id": "2021.eacl-main.31", "title": "Semantic Oppositeness Assisted Deep Contextual Modeling for Automatic Rumor Detection in Social Networks", "year": "2021", "venue_acronym": "EACL"}
+{"full_id": "2021.eacl-main.298", "title": "Mega-COV: A Billion-Scale Dataset of 100+ Languages for COVID-19", "year": "2021", "venue_acronym": "EACL"}
+{"full_id": "2021.eacl-main.309", "title": "From the Stage to the Audience: Propaganda on Reddit", "year": "2021", "venue_acronym": "EACL"}
+{"full_id": "2021.eacl-demos.12", "title": "A Dashboard for Mitigating the COVID-19 Misinfodemic", "year": "2021", "venue_acronym": "EACL"}
+{"full_id": "2021.emnlp-main.269", "title": "STANKER: Stacking Network based on Level-grained Attention-masked BERT for Rumor Detection on Social Media", "year": "2021", "venue_acronym": "EMNLP"}
+{"full_id": "2021.emnlp-main.485", "title": "Navigating the Kaleidoscope of COVID-19 Misinformation Using Deep Learning", "year": "2021", "venue_acronym": "EMNLP"}
+{"full_id": "2021.emnlp-main.786", "title": "Rumor Detection on Twitter with Claim-Guided Hierarchical Graph Attention Networks", "year": "2021", "venue_acronym": "EMNLP"}
+{"full_id": "2021.fever-1.7", "title": "Verdict Inference with Claim and Retrieved Elements Using RoBERTa", "year": "2021", "venue_acronym": "FEVER"}
+{"full_id": "2021.fever-1.8", "title": "Stance Detection in German News Articles", "year": "2021", "venue_acronym": "FEVER"}
+{"full_id": "2021.fever-1.9", "title": "FANG-COVID: A New Large-Scale Benchmark Dataset for Fake News Detection in German", "year": "2021", "venue_acronym": "FEVER"}
+{"full_id": "2021.findings-emnlp.56", "title": "Fighting the COVID-19 Infodemic: Modeling the Perspective of Journalists, Fact-Checkers, Social Media Platforms, Policy Makers, and the Society", "year": "2021", "venue_acronym": "Findings"}
+{"full_id": "2021.findings-emnlp.387", "title": "Active Learning for Rumor Identification on Social Media", "year": "2021", "venue_acronym": "Findings"}
+{"full_id": "2021.icon-main.55", "title": "Automated Evidence Collection for Fake News Detection", "year": "2021", "venue_acronym": "ICON"}
+{"full_id": "2021.internlp-1.7", "title": "Tackling Fake News Detection by Interactively Learning Representations using Graph Neural Networks", "year": "2021", "venue_acronym": "InterNLP"}
+{"full_id": "2021.latechclfl-1.18", "title": "WMDecompose: A Framework for Leveraging the Interpretable Properties of Word Mover\u2019s Distance in Sociocultural Analysis", "year": "2021", "venue_acronym": "LaTeCH-CLfL"}
+{"full_id": "2021.louhi-1.1", "title": "ArCorona: Analyzing Arabic Tweets in the Early Days of Coronavirus (COVID-19) Pandemic", "year": "2021", "venue_acronym": "Louhi"}
+{"full_id": "2021.ltedi-1.24", "title": "Hopeful NLP@LT-EDI-EACL2021: Finding Hope in YouTube Comment Section", "year": "2021", "venue_acronym": "LTEDI"}
+{"full_id": "2021.nlp4if-1.1", "title": "Identifying Automatically Generated Headlines using Transformers", "year": "2021", "venue_acronym": "NLP4IF"}
+{"full_id": "2021.nlp4if-1.5", "title": "Leveraging Community and Author Context to Explain the Performance and Bias of Text-Based Deception Detection Models", "year": "2021", "venue_acronym": "NLP4IF"}
+{"full_id": "2021.nlp4if-1.14", "title": "NARNIA at NLP4IF-2021: Identification of Misinformation in COVID-19 Tweets Using BERTweet", "year": "2021", "venue_acronym": "NLP4IF"}
+{"full_id": "2021.nlp4if-1.15", "title": "R00 at NLP4IF-2021 Fighting COVID-19 Infodemic with Transformers and More Transformers", "year": "2021", "venue_acronym": "NLP4IF"}
+{"full_id": "2021.nlp4if-1.19", "title": "Detecting Multilingual COVID-19 Misinformation on Social Media via Contextualized Embeddings", "year": "2021", "venue_acronym": "NLP4IF"}
+{"full_id": "2021.ranlp-1.113", "title": "COVID-19 in Bulgarian Social Media: Factuality, Harmfulness, Propaganda, and Framing", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.ranlp-1.114", "title": "A Second Pandemic? Analysis of Fake News about COVID-19 Vaccines in Qatar", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.ranlp-1.147", "title": "A Domain-Independent Holistic Approach to Deception Detection", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.ranlp-1.154", "title": "Tackling Multilinguality and Internationality in Fake News", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.ranlp-1.168", "title": "\u201cDon\u2019t discuss\u201d: Investigating Semantic and Argumentative Features for Supervised Propagandist Message Detection and Classification", "year": "2021", "venue_acronym": "RANLP"}
+{"full_id": "2021.semeval-1.144", "title": "YNU-HPCC at SemEval-2021 Task 6: Combining ALBERT and Text-CNN for Persuasion Detection in Texts and Images", "year": "2021", "venue_acronym": "SemEval"}
+{"full_id": "2021.semeval-1.145", "title": "LT3 at SemEval-2021 Task 6: Using Multi-Modal Compact Bilinear Pooling to Combine Visual and Textual Understanding in Memes", "year": "2021", "venue_acronym": "SemEval"}
+{"full_id": "2021.triton-1.16", "title": "Fake News Detection for Portuguese with Deep Learning", "year": "2021", "venue_acronym": "TRITON"}
+{"full_id": "2021.wanlp-1.8", "title": "ArCOV19-Rumors: Arabic COVID-19 Twitter Dataset for Misinformation Detection", "year": "2021", "venue_acronym": "WANLP"}
+{"full_id": "2022.acl-long.97", "title": "Tackling Fake News Detection by Continually Improving Social Context Representations using Graph Neural Networks", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.acl-long.311", "title": "Zoom Out and Observe: News Environment Perception for Fake News Detection", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.acl-long.341", "title": "Which side are you on? Insider-Outsider classification in conspiracy-theoretic social media", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.acl-srw.30", "title": "Improving Cross-domain, Cross-lingual and Multi-modal Deception Detection", "year": "2022", "venue_acronym": "ACL"}
+{"full_id": "2022.coling-1.244", "title": "A Unified Propagation Forest-based Framework for Fake News Detection", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.coling-1.250", "title": "Improving Fake News Detection of Influential Domain via Domain- and Instance-Level Transfer", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.coling-1.259", "title": "Harnessing Abstractive Summarization for Fact-Checked Claim Detection", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.coling-1.268", "title": "Continually Detection, Rapidly React: Unseen Rumors Detection Based on Continual Prompt-Tuning", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.coling-1.317", "title": "Evons: A Dataset for Fake and Real News Virality Analysis and Prediction", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.coling-1.415", "title": "Topology Imbalance and Relation Inauthenticity Aware Hierarchical Graph Attention Networks for Fake News Detection", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.coling-1.576", "title": "A Survey on Multimodal Disinformation Detection", "year": "2022", "venue_acronym": "COLING"}
+{"full_id": "2022.constraint-1.6", "title": "Detecting the Role of an Entity in Harmful Memes: Techniques and their Limitations", "year": "2022", "venue_acronym": "CONSTRAINT"}
+{"full_id": "2022.constraint-1.8", "title": "Document Retrieval and Claim Verification to Mitigate COVID-19 Misinformation", "year": "2022", "venue_acronym": "CONSTRAINT"}
+{"full_id": "2022.constraint-1.11", "title": "Detecting False Claims in Low-Resource Regions: A Case Study of Caribbean Islands", "year": "2022", "venue_acronym": "CONSTRAINT"}
+{"full_id": "2022.emnlp-main.138", "title": "Stanceosaurus: Classifying Stance Towards Multicultural Misinformation", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.emnlp-main.506", "title": "GREENER: Graph Neural Networks for News Media Profiling", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.emnlp-main.525", "title": "Empowering the Fact-checkers! Automatic Identification of Claim Spans on Twitter", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.emnlp-main.560", "title": "Multitask Instruction-based Prompting for Fallacy Recognition", "year": "2022", "venue_acronym": "EMNLP"}
+{"full_id": "2022.findings-naacl.72", "title": "MM-Claims: A Dataset for Multimodal Claim Detection in Social Media", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.findings-emnlp.382", "title": "Challenges and Opportunities in Information Manipulation Detection: An Examination of Wartime Russian Media", "year": "2022", "venue_acronym": "Findings"}
+{"full_id": "2022.icon-wlli.3", "title": "BERT-based Language Identification in Code-Mix Kannada-English Text at the CoLI-Kanglish Shared Task@ICON 2022", "year": "2022", "venue_acronym": "ICON"}
+{"full_id": "2022.lrec-1.26", "title": "CoVERT: A Corpus of Fact-checked Biomedical COVID-19 Tweets", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.159", "title": "Multimodal Pipeline for Collection of Misinformation Data from Telegram", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.200", "title": "The Engage Corpus: A Social Media Dataset for Text-Based Recommender Systems", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.289", "title": "Applying Automatic Text Summarization for Fake News Detection", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.344", "title": "ArCovidVac: Analyzing Arabic Tweets About COVID-19 Vaccination", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.345", "title": "FACTOID: A New Dataset for Identifying Misinformation Spreaders and Political Bias", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.439", "title": "Telling a Lie: Analyzing the Language of Information and Misinformation during Global Health Events", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.635", "title": "Rhetorical Structure Approach for Online Deception Detection: A Survey", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.753", "title": "VaccineLies: A Natural Language Resource for Learning to Recognize Misinformation about the COVID-19 and HPV Vaccines", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.lrec-1.801", "title": "PoliBERTweet: A Pre-trained Language Model for Analyzing Political Content on Twitter", "year": "2022", "venue_acronym": "LREC"}
+{"full_id": "2022.naacl-main.110", "title": "Twitter-COMMs: Detecting Climate, COVID, and Military Multimodal Misinformation", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2022.naacl-main.251", "title": "TWEETSPIN: Fine-grained Propaganda Detection in Social Media Using Multi-View Representations", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2022.naacl-main.364", "title": "DUCK: Rumour Detection on Social Media by Modelling User and Comment Propagation Networks", "year": "2022", "venue_acronym": "NAACL"}
+{"full_id": "2022.nlp4pi-1.10", "title": "Misinformation Detection in the Wild: News Source Classification as a Proxy for Non-article Texts", "year": "2022", "venue_acronym": "NLP4PI"}
+{"full_id": "2022.nlp4pi-1.20", "title": "Hate-CLIPper: Multimodal Hateful Meme Classification based on Cross-modal Interaction of CLIP Features", "year": "2022", "venue_acronym": "NLP4PI"}
+{"full_id": "2022.osact-1.2", "title": "Detecting Users Prone to Spread Fake News on Arabic Twitter", "year": "2022", "venue_acronym": "OSACT"}
+{"full_id": "2022.paclic-1.59", "title": "A Graph-Based Approach Leveraging Posts and Reactions for Detecting Rumors on Online Social Media", "year": "2022", "venue_acronym": "PACLIC"}
+{"full_id": "2022.politicalnlp-1.12", "title": "Creation of Polish Online News Corpus for Political Polarization Studies", "year": "2022", "venue_acronym": "PoliticalNLP"}
+{"full_id": "2022.semeval-1.75", "title": "Transformers at SemEval-2022 Task 5: A Feature Extraction based Approach for Misogynous Meme Detection", "year": "2022", "venue_acronym": "SemEval"}
+{"full_id": "2022.socialnlp-1.3", "title": "Detecting Rumor Veracity with Only Textual Information by Double-Channel Structure", "year": "2022", "venue_acronym": "SocialNLP"}
+{"full_id": "2022.textgraphs-1.10", "title": "Temporal Graph Analysis of Misinformation Spreaders in Social Media", "year": "2022", "venue_acronym": "TextGraphs"}
+{"full_id": "2022.wanlp-1.11", "title": "Overview of the WANLP 2022 Shared Task on Propaganda Detection in Arabic", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.56", "title": "AraProp at WANLP 2022 Shared Task: Leveraging Pre-Trained Language Models for Arabic Propaganda Detection", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.57", "title": "TUB at WANLP22 Shared Task: Using Semantic Similarity for Propaganda Detection in Arabic", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.59", "title": "iCompass at WANLP 2022 Shared Task: ARBERT and MARBERT for Multilabel Propaganda Classification of Arabic Tweets", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.61", "title": "AraBERT Model for Propaganda Detection", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.62", "title": "AraBEM at WANLP 2022 Shared Task: Propaganda Detection in Arabic Tweets", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.63", "title": "IITD at WANLP 2022 Shared Task: Multilingual Multi-Granularity Network for Propaganda Detection", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wanlp-1.65", "title": "CNLP-NITS-PP at WANLP 2022 Shared Task: Propaganda Detection in Arabic using Data Augmentation and AraBERT Pre-trained Model", "year": "2022", "venue_acronym": "WANLP"}
+{"full_id": "2022.wnut-1.24", "title": "True or False? Detecting False Information on Social Media Using Graph Neural Networks", "year": "2022", "venue_acronym": "WNUT"}
+{"full_id": "2023.acl-long.37", "title": "Causal Intervention and Counterfactual Reasoning for Multi-modal Fake News Detection", "year": "2023", "venue_acronym": "ACL"}
+{"full_id": "2023.acl-long.286", "title": "MetaAdapt: Domain Adaptive Few-Shot Misinformation Detection via Meta Learning", "year": "2023", "venue_acronym": "ACL"}
+{"full_id": "2023.acl-long.575", "title": "BIC: Twitter Bot Detection with Text-Graph Interaction and Semantic Consistency", "year": "2023", "venue_acronym": "ACL"}
+{"full_id": "2023.acl-long.881", "title": "Human-in-the-loop Evaluation for Early Misinformation Detection: A Case Study of COVID-19 Treatments", "year": "2023", "venue_acronym": "ACL"}
+{"full_id": "2023.arabicnlp-1.44", "title": "ArAIEval Shared Task: Persuasion Techniques and Disinformation Detection in Arabic Text", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.45", "title": "DetectiveRedasers at ArAIEval Shared Task: Leveraging Transformer Ensembles for Arabic Deception Detection", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.46", "title": "HTE at ArAIEval Shared Task: Integrating Content Type Information in Binary Persuasive Technique Detection", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.48", "title": "Mavericks at ArAIEval Shared Task: Towards a Safer Digital Space - Transformer Ensemble Models Tackling Deception and Persuasion", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.50", "title": "PTUK-HULAT at ArAIEval Shared Task Fine-tuned Distilbert to Predict Disinformative Tweets", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.51", "title": "AraDetector at ArAIEval Shared Task: An Ensemble of Arabic-specific pre-trained BERT and GPT-4 for Arabic Disinformation Detection", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.52", "title": "rematchka at ArAIEval Shared Task: Prefix-Tuning & Prompt-tuning for Improved Detection of Propaganda and Disinformation in Arabic Social Media Content", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.53", "title": "Itri Amigos at ArAIEval Shared Task: Transformer vs. Compression-Based Models for Persuasion Techniques and Disinformation Detection", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.58", "title": "Nexus at ArAIEval Shared Task: Fine-Tuning Arabic Language Models for Propaganda and Disinformation Detection", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.59", "title": "Frank at ArAIEval Shared Task: Arabic Persuasion and Disinformation: The Power of Pretrained Models", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.arabicnlp-1.60", "title": "Raphael at ArAIEval Shared Task: Understanding Persuasive Language and Tone, an LLM Approach", "year": "2023", "venue_acronym": "ArabicNLP"}
+{"full_id": "2023.c3nlp-1.3", "title": "A Cross-Lingual Study of Homotransphobia on Twitter", "year": "2023", "venue_acronym": "C3NLP"}
+{"full_id": "2023.case-1.12", "title": "Lexical Squad@Multimodal Hate Speech Event Detection 2023: Multimodal Hate Speech Detection using Fused Ensemble Approach", "year": "2023", "venue_acronym": "CASE"}
+{"full_id": "2023.contents-1.7", "title": "BanMANI: A Dataset to Identify Manipulated Social Media News in Bangla", "year": "2023", "venue_acronym": "ConTeNTS"}
+{"full_id": "2023.dravidianlangtech-1.8", "title": "Overview of the shared task on Fake News Detection from Social Media Text", "year": "2023", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2023.dravidianlangtech-1.28", "title": "ML&AI_IIITRanchi@DravidianLangTech:Leveraging Transfer Learning for the discernment of Fake News within the Linguistic Domain of Dravidian Language", "year": "2023", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2023.dravidianlangtech-1.42", "title": "MUCS@DravidianLangTech2023: Malayalam Fake News Detection Using Machine Learning Approach", "year": "2023", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2023.eacl-demo.9", "title": "PANACEA: An Automated Misinformation Detection System on COVID-19", "year": "2023", "venue_acronym": "EACL"}
+{"full_id": "2023.emnlp-main.94", "title": "WSDMS: Debunk Fake News via Weakly Supervised Detection of Misinforming Sentences with Contextualized Social Wisdom", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-main.237", "title": "COVID-19 Vaccine Misinformation in Middle Income Countries", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-main.347", "title": "Rumor Detection on Social Media with Crowd Intelligence and ChatGPT-Assisted Networks", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-main.703", "title": "Countering Misinformation via Emotional Response Generation", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-main.707", "title": "Beyond Detection: A Defend-and-Summarize Strategy for Robust and Interpretable Rumor Analysis on Social Media", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-main.945", "title": "FACTIFY3M: A benchmark for multimodal fact verification with explainability through 5W Question-Answering", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.emnlp-main.1044", "title": "Detecting Propaganda Techniques in Code-Switched Social Media Text", "year": "2023", "venue_acronym": "EMNLP"}
+{"full_id": "2023.findings-eacl.7", "title": "Entity-Aware Dual Co-Attention Network for Fake News Detection", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-eacl.35", "title": "Paper Bullets: Modeling Propaganda with the Help of Metaphor", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-eacl.51", "title": "A Multilingual Dataset of Racial Stereotypes in Social Media Conversational Threads", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-eacl.55", "title": "It\u2019s about Time: Rethinking Evaluation on Rumor Detection Benchmarks using Chronological Splits", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-acl.620", "title": "Interpretable Multimodal Misinformation Detection with Logic Reasoning", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.92", "title": "Is Explanation the Cure? Misinformation Mitigation in the Short Term and Long Term", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.263", "title": "KAPALM: Knowledge grAPh enhAnced Language Models for Fake News Detection", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.267", "title": "Definitions Matter: Guiding GPT for Multi-label Classification", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.282", "title": "Narrative Style and the Spread of Health Misinformation on Twitter", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.295", "title": "Toxicity, Morality, and Speech Act Guided Stance Detection", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.577", "title": "The Intended Uses of Automated Fact-Checking Artefacts: Why, How and Who", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.656", "title": "Identifying Conspiracy Theories News based on Event Relation Graph", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.827", "title": "DetectLLM: Leveraging Log Rank Information for Zero-Shot Detection of Machine-Generated Text", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.900", "title": "Leveraging Contrastive Learning and Knowledge Distillation for Incomplete Modality Rumor Detection", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.findings-emnlp.954", "title": "BotPercent: Estimating Bot Populations in Twitter Communities", "year": "2023", "venue_acronym": "Findings"}
+{"full_id": "2023.latechclfl-1.17", "title": "Wartime Media Monitor (WarMM-2022): A Study of Information Manipulation on Russian Social Media during the Russia-Ukraine War", "year": "2023", "venue_acronym": "LaTeCH-CLfL"}
+{"full_id": "2023.ranlp-1.48", "title": "Data Augmentation for Fake News Detection by Combining Seq2seq and NLI", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2023.ranlp-1.61", "title": "Categorising Fine-to-Coarse Grained Misinformation: An Empirical Study of the COVID-19 Infodemic", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2023.ranlp-1.104", "title": "Publish or Hold? Automatic Comment Moderation in Luxembourgish News Articles", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2023.ranlp-1.115", "title": "Exploring Deceptive Domain Transfer Strategies: Mitigating the Differences among Deceptive Domains", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2023.ranlp-1.123", "title": "Propaganda Detection in Russian Telegram Posts in the Scope of the Russian Invasion of Ukraine", "year": "2023", "venue_acronym": "RANLP"}
+{"full_id": "2023.semeval-1.172", "title": "QCRI at SemEval-2023 Task 3: News Genre, Framing and Persuasion Techniques Detection Using Multilingual Models", "year": "2023", "venue_acronym": "SemEval"}
+{"full_id": "2023.semeval-1.296", "title": "MasonNLP+ at SemEval-2023 Task 8: Extracting Medical Questions, Experiences and Claims from Social Media using Knowledge-Augmented Pre-trained Language Models", "year": "2023", "venue_acronym": "SemEval"}
+{"full_id": "2023.socialnlp-1.4", "title": "An Emotion-Enriched and Psycholinguistics Features-Based Approach for Rumor Detection on Online Social Media", "year": "2023", "venue_acronym": "SocialNLP"}
+{"full_id": "2023.wassa-1.1", "title": "PESTO: A Post-User Fusion Network for Rumour Detection on Social Media", "year": "2023", "venue_acronym": "WASSA"}
+{"full_id": "2023.wassa-1.5", "title": "UNIDECOR: A Unified Deception Corpus for Cross-Corpus Deception Detection", "year": "2023", "venue_acronym": "WASSA"}
+{"full_id": "2023.wassa-1.6", "title": "Discourse Mode Categorization of Bengali Social Media Health Text", "year": "2023", "venue_acronym": "WASSA"}
+{"full_id": "2024.acl-long.240", "title": "Missci: Reconstructing Fallacies in Misrepresented Science", "year": "2024", "venue_acronym": "ACL"}
+{"full_id": "2024.arabicnlp-1.3", "title": "AuRED: Enabling Arabic Rumor Verification using Evidence from Authorities over Twitter", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.45", "title": "MemeMind at ArAIEval Shared Task: Generative Augmentation and Feature Fusion for Multimodal Propaganda Detection in Arabic Memes through Advanced Language and Vision Models", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.48", "title": "MODOS at ArAIEval Shared Task: Multimodal Propagandistic Memes Classification Using Weighted SAM, CLIP and ArabianGPT", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.49", "title": "Nullpointer at ArAIEval Shared Task: Arabic Propagandist Technique Detection with Token-to-Word Mapping in Sequence Tagging", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.50", "title": "MemeMind at ArAIEval Shared Task: Spotting Persuasive Spans in Arabic Text with Persuasion Techniques Identification", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.52", "title": "CUET_sstm at ArAIEval Shared Task: Unimodal (Text) Propagandistic Technique Detection Using Transformer-Based Model", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.55", "title": "SussexAI at ArAIEval Shared Task: Mitigating Class Imbalance in Arabic Propaganda Detection", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.57", "title": "Narrative Navigators at FIGNEWS 2024 Shared Task: New Frontiers in Bias and Propaganda Annotation Techniques", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.58", "title": "DRAGON at FIGNEWS 2024 Shared Task: a Dedicated RAG for October 7th conflict News", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.66", "title": "The CyberEquity Lab at FIGNEWS 2024 Shared Task: Annotating a Corpus of Facebook Posts to Label Bias and Propaganda in Gaza-Israel War Coverage in Five Languages", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.arabicnlp-1.69", "title": "Sina at FigNews 2024: Multilingual Datasets Annotated with Bias and Propaganda.", "year": "2024", "venue_acronym": "ArabicNLP"}
+{"full_id": "2024.clicit-1.108", "title": "Implicit Stereotypes: A Corpus-Based Study for Italian", "year": "2024", "venue_acronym": "CLiC-it"}
+{"full_id": "2024.clicit-1.115", "title": "Life and Death of Fakes: On Data Persistence for Manipulative Social Media Content", "year": "2024", "venue_acronym": "CLiC-it"}
+{"full_id": "2024.climatenlp-1.18", "title": "Granular Analysis of Social Media Users\u2019 Truthfulness Stances Toward Climate Change Factual Claims", "year": "2024", "venue_acronym": "ClimateNLP"}
+{"full_id": "2024.cpss-1.4", "title": "A Few Hypocrites: Few-Shot Learning and Subtype Definitions for Detecting Hypocrisy Accusations in Online Climate Change Debates", "year": "2024", "venue_acronym": "cpss"}
+{"full_id": "2024.determit-1.2", "title": "Complexity-Aware Scientific Literature Search: Searching for Relevant and Accessible Scientific Text", "year": "2024", "venue_acronym": "DeTermIt"}
+{"full_id": "2024.dravidianlangtech-1.4", "title": "Social Media Fake News Classification Using Machine Learning Algorithm", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.11", "title": "Overview of the Second Shared Task on Fake News Detection in Dravidian Languages: DravidianLangTech@EACL 2024", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.18", "title": "Tayyab@DravidianLangTech 2024:Detecting Fake News in Malayalam LSTM Approach and Challenges", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.20", "title": "Beyond Tech@DravidianLangTech2024 : Fake News Detection in Dravidian Languages Using Machine Learning", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.27", "title": "WordWizards@DravidianLangTech 2024:Fake News Detection in Dravidian Languages using Cross-lingual Sentence Embeddings", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.30", "title": "Punny_Punctuators@DravidianLangTech-EACL2024: Transformer-based Approach for Detection and Classification of Fake News in Malayalam Social Media Text", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.31", "title": "CUET_NLP_GoodFellows@DravidianLangTech EACL2024: A Transformer-Based Approach for Detecting Fake News in Dravidian Languages", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.33", "title": "TechWhiz@DravidianLangTech 2024: Fake News Detection Using Deep Learning Models", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.dravidianlangtech-1.37", "title": "CUET_DUO@DravidianLangTech EACL2024: Fake News Classification Using Malayalam-BERT", "year": "2024", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2024.eacl-long.92", "title": "Style-News: Incorporating Stylized News Generation and Adversarial Verification for Neural Fake News Detection", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.eacl-long.156", "title": "Leveraging fine-tuned Large Language Models with LoRA for Effective Claim, Claimer, and Claim Object Detection", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.eacl-srw.16", "title": "A Thesis Proposal ClaimInspector Framework: A Hybrid Approach to Data Annotation using Fact-Checked Claims and LLMs", "year": "2024", "venue_acronym": "EACL"}
+{"full_id": "2024.eamt-2.2", "title": "Transitude: Machine Translation on Social Media: MT as a potential tool for opinion (mis)formation", "year": "2024", "venue_acronym": "EAMT"}
+{"full_id": "2024.emnlp-main.255", "title": "F2RL: Factuality and Faithfulness Reinforcement Learning Framework for Claim-Guided Evidence-Supported Counterspeech Generation", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.emnlp-main.256", "title": "Deciphering Rumors: A Multi-Task Learning Approach with Intent-aware Hierarchical Contrastive Learning", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.emnlp-main.327", "title": "The Computational Anatomy of Humility: Modeling Intellectual Humility in Online Public Discourse", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.emnlp-main.487", "title": "MisinfoEval: Generative AI in the Era of \u201cAlternative Facts\u201d", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.emnlp-main.590", "title": "LLMs Are Prone to Fallacies in Causal Inference", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.emnlp-main.720", "title": "SPEED++: A Multilingual Event Extraction Framework for Epidemic Prediction and Preparedness", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.emnlp-main.846", "title": "Decoding Susceptibility: Modeling Misbelief to Misinformation Through a Computational Approach", "year": "2024", "venue_acronym": "EMNLP"}
+{"full_id": "2024.fever-1.3", "title": "Retrieving Semantics for Fact-Checking: A Comparative Approach using CQ (Claim to Question) & AQ (Answer to Question)", "year": "2024", "venue_acronym": "FEVER"}
+{"full_id": "2024.fever-1.10", "title": "Evidence-backed Fact Checking using RAG and Few-Shot In-Context Learning with LLMs", "year": "2024", "venue_acronym": "FEVER"}
+{"full_id": "2024.fever-1.13", "title": "Exploring Retrieval Augmented Generation For Real-world Claim Verification", "year": "2024", "venue_acronym": "FEVER"}
+{"full_id": "2024.fever-1.26", "title": "AMREx: AMR for Explainable Fact Verification", "year": "2024", "venue_acronym": "FEVER"}
+{"full_id": "2024.findings-naacl.30", "title": "A (More) Realistic Evaluation Setup for Generalisation of Community Models on Malicious Content Detection", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.findings-acl.370", "title": "MM-SOC: Benchmarking Multimodal Large Language Models in Social Media Platforms", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.findings-acl.750", "title": "Paying Attention to Deflections: Mining Pragmatic Nuances for Whataboutism Detection in Online Discourse", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.findings-emnlp.764", "title": "How to Train Your Fact Verifier: Knowledge Transfer with Multimodal Open Models", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.findings-emnlp.795", "title": "ClaimVer: Explainable Claim-Level Verification and Evidence Attribution of Text Through Knowledge Graphs", "year": "2024", "venue_acronym": "Findings"}
+{"full_id": "2024.icon-1.45", "title": "TRO(F)LL or ROFL ? : Exploring Troll Detection in Tamil Memes", "year": "2024", "venue_acronym": "ICON"}
+{"full_id": "2024.icon-fauxhate.4", "title": "Challenges and Insights in Identifying Hate Speech and Fake News on Social Media", "year": "2024", "venue_acronym": "ICON"}
+{"full_id": "2024.icon-fauxhate.9", "title": "Faux-Hate Multitask Framework for Misinformation and Hate Speech Detection in Code-Mixed Languages", "year": "2024", "venue_acronym": "ICON"}
+{"full_id": "2024.isa-1.6", "title": "What to Annotate: Retrieving Lexical Markers of Conspiracy Discourse from an Italian-English Corpus of Telegram Data", "year": "2024", "venue_acronym": "ISA"}
+{"full_id": "2024.lrec-main.92", "title": "A Natural Approach for Synthetic Short-Form Text Analysis", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.244", "title": "Can GPT-4 Identify Propaganda? Annotation and Detection of Propaganda Spans in News Articles", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.267", "title": "Challenges in Pre-Training Graph Neural Networks for Context-Based Fake News Detection: An Evaluation of Current Strategies and Resource Limitations", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.294", "title": "CLFFRD: Curriculum Learning and Fine-grained Fusion for Multimodal Rumor Detection", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.368", "title": "Cross-Lingual Learning vs. Low-Resource Fine-Tuning: A Case Study with Fact-Checking in Turkish", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.409", "title": "DeFaktS: A German Dataset for Fine-Grained Disinformation Detection through Social Media Framing", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.741", "title": "Human vs. Machine Perceptions on Immigration Stereotypes", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.804", "title": "Interpretable Short Video Rumor Detection Based on Modality Tampering", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.986", "title": "MiDe22: An Annotated Multi-Event Tweet Dataset for Misinformation Detection", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.lrec-main.1463", "title": "Triple-R: Automatic Reasoning for Fact Verification Using Language Models", "year": "2024", "venue_acronym": "LREC-COLING"}
+{"full_id": "2024.nlp4dh-1.1", "title": "Text Length and the Function of Intentionality: A Case Study of Contrastive Subreddits", "year": "2024", "venue_acronym": "NLP4DH"}
+{"full_id": "2024.nlp4pi-1.2", "title": "Multilingual Fact-Checking using LLMs", "year": "2024", "venue_acronym": "NLP4PI"}
+{"full_id": "2024.nlpcss-1.4", "title": "Discovering Implicit Meanings of Cultural Motifs from Text", "year": "2024", "venue_acronym": "NLP+CSS"}
+{"full_id": "2024.semeval-1.9", "title": "McRock at SemEval-2024 Task 4: Mistral 7B for Multilingual Detection of Persuasion Techniques In Memes", "year": "2024", "venue_acronym": "SemEval"}
+{"full_id": "2024.semeval-1.37", "title": "BadRock at SemEval-2024 Task 8: DistilBERT to Detect Multigenerator, Multidomain and Multilingual Black-Box Machine-Generated Text", "year": "2024", "venue_acronym": "SemEval"}
+{"full_id": "2024.semeval-1.94", "title": "DUTIR938 at SemEval-2024 Task 4: Semi-Supervised Learning and Model Ensemble for Persuasion Techniques Detection in Memes", "year": "2024", "venue_acronym": "SemEval"}
+{"full_id": "2024.semeval-1.247", "title": "HierarchyEverywhere at SemEval-2024 Task 4: Detection of Persuasion Techniques in Memes Using Hierarchical Text Classifier", "year": "2024", "venue_acronym": "SemEval"}
+{"full_id": "2024.semeval-1.252", "title": "IITK at SemEval-2024 Task 4: Hierarchical Embeddings for Detection of Persuasion Techniques in Memes", "year": "2024", "venue_acronym": "SemEval"}
+{"full_id": "2024.semeval-1.267", "title": "CVcoders on Semeval-2024 Task 4", "year": "2024", "venue_acronym": "SemEval"}
+{"full_id": "2024.trac-1.16", "title": "Empowering Users and Mitigating Harm: Leveraging Nudging Principles to Enhance Social Media Safety", "year": "2024", "venue_acronym": "TRAC"}
+{"full_id": "2024.wassa-1.7", "title": "A Multi-Faceted NLP Analysis of Misinformation Spreaders in Twitter", "year": "2024", "venue_acronym": "WASSA"}
+{"full_id": "2024.wassa-1.13", "title": "Guiding Sentiment Analysis with Hierarchical Text Clustering: Analyzing the German X/Twitter Discourse on Face Masks in the 2020 COVID-19 Pandemic", "year": "2024", "venue_acronym": "WASSA"}
+{"full_id": "2024.wassa-1.20", "title": "POLygraph: Polish Fake News Dataset", "year": "2024", "venue_acronym": "WASSA"}
+{"full_id": "2024.wnut-1.4", "title": "Stanceosaurus 2.0 - Classifying Stance Towards Russian and Spanish Misinformation", "year": "2024", "venue_acronym": "WNUT"}
+{"full_id": "2024.woah-1.2", "title": "Detection of Conspiracy Theories Beyond Keyword Bias in German-Language Telegram Using Large Language Models", "year": "2024", "venue_acronym": "WOAH"}
+{"full_id": "2024.yrrsds-1.24", "title": "Innovative Approaches to Enhancing Safety and Ethical AI Interactions in Digital Environments", "year": "2024", "venue_acronym": "YRRSDS"}
+{"full_id": "2025.abjadnlp-1.2", "title": "MultiProp Framework: Ensemble Models for Enhanced Cross-Lingual Propaganda Detection in Social Media and News using Data Augmentation, Text Segmentation, and Meta-Learning", "year": "2025", "venue_acronym": "AbjadNLP"}
+{"full_id": "2025.acl-long.119", "title": "Digital Gatekeepers: Google\u2019s Role in Curating Hashtags and Subreddits", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-long.170", "title": "Detection of Human and Machine-Authored Fake News in Urdu", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-long.617", "title": "SINCon: Mitigate LLM-Generated Malicious Message Injection Attack for Rumor Detection", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-long.1120", "title": "Are We in the AI-Generated Text World Already? Quantifying and Monitoring AIGT on Social Media", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-long.1215", "title": "PCoT: Persuasion-Augmented Chain of Thought for Detecting Fake News and Social Media Disinformation", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-long.1378", "title": "LLM-based Rumor Detection via Influence Guided Sample Selection and Game-based Perspective Analysis", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-short.42", "title": "Can Community Notes Replace Professional Fact-Checkers?", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.acl-srw.7", "title": "SEPSIS: I Can Catch Your Lies \u2013 A New Paradigm for Deception Detection", "year": "2025", "venue_acronym": "ACL"}
+{"full_id": "2025.bsnlp-1.21", "title": "Hierarchical Classification of Propaganda Techniques in Slavic Texts in Hyperbolic Space", "year": "2025", "venue_acronym": "BSNLP"}
+{"full_id": "2025.ccl-1.71", "title": "Cross-modal Ambiguity Learning with Heterogeneous Interaction Analysis For Rumor Detection", "year": "2025", "venue_acronym": "CCL"}
+{"full_id": "2025.coling-main.230", "title": "You Only Query Twice: Multimodal Rumor Detection via Evidential Evaluation from Dual Perspectives", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.261", "title": "Rumor Detection on Social Media with Temporal Propagation Structure Optimization", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.270", "title": "Claim veracity assessment for explainable fake news detection", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.282", "title": "Efficient Cross-modal Prompt Learning with Semantic Enhancement for Domain-robust Fake News Detection", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.476", "title": "Towards Real-World Rumor Detection: Anomaly Detection Framework with Graph Supervised Contrastive Learning", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.478", "title": "Enhancing Rumor Detection Methods with Propagation Structure Infused Language Model", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.484", "title": "Cross-lingual Social Misinformation Detector based on Hierarchical Mixture-of-Experts Adapter", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.526", "title": "Unveiling Fake News with Adversarial Arguments Generated by Multimodal Large Language Models", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.572", "title": "Semantic Reshuffling with LLM and Heterogeneous Graph Auto-Encoder for Enhanced Rumor Detection", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.coling-main.709", "title": "Investigating Bias in LLM-Based Bias Detection: Disparities between LLMs and Human Perception", "year": "2025", "venue_acronym": "COLING"}
+{"full_id": "2025.dravidianlangtech-1.3", "title": "Akatsuki-CIOL@DravidianLangTech 2025: Ensemble-Based Approach Using Pre-Trained Models for Fake News Detection in Dravidian Languages", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.29", "title": "KEC_AI_DATA_DRIFTERS@DravidianLangTech 2025: Fake News Detection in Dravidian Languages", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.61", "title": "NLP_goats@DravidianLangTech 2025: Detecting Fake News in Dravidian Languages: A Text Classification Approach", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.64", "title": "Cognitext@DravidianLangTech2025: Fake News Classification in Malayalam Using mBERT and LSTM", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.78", "title": "CUET-NLP_Big_O@DravidianLangTech 2025: A BERT-based Approach to Detect Fake News from Malayalam Social Media Texts", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.82", "title": "One_by_zero@DravidianLangTech 2025: Fake News Detection in Malayalam Language Leveraging Transformer-based Approach", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.107", "title": "KCRL@DravidianLangTech 2025: Multi-Pooling Feature Fusion with XLM-RoBERTa for Malayalam Fake News Detection and Classification", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.111", "title": "CIC-NLP@DravidianLangTech 2025: Fake News Detection in Dravidian Languages", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.dravidianlangtech-1.128", "title": "Overview of the Shared Task on Fake News Detection in Dravidian Languages-DravidianLangTech@NAACL 2025", "year": "2025", "venue_acronym": "DravidianLangTech"}
+{"full_id": "2025.emnlp-main.325", "title": "MOSAIC: Modeling Social AI for Content Dissemination and Regulation in Multi-Agent Simulations", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.407", "title": "Cross-domain Rumor Detection via Test-Time Adaptation and Large Language Models", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.729", "title": "SWAM: Adaptive Sliding Window and Memory-Augmented Attention Model for Rumor Detection", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.948", "title": "Mapping Toxic Comments Across Demographics: A Dataset from German Public Broadcasting", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.968", "title": "GCML: Gradient Coherence Guided Meta-Learning for Cross-Domain Emerging Topic Rumor Detection", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1013", "title": "DRES: Fake news detection by dynamic representation and ensemble selection", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1330", "title": "The Stepwise Deception: Simulating the Evolution from True News to Fake News with LLM Agents", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1405", "title": "Attacking Misinformation Detection Using Adversarial Examples Generated by Language Models", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1468", "title": "How to Protect Yourself from 5G Radiation? Investigating LLM Responses to Implicit Misinformation", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1539", "title": "MemeIntel: Explainable Detection of Propagandistic and Hateful Memes", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-main.1604", "title": "How Do Social Bots Participate in Misinformation Spread? A Comprehensive Dataset and Analysis", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.emnlp-demos.46", "title": "o-MEGA: Optimized Methods for Explanation Generation and Analysis", "year": "2025", "venue_acronym": "EMNLP"}
+{"full_id": "2025.fever-1.4", "title": "Multilingual Symptom Detection on Social Media: Enhancing Health-related Fact-checking with LLMs", "year": "2025", "venue_acronym": "FEVER"}
+{"full_id": "2025.fever-1.5", "title": "When Scale Meets Diversity: Evaluating Language Models on Fine-Grained Multilingual Claim Verification", "year": "2025", "venue_acronym": "FEVER"}
+{"full_id": "2025.findings-naacl.185", "title": "Efficient Annotator Reliability Assessment and Sample Weighting for Knowledge-Based Misinformation Detection on Social Media", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-naacl.187", "title": "RATSD: Retrieval Augmented Truthfulness Stance Detection from Social Media Posts Toward Factual Claims", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.45", "title": "Profiling News Media for Factuality and Bias Using LLMs and the Fact-Checking Methodology of Human Experts", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.226", "title": "Fraud-R1 : A Multi-Round Benchmark for Assessing the Robustness of LLM Against Augmented Fraud and Phishing Inducements", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.296", "title": "FGDGNN: Fine-Grained Dynamic Graph Neural Network for Rumor Detection on Social Media", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.963", "title": "MVTamperBench: Evaluating Robustness of Vision-Language Models", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.1106", "title": "MONTROSE: LLM-driven Monte Carlo Tree Search Self-Refinement for Cross-Domain Rumor Detection", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-acl.1153", "title": "Revealing Hidden Mechanisms of Cross-Country Content Moderation with Natural Language Processing", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.8", "title": "Exploring Hyperbolic Hierarchical Structure for Multimodal Rumor Detection", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.359", "title": "Investigating Controversy Framing across Topics on Social Media", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.584", "title": "Equal Truth: Rumor Detection with Invariant Group Fairness", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.714", "title": "Structure-aware Propagation Generation with Large Language Models for Fake News Detection", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.findings-emnlp.1316", "title": "From Generation to Detection: A Multimodal Multi-Task Dataset for Benchmarking Health Misinformation", "year": "2025", "venue_acronym": "Findings"}
+{"full_id": "2025.genaidetect-1.20", "title": "CNLP-NITS-PP at GenAI Detection Task 1: AI-Generated Text Using Transformer-Based Approaches", "year": "2025", "venue_acronym": "GenAIDetect"}
+{"full_id": "2025.genaik-1.12", "title": "KGFakeNet: A Knowledge Graph-Enhanced Model for Fake News Detection", "year": "2025", "venue_acronym": "GenAIK"}
+{"full_id": "2025.ijcnlp-long.100", "title": "The Visual Counter Turing Test (VCT\u00b2): A Benchmark for Evaluating AI-Generated Image Detection and the Visual AI Index (V_AI)", "year": "2025", "venue_acronym": "IJCNLP-AACL"}
+{"full_id": "2025.latechclfl-1.11", "title": "Interpretable Models for Detecting Linguistic Variation in Russian Media: Towards Unveiling Propagandistic Strategies during the Russo-Ukrainian War", "year": "2025", "venue_acronym": "LaTeCH-CLfL"}
+{"full_id": "2025.ltedi-1.6", "title": "Dll5143A@LT-EDI 2025: Bias-Aware Detection of Racial Hoaxes in Code-Mixed Social Media Data (BaCoHoax)", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.7", "title": "Hope_for_best@LT-EDI 2025: Detecting Racial Hoaxes in Code-Mixed Hindi-English Social Media Data using a multi-phase fine-tuning strategy", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.10", "title": "CUET\u2019s_White_Walkers@LT-EDI 2025: Racial Hoax Detection in Code-Mixed on Social Media Data", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.19", "title": "KEC-Elite-Analysts@LT-EDI 2025: Leveraging Deep Learning for Racial Hoax Detection in Code-Mixed Hindi-English Tweets", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.21", "title": "Hinterwelt@LT-EDI 2025: A Transformer-Based Approach for Identifying Racial Hoaxes in Code-Mixed Hindi-English Social Media Narratives", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.25", "title": "EM-26@LT-EDI 2025: Detecting Racial Hoaxes in Code-Mixed Social Media Data", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.27", "title": "Hoax Terminators@LT-EDI 2025: CharBERT\u2019s dominance over LLM Models in the Detection of Racial Hoaxes in Code-Mixed Hindi-English Social Media Data", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.ltedi-1.35", "title": "Overview of the Shared Task on Detecting Racial Hoaxes in Code-Mixed Hindi-English Social Media Data", "year": "2025", "venue_acronym": "LTEDI"}
+{"full_id": "2025.mmloso-1.4", "title": "MemeGuard: Transformer-Based Fusion for Multimodal Propaganda Detection in Low-Resource Social Media Memes", "year": "2025", "venue_acronym": "MMLoSo"}
+{"full_id": "2025.naacl-long.34", "title": "Fine-grained Fallacy Detection with Human Label Variation", "year": "2025", "venue_acronym": "NAACL"}
+{"full_id": "2025.naacl-long.128", "title": "Exploring Large Language Models for Effective Rumor Detection on Social Media", "year": "2025", "venue_acronym": "NAACL"}
+{"full_id": "2025.naacl-long.461", "title": "IMRRF: Integrating Multi-Source Retrieval and Redundancy Filtering for LLM-based Fake News Detection", "year": "2025", "venue_acronym": "NAACL"}
+{"full_id": "2025.nlp4pi-1.18", "title": "Hybrid Annotation for Propaganda Detection: Integrating LLM Pre-Annotations with Human Intelligence", "year": "2025", "venue_acronym": "NLP4PI"}
+{"full_id": "2025.quantumnlp-1.7", "title": "QCNN-MFND: A Novel Quantum CNN Framework for Multimodal Fake News Detection in Social Media", "year": "2025", "venue_acronym": "QuantumNLP"}
+{"full_id": "2025.ranlp-1.118", "title": "Enhancing Textual Understanding: Automated Claim Span Identification in English, Hindi, Bengali, and CodeMix", "year": "2025", "venue_acronym": "RANLP"}
+{"full_id": "2025.ranlp-1.131", "title": "Cross-Lingual Fact Verification: Analyzing LLM Performance Patterns across Languages", "year": "2025", "venue_acronym": "RANLP"}
+{"full_id": "2025.rocling-main.28", "title": "Multimodal Fake News Detection Combining Social Network Features with Images and Text", "year": "2025", "venue_acronym": "ROCLING"}
+{"full_id": "2025.sdp-1.5", "title": "The ClimateCheck Dataset: Mapping Social Media Claims About Climate Change to Corresponding Scholarly Articles", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.24", "title": "The ClimateCheck Shared Task: Scientific Fact-Checking of Social Media Claims about Climate Change", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.26", "title": "Comparing LLMs and BERT-based Classifiers for Resource-Sensitive Claim Verification in Social Media", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.sdp-1.28", "title": "ClimateCheck2025: Multi-Stage Retrieval Meets LLMs for Automated Scientfic Fact-Checking", "year": "2025", "venue_acronym": "sdp"}
+{"full_id": "2025.semeval-1.44", "title": "NCL-AR at SemEval-2025 Task 7: A Sieve Filtering Approach to Refute the Misinformation within Harmful Social Media Posts", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.103", "title": "UMUTeam at SemEval-2025 Task 7: Multilingual Fact-Checked Claim Retrieval with XLM-RoBERTa and Self-Alignment Pretraining Strategy", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.284", "title": "FactDebug at SemEval-2025 Task 7: Hybrid Retrieval Pipeline for Identifying Previously Fact-Checked Claims Across Multiple Languages", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.semeval-1.323", "title": "SemEval-2025 Task 7: Multilingual and Crosslingual Fact-Checked Claim Retrieval", "year": "2025", "venue_acronym": "SemEval"}
+{"full_id": "2025.unlp-1.5", "title": "Comparing Methods for Multi-Label Classification of Manipulation Techniques in Ukrainian Telegram Content", "year": "2025", "venue_acronym": "UNLP"}
+{"full_id": "2025.unlp-1.12", "title": "The UNLP 2025 Shared Task on Detecting Social Media Manipulation", "year": "2025", "venue_acronym": "UNLP"}
+{"full_id": "2025.unlp-1.13", "title": "Transforming Causal LLM into MLM Encoder for Detecting Social Media Manipulation in Telegram", "year": "2025", "venue_acronym": "UNLP"}
+{"full_id": "2025.woah-1.16", "title": "MisinfoTeleGraph: Network-driven Misinformation Detection for German Telegram Messages", "year": "2025", "venue_acronym": "WOAH"}
+{"full_id": "2026.eacl-industry.45", "title": "Tailoring Rumor Debunking to You: Diversifying Chinese Rumor-Debunking Passages with an LLM-Driven Simulated Feedback-Enhanced Framework", "year": "2026", "venue_acronym": "EACL"}
+{"full_id": "2026.eacl-industry.64", "title": "Do Clinical Question Answering Systems Really Need Specialised Medical Fine Tuning?", "year": "2026", "venue_acronym": "EACL"}
+{"full_id": "2026.fever-1.7", "title": "Take It All: Ensemble Retrieval for Multimodal Evidence Aggregation", "year": "2026", "venue_acronym": "FEVER"}
+{"full_id": "2026.findings-eacl.2", "title": "Entity-aware Cross-lingual Claim Detection for Automated Fact-checking", "year": "2026", "venue_acronym": "Findings"}
+{"full_id": "2026.latechclfl-1.5", "title": "Identity Without Action: Rethinking Collective Action Models in Disinformation Research", "year": "2026", "venue_acronym": "LaTeCH-CLfL"}
+{"full_id": "2026.loreslm-1.6", "title": "To make someone do something: mining alert-style directives in Bulgarian social media for low-resource language modelling", "year": "2026", "venue_acronym": "LoResLM"}
+{"full_id": "2026.propor-1.44", "title": "Exploring Knowledge Graphs for Automatic Fake News Detection in Portuguese", "year": "2026", "venue_acronym": "PROPOR"}
+{"full_id": "2026.wassa-1.1", "title": "Council of LLMs: Evaluating Capability of Large Language Models to Annotate Propaganda", "year": "2026", "venue_acronym": "WASSA"}
+{"full_id": "2026.wassa-1.22", "title": "Multimodal Claim Extraction for Fact-Checking", "year": "2026", "venue_acronym": "WASSA"}
+{"full_id": "C18-1287", "title": "Automatic Detection of Fake News", "year": "2018", "venue_acronym": "COLING"}
+{"full_id": "D17-1245", "title": "Argument Mining on Twitter: Arguments, Facts and Sources", "year": "2017", "venue_acronym": "EMNLP"}
+{"full_id": "D18-1385", "title": "Cross-Lingual Cross-Platform Rumor Verification Pivoting on Multimedia Content", "year": "2018", "venue_acronym": "EMNLP"}
+{"full_id": "D19-1216", "title": "Fact-Checking Meets Fauxtography: Verifying Claims About Images", "year": "2019", "venue_acronym": "EMNLP-IJCNLP"}
+{"full_id": "D19-1485", "title": "Modeling Conversation Structure and Temporal Dynamics for Jointly Predicting Rumor Stance and Veracity", "year": "2019", "venue_acronym": "EMNLP-IJCNLP"}
+{"full_id": "D19-5004", "title": "Identifying Nuances in Fake News vs. Satire: Using Semantic and Linguistic Cues", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5006", "title": "Mapping (Dis-)Information Flow about the MH17 Plane Crash", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5008", "title": "Rumor Detection on Social Media: Datasets, Methods and Opportunities", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5014", "title": "Divisive Language and Propaganda Detection using Multi-head Attention Transformers with Deep Learning BERT-based Language Models for Binary Classification", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5015", "title": "On Sentence Representations for Propaganda Detection: From Handcrafted Features to Word Embeddings", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5016", "title": "JUSTDeep at NLP4IF 2019 Task 1: Propaganda Detection using Ensemble Deep Learning Models", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5022", "title": "Sentence-Level Propaganda Detection in News Articles with Transfer Learning and BERT-BiLSTM-Capsule Model", "year": "2019", "venue_acronym": "NLP4IF"}
+{"full_id": "D19-5548", "title": "The Fallacy of Echo Chambers: Analyzing the Political Slants of User-Generated News Comments in Korean Media", "year": "2019", "venue_acronym": "WNUT"}
+{"full_id": "J18-4011", "title": "Combining Deep Learning and Argumentative Reasoning for the Analysis of Social Media Textual Content Using Small Data Sets", "year": "2018", "venue_acronym": "CL"}
+{"full_id": "N19-1141", "title": "Fake News Detection using Deep Markov Random Fields", "year": "2019", "venue_acronym": "NAACL"}
+{"full_id": "P17-1066", "title": "Detect Rumors in Microblog Posts Using Propagation Structure via Kernel Learning", "year": "2017", "venue_acronym": "ACL"}
+{"full_id": "P17-2102", "title": "Separating Facts from Fiction: Linguistic Models to Classify Suspicious and Trusted News Posts on Twitter", "year": "2017", "venue_acronym": "ACL"}
+{"full_id": "P18-1184", "title": "Rumor Detection on Twitter with Tree-structured Recursive Neural Networks", "year": "2018", "venue_acronym": "ACL"}
+{"full_id": "P19-1498", "title": "Tree LSTMs with Convolution Units to Predict Stance and Rumor Veracity in Social Media Conversations", "year": "2019", "venue_acronym": "ACL"}
+{"full_id": "P19-2028", "title": "Computational Ad Hominem Detection", "year": "2019", "venue_acronym": "ACL"}
+{"full_id": "R17-1005", "title": "Simple Open Stance Classification for Rumour Analysis", "year": "2017", "venue_acronym": "RANLP"}
+{"full_id": "R17-1102", "title": "Online Deception Detection Refueled by Real World Data Collection", "year": "2017", "venue_acronym": "RANLP"}
+{"full_id": "S17-1013", "title": "Comparing Approaches for Automatic Question Identification", "year": "2017", "venue_acronym": "*SEM"}
+{"full_id": "S17-2081", "title": "IKM at SemEval-2017 Task 8: Convolutional Neural Networks for stance detection and rumor verification", "year": "2017", "venue_acronym": "SemEval"}
+{"full_id": "S17-2083", "title": "Turing at SemEval-2017 Task 8: Sequential Approach to Rumour Stance Classification with Branch-LSTM", "year": "2017", "venue_acronym": "SemEval"}
+{"full_id": "S19-2147", "title": "SemEval-2019 Task 7: RumourEval, Determining Rumour Veracity and Support for Rumours", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2148", "title": "eventAI at SemEval-2019 Task 7: Rumor Detection on Social Media by Exploiting Content, User Credibility and Propagation Information", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2193", "title": "CLEARumor at SemEval-2019 Task 7: ConvoLving ELMo Against Rumors", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2195", "title": "GWU NLP at SemEval-2019 Task 7: Hybrid Pipeline for Rumour Veracity and Stance Classification on Social Media", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "S19-2197", "title": "UPV-28-UNITO at SemEval-2019 Task 7: Exploiting Post\u2019s Nesting and Syntax Information for Rumor Stance Classification", "year": "2019", "venue_acronym": "SemEval"}
+{"full_id": "W16-0403", "title": "Rumor Identification and Belief Investigation on Twitter", "year": "2016", "venue_acronym": "WASSA"}
+{"full_id": "W16-3907", "title": "Veracity Computing from Lexical Cues and Perceived Certainty Trends", "year": "2016", "venue_acronym": "WNUT"}
+{"full_id": "W16-5004", "title": "Contradiction Detection for Rumorous Claims", "year": "2016", "venue_acronym": "EXprom"}
+{"full_id": "W17-1308", "title": "CAT: Credibility Analysis of Arabic Content on Twitter", "year": "2017", "venue_acronym": "WANLP"}
