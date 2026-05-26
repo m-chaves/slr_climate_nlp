@@ -33,6 +33,11 @@ acl:
   # (~1 GB) and caches it in the user data directory.
   anthology_dir: null
 
+  # Check for other fields of interest at 
+  # https://acl-anthology.readthedocs.io/py-v1.1.0/api/collections.paper/
+  # https://acl-anthology.readthedocs.io/py-v1.1.0/api/collections.volume/ 
+  # and other collection.* documentation
+
   fields_lite:
     - full_id          # ACL Anthology paper ID (e.g. "2022.emnlp-main.1")
     - title
