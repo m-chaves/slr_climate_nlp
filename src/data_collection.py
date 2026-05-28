@@ -263,6 +263,10 @@ def collect_semantic_scholar_data(
 
 from acl_anthology.collections.types import VolumeType as _VolumeType
 
+# Check for other fields of interest at 
+# https://acl-anthology.readthedocs.io/py-v1.1.0/api/collections.paper/
+# https://acl-anthology.readthedocs.io/py-v1.1.0/api/collections.volume/ 
+# and other collection.* documentation
 _ACL_FIELD_EXTRACTORS = {
     "full_id":        lambda p: p.full_id,
     "title":         lambda p: p.title.as_text(),
