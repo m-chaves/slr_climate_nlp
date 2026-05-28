@@ -1,5 +1,6 @@
-requests
+requests # for API calls
 PyYAML
 python-dotenv
 matplotlib-venn
 acl-anthology
+pybliometrics # for Scopus API
