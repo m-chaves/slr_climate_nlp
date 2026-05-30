@@ -115,6 +115,57 @@ def build_query(logic_string, groups):
 # SOURCE-SPECIFIC CONVERSION
 # ─────────────────────────────────────────────
 
+# ─────────────────────────────────────────────
+# Scopus QUERY BUILDING
+# ─────────────────────────────────────────────
+
+def to_scopus(query_string):
+    """
+    Convert a source-agnostic AND/OR query string to Scopus syntax.
+    Scopus uses AND/OR natively so no operator conversion is needed.
+    Two characters require special handling:
+    - / is a reserved proximity operator (e.g. bare Twitter/X is parsed as Twitter W/X).
+    - - (hyphen) inside quoted phrases is treated as a space ("alt-tech" matches "alt tech").
+    Any token or quoted phrase containing / or - is wrapped in curly braces,
+    which forces Scopus to match the string exactly as written.
+
+    Examples:
+        Twitter/X    -> {Twitter/X}
+        alt-tech     -> {alt-tech}
+        "fake-news"  -> {fake-news}
+        "fake news"  -> "fake news"  (unchanged)
+        {Twitter/X}  -> {Twitter/X}  (already braced, unchanged)
+    """
+    def maybe_wrap(m):
+        token = m.group(0)
+        if '-' not in token and '/' not in token:
+            return token
+        if token.startswith('"') and token.endswith('"'):
+            return '{' + token[1:-1] + '}'
+        if not token.startswith('{'):
+            return '{' + token + '}'
+        return token
+
+    # Match quoted phrases, already-braced tokens, or bare tokens — in that priority order
+    return re.sub(r'"[^"]*"|{[^}]*}|[^\s()]+', maybe_wrap, query_string)
+
+def build_scopus_query(logic_string, keywords_path):
+    """
+    Full pipeline: load keywords, build generic query, convert to Scopus syntax.
+    Parameters:
+    - logic_string: a string like "climate AND nlp AND (misinformation OR polarization)"
+    - keywords_path: path to YAML file defining keyword groups
+
+    Note: wrap the result in TITLE-ABS-KEY(...) when calling the Scopus API.
+    """
+    groups = load_keywords(keywords_path)
+    generic_query = build_query(logic_string, groups)
+    return to_scopus(generic_query)
+
+# ─────────────────────────────────────────────
+# Semanctic Scholar QUERY BUILDING
+# ─────────────────────────────────────────────
+
 def to_semantic_scholar(query_string):
     """
     Convert a source-agnostic AND/OR query string to Semantic Scholar syntax.
@@ -127,10 +178,6 @@ def to_semantic_scholar(query_string):
     result = re.sub(r'\bAND\b', '+', query_string)
     result = re.sub(r'\bOR\b', '|', result)
     return result
-
-# ─────────────────────────────────────────────
-# Semanctic Scholar QUERY BUILDING
-# ─────────────────────────────────────────────
 
 def build_semantic_scholar_query(logic_string, keywords_path):
     """
