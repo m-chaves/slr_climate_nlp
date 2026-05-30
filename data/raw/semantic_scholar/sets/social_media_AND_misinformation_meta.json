@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-12T16:42:42.182292",
-  "query": "(\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/x | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | \"tweet*\" | \"post*\" | \"user comment\" | \"user comments\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda)",
+  "timestamp": "2026-05-25T22:08:36.813681",
+  "query": "(\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/X | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | tweet | tweets | \"user comment\" | \"user comments\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | propaganda)",
   "fields": [
     "paperId",
     "year",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 39860,
-  "grand_total": 39860,
+  "total_downloaded": 33471,
+  "grand_total": 33471,
   "error": null
 }

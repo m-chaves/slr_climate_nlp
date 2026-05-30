@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-05-12T13:10:37.013653",
+  "timestamp": "2026-05-30T11:32:42.870573",
   "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\")",
   "fields": [
     "paperId",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 702261,
-  "grand_total": 702270,
+  "total_downloaded": 702632,
+  "grand_total": 702641,
   "error": null
 }

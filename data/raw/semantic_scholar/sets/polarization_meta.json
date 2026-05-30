@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-12T16:34:45.150299",
-  "query": "(polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
+  "timestamp": "2026-05-30T11:01:07.574731",
+  "query": "(polarisation | polarization | \"echo chamber\" | \"hyperpartisan*\" | homophily)",
   "fields": [
     "paperId",
     "year",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 455684,
-  "grand_total": 455687,
+  "total_downloaded": 455616,
+  "grand_total": 455617,
   "error": null
 }

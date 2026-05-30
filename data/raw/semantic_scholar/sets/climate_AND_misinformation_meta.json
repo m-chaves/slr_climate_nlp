@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-12T16:38:01.346790",
-  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda)",
+  "timestamp": "2026-05-25T21:50:58.450615",
+  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | propaganda)",
   "fields": [
     "paperId",
     "year",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 1552,
-  "grand_total": 1552,
+  "total_downloaded": 1547,
+  "grand_total": 1547,
   "error": null
 }

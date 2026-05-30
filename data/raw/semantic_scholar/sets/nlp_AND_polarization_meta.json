@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-12T16:40:40.914852",
-  "query": "(\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
+  "timestamp": "2026-05-25T22:07:08.356196",
+  "query": "(\"natural language processing\" | NLP | \"machine learning\" | \"LLM*\" | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (polarisation | polarization | \"echo chamber\" | \"hyperpartisan*\" | homophily)",
   "fields": [
     "paperId",
     "year",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 8550,
-  "grand_total": 8551,
+  "total_downloaded": 8568,
+  "grand_total": 8568,
   "error": null
 }

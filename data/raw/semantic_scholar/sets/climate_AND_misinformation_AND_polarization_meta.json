@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-12T16:48:23.753140",
-  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda) + (polarisation | polarization | \"echo chamber\" | hyperpartisan | homophily)",
+  "timestamp": "2026-05-25T22:15:05.601732",
+  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | propaganda) + (polarisation | polarization | \"echo chamber\" | \"hyperpartisan*\" | homophily)",
   "fields": [
     "paperId",
     "year",
@@ -8,7 +8,7 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
   "total_downloaded": 82,
   "grand_total": 82,

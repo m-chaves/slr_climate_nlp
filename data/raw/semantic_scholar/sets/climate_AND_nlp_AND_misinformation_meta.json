@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-13T05:38:24.612978",
-  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda)",
+  "timestamp": "2026-05-25T22:14:50.649284",
+  "query": "(\"global warming\" | \"climate change\" | \"climate science\" | \"climate denial\" | \"climate crisis\" | \"climate skeptic\" | \"climate skepticism\" | \"climate skeptics\" | \"climate skepticist\" | \"climate action\" | \"climate misinformation\" | \"climate disinformation\") + (\"natural language processing\" | NLP | \"machine learning\" | \"LLM*\" | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | propaganda)",
   "fields": [
     "paperId",
     "year",
@@ -8,7 +8,7 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
   "total_downloaded": 151,
   "grand_total": 151,

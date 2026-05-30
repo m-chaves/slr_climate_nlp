@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-12T15:53:05.800400",
-  "query": "(\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | Propaganda)",
+  "timestamp": "2026-05-28T02:06:31.569513",
+  "query": "(\"misinform*\" | \"disinform*\" | \"fake news\" | \"conspiracy theory\" | \"conspiracy theories\" | debunking | \"claim verification\" | deception | \"hoax*\" | \"fallac*\" | \"rumor*\" | \"malinformat*\" | propaganda)",
   "fields": [
     "paperId",
     "year",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 166423,
-  "grand_total": 166423,
+  "total_downloaded": 166628,
+  "grand_total": 166628,
   "error": null
 }

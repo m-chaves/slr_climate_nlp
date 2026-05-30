@@ -1,82 +1,82 @@
 {
   "climate": {
-    "total_downloaded": 702261,
-    "grand_total": 702270,
+    "total_downloaded": 702632,
+    "grand_total": 702641,
     "complete": false
   },
   "nlp": {
-    "total_downloaded": 3272542,
-    "grand_total": 3272587,
+    "total_downloaded": 3282112,
+    "grand_total": 3282148,
     "complete": false
   },
   "social_media": {
-    "total_downloaded": 9893708,
-    "grand_total": 9990057,
+    "total_downloaded": 7123183,
+    "grand_total": 7124039,
     "complete": false
   },
   "misinformation": {
-    "total_downloaded": 166423,
-    "grand_total": 166423,
+    "total_downloaded": 166628,
+    "grand_total": 166628,
     "complete": true
   },
   "polarization": {
-    "total_downloaded": 455684,
-    "grand_total": 455687,
+    "total_downloaded": 455616,
+    "grand_total": 455617,
     "complete": false
   },
   "climate AND nlp": {
-    "total_downloaded": 21824,
-    "grand_total": 21824,
+    "total_downloaded": 21858,
+    "grand_total": 21858,
     "complete": true
   },
   "climate AND social_media": {
-    "total_downloaded": 42212,
-    "grand_total": 42212,
+    "total_downloaded": 24551,
+    "grand_total": 24551,
     "complete": true
   },
   "climate AND misinformation": {
-    "total_downloaded": 1552,
-    "grand_total": 1552,
+    "total_downloaded": 1547,
+    "grand_total": 1547,
     "complete": true
   },
   "climate AND polarization": {
-    "total_downloaded": 1632,
-    "grand_total": 1632,
+    "total_downloaded": 1633,
+    "grand_total": 1633,
     "complete": true
   },
   "nlp AND social_media": {
-    "total_downloaded": 426246,
-    "grand_total": 426253,
+    "total_downloaded": 361491,
+    "grand_total": 361564,
     "complete": false
   },
   "nlp AND misinformation": {
-    "total_downloaded": 16121,
-    "grand_total": 16121,
+    "total_downloaded": 16174,
+    "grand_total": 16174,
     "complete": true
   },
   "nlp AND polarization": {
-    "total_downloaded": 8550,
-    "grand_total": 8551,
-    "complete": false
+    "total_downloaded": 8568,
+    "grand_total": 8568,
+    "complete": true
   },
   "social_media AND misinformation": {
-    "total_downloaded": 39860,
-    "grand_total": 39860,
+    "total_downloaded": 33471,
+    "grand_total": 33471,
     "complete": true
   },
   "social_media AND polarization": {
-    "total_downloaded": 104831,
-    "grand_total": 104832,
+    "total_downloaded": 98179,
+    "grand_total": 98180,
     "complete": false
   },
   "misinformation AND polarization": {
-    "total_downloaded": 1981,
-    "grand_total": 1981,
+    "total_downloaded": 1986,
+    "grand_total": 1986,
     "complete": true
   },
   "climate AND nlp AND social_media": {
-    "total_downloaded": 1735,
-    "grand_total": 1735,
+    "total_downloaded": 1239,
+    "grand_total": 1239,
     "complete": true
   },
   "climate AND nlp AND misinformation": {
@@ -90,13 +90,13 @@
     "complete": true
   },
   "climate AND social_media AND misinformation": {
-    "total_downloaded": 453,
-    "grand_total": 453,
+    "total_downloaded": 354,
+    "grand_total": 354,
     "complete": true
   },
   "climate AND social_media AND polarization": {
-    "total_downloaded": 356,
-    "grand_total": 356,
+    "total_downloaded": 288,
+    "grand_total": 288,
     "complete": true
   },
   "climate AND misinformation AND polarization": {
@@ -105,13 +105,13 @@
     "complete": true
   },
   "nlp AND social_media AND misinformation": {
-    "total_downloaded": 7105,
-    "grand_total": 7105,
+    "total_downloaded": 6812,
+    "grand_total": 6812,
     "complete": true
   },
   "nlp AND social_media AND polarization": {
-    "total_downloaded": 2324,
-    "grand_total": 2324,
+    "total_downloaded": 2211,
+    "grand_total": 2211,
     "complete": true
   },
   "nlp AND misinformation AND polarization": {
@@ -120,18 +120,18 @@
     "complete": true
   },
   "social_media AND misinformation AND polarization": {
-    "total_downloaded": 1233,
-    "grand_total": 1233,
+    "total_downloaded": 1152,
+    "grand_total": 1152,
     "complete": true
   },
   "climate AND nlp AND social_media AND misinformation": {
-    "total_downloaded": 65,
-    "grand_total": 65,
+    "total_downloaded": 60,
+    "grand_total": 60,
     "complete": true
   },
   "climate AND nlp AND social_media AND polarization": {
-    "total_downloaded": 36,
-    "grand_total": 36,
+    "total_downloaded": 34,
+    "grand_total": 34,
     "complete": true
   },
   "climate AND nlp AND misinformation AND polarization": {
@@ -140,13 +140,13 @@
     "complete": true
   },
   "climate AND social_media AND misinformation AND polarization": {
-    "total_downloaded": 41,
-    "grand_total": 41,
+    "total_downloaded": 31,
+    "grand_total": 31,
     "complete": true
   },
   "nlp AND social_media AND misinformation AND polarization": {
-    "total_downloaded": 188,
-    "grand_total": 188,
+    "total_downloaded": 181,
+    "grand_total": 181,
     "complete": true
   },
   "climate AND nlp AND social_media AND misinformation AND polarization": {

@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-05-13T05:30:16.279929",
-  "query": "(\"natural language processing\" | NLP | \"machine learning\" | LLM | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/x | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | \"tweet*\" | \"post*\" | \"user comment\" | \"user comments\")",
+  "timestamp": "2026-05-29T21:34:32.547644",
+  "query": "(\"natural language processing\" | NLP | \"machine learning\" | \"LLM*\" | AI | \"artificial intelligence\" | \"language model\" | \"language models\" | \"neural network\" | \"neural networks\" | GenAI | \"Generative AI\" | \"text mining\" | \"text processing\" | \"text classification\" | \"deep learning\" | \"transformer*\" | \"argument mining\" | \"sentiment analysis\") + (\"social media\" | \"social network\" | \"social networks\" | \"social platform\" | \"social platforms\" | \"online community\" | \"online communities\" | \"alternative platform\" | \"alternative platforms\" | alt-tech | Youtube | Rumble | Bitchute | Odysee | Twitch | Quora | Facebook | Instagram | Tiktok | Whatsapp | Telegram | Signal | WeChat | Discord | Threads | Mastodon | Reddit | X | Twitter/X | Twitter | Bluesky | 4chan | 8kun | 8chan | Parler | Gab | \"Truth Social\" | MeWe | Snapchat | LinkedIn | tweet | tweets | \"user comment\" | \"user comments\")",
   "fields": [
     "paperId",
     "year",
@@ -8,9 +8,9 @@
     "citationCount"
   ],
   "date_start": "2010-01-01",
-  "date_end": "2026-05-01",
+  "date_end": "2026-04-30",
   "api_key_used": true,
-  "total_downloaded": 426246,
-  "grand_total": 426253,
+  "total_downloaded": 361491,
+  "grand_total": 361564,
   "error": null
 }
