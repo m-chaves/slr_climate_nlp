@@ -83,9 +83,6 @@ def collect_semantic_scholar_data(
             for attempt in range(1, max_retries + 1):
 
                 try:
-                    print(
-                        f"Fetching batch | total so far: {total_downloaded}"
-                    )
 
                     response = requests.get(
                         base_url,
@@ -427,3 +424,329 @@ def collect_acl_data(
         )
 
     return total_matched, total_scanned
+
+
+# ─────────────────────────────────────────────
+# SCOPUS DATA COLLECTION
+# ─────────────────────────────────────────────
+
+_SCOPUS_FIELD_EXTRACTORS = {
+    "eid":                lambda d: d.eid,
+    "doi":                lambda d: d.doi,
+    "title":              lambda d: d.title,
+    "description":        lambda d: d.description,
+    "coverDate":          lambda d: d.coverDate,
+    "publicationName":    lambda d: d.publicationName,
+    "aggregationType":    lambda d: d.aggregationType,
+    "subtypeDescription": lambda d: d.subtypeDescription,
+    "subtype":            lambda d: d.subtype,
+    "authkeywords":       lambda d: d.authkeywords,
+    "author_names":       lambda d: d.author_names,
+    "author_ids":         lambda d: d.author_ids,
+    "citedby_count":      lambda d: d.citedby_count,
+    "openaccess":         lambda d: d.openaccess,
+    "afid":               lambda d: d.afid,
+    "affilname":          lambda d: d.affilname,
+    "author_afids":       lambda d: d.author_afids,
+    "pii":                lambda d: d.pii,
+    "pubmed_id":          lambda d: d.pubmed_id,
+    "issn":               lambda d: d.issn,
+    "source_id":          lambda d: d.source_id,
+}
+
+# These fields are only populated when view="COMPLETE"; silently None with view="STANDARD".
+_SCOPUS_COMPLETE_ONLY_FIELDS = {"description", "authkeywords"}
+
+
+def scopus_doc_to_dict(doc, fields):
+    """
+    Extract requested fields from a pybliometrics Document namedtuple into a dict.
+    Valid field names: see _SCOPUS_FIELD_EXTRACTORS keys.
+
+    Raises:
+        ValueError: If an unrecognised field name is requested.
+    """
+    unknown = set(fields) - _SCOPUS_FIELD_EXTRACTORS.keys()
+    if unknown:
+        raise ValueError(
+            f"Unknown Scopus field(s) {sorted(unknown)}. "
+            f"Valid fields: {sorted(_SCOPUS_FIELD_EXTRACTORS)}"
+        )
+    return {f: _SCOPUS_FIELD_EXTRACTORS[f](doc) for f in fields}
+
+
+def collect_scopus_data(
+    query,
+    fields,
+    output_path,
+    date_start,
+    date_end,
+    api_key="",
+    batch_threshold=4000,
+    subscriber=True,
+    view="COMPLETE",
+    refresh=False,
+    max_retries=5,
+    backoff_factor=4,
+):
+    """
+    Fetch Scopus papers via pybliometrics ScopusSearch and stream results to JSONL.
+
+    Args:
+        query (str): Scopus query string without the TITLE-ABS-KEY() wrapper — i.e.,
+            the direct output of build_scopus_query(). The wrapper is added internally.
+        fields (list[str]): Fields to retrieve per paper. Must be keys of
+            _SCOPUS_FIELD_EXTRACTORS (e.g. config["scopus"]["fields_full"]).
+            Note: "description" and "authkeywords" require view="COMPLETE".
+        output_path (str): Path to the output .jsonl file.
+        date_start: Start of date range. Accepts datetime.date or "YYYY-MM-DD" str.
+        date_end: End of date range (inclusive). Accepts datetime.date or "YYYY-MM-DD" str.
+        api_key (str): Scopus API key. Overrides the key in pybliometrics.cfg for this
+            process if provided. If omitted, the configured key is used.
+        batch_threshold (int): If the total result count exceeds this value, the
+            function switches from a single query to year-by-year batching to limit
+            peak RAM usage. Default 4000 (conservative buffer below the 5000-result
+            hard cap for non-subscriber keys).
+        subscriber (bool): Pass True if the API key has subscriber privileges. Enables
+            cursor-based pagination, removing the 5000-result cap per query.
+        view (str): ScopusSearch view — "COMPLETE" (default) or "STANDARD".
+            "STANDARD" does not return description or authkeywords.
+        refresh (bool | int): Passed directly to ScopusSearch. True forces a cache
+            bypass; an integer n refreshes if the cached file is older than n days.
+            Useful when re-running after a partial failure.
+        max_retries (int): Retry attempts per batch on transient errors.
+        backoff_factor (int): Exponential backoff base for server errors (e.g. 4 gives
+            waits of 1s, 4s, 16s, 64s between retries).
+
+    Returns:
+        total_downloaded (int): Papers written to the output file (date-matched +
+            unknown-date papers that could not be filtered).
+        grand_total (int): Total papers reported by the API for the full query range.
+
+    Notes:
+        - Papers with coverDate=None cannot be date-filtered and are included in the
+          output; their count is recorded in the metadata sidecar as unknown_date_count.
+        - pybliometrics caches responses locally. Pass refresh=True to force fresh data.
+        - Scopus only supports year-level filtering (PUBYEAR). Exact date boundaries
+          are enforced by post-filtering on coverDate after download, so total_downloaded
+          may legitimately be less than grand_total when date_start or date_end falls
+          mid-year.
+    """
+    from pybliometrics.scopus import ScopusSearch
+    from pybliometrics.utils import init
+    from pybliometrics.exception import (
+        Scopus429Error,
+        Scopus401Error,
+        Scopus403Error,
+        ScopusQueryError,
+        ScopusServerError,
+    )
+
+    # Initialise pybliometrics — must always be called, even if using the config-file key.
+    if api_key:
+        init(keys=[api_key])
+    else:
+        init()
+
+    # Warn about COMPLETE-only fields requested with STANDARD view.
+    incomplete_fields = _SCOPUS_COMPLETE_ONLY_FIELDS & set(fields)
+    if view == "STANDARD" and incomplete_fields:
+        print(
+            f"WARNING: fields {sorted(incomplete_fields)} require view='COMPLETE' "
+            f"but view='STANDARD' was requested — these fields will be None."
+        )
+
+    date_start_str = str(date_start)[:10]
+    date_end_str = str(date_end)[:10]
+    year_start = int(date_start_str[:4])
+    year_end = int(date_end_str[:4])
+
+    full_query = (
+        f"TITLE-ABS-KEY({query}) "
+        f"AND PUBYEAR > {year_start - 1} AND PUBYEAR < {year_end + 1}"
+    )
+
+    print(f"Query: {full_query}")
+    print(f"Date range: {date_start_str} → {date_end_str}")
+
+    # ── Pre-count ───────────────────────────────────────────────────────────
+    counter = ScopusSearch(full_query, download=False, subscriber=subscriber)
+    grand_total = counter.get_results_size()
+    use_batches = grand_total > batch_threshold
+
+    print(f"Total papers to retrieve: {grand_total}")
+    print(f"Batching strategy: {'year-by-year' if use_batches else 'single query'}")
+
+    # ── Build batch list ─────────────────────────────────────────────────────
+    if not use_batches:
+        batch_queries = [(None, full_query)]
+    else:
+        year_range = range(year_start, year_end + 1)
+        year_queries = [
+            (y, f"TITLE-ABS-KEY({query}) AND PUBYEAR IS {y}")
+            for y in year_range
+        ]
+
+        # Preflight: check all years before downloading any data.
+        print("Preflight: checking per-year counts...")
+        offending = []
+        for year, yq in year_queries:
+            yc = ScopusSearch(yq, download=False, subscriber=subscriber).get_results_size()
+            print(f"  {year}: {yc} papers")
+            if yc > batch_threshold:
+                offending.append({"year": year, "count": yc})
+
+        if offending:
+            error_info = {
+                "type": "BatchThresholdExceeded",
+                "message": (
+                    f"The following years exceed batch_threshold={batch_threshold} "
+                    f"and cannot be downloaded in a single year query. "
+                    f"Consider increasing batch_threshold or narrowing the query."
+                ),
+                "offending_years": offending,
+                "timestamp": datetime.now().isoformat(),
+            }
+            output_path = Path(output_path)
+            output_path.parent.mkdir(parents=True, exist_ok=True)
+            meta_path = output_path.with_name(output_path.stem + "_meta.json")
+            meta = {
+                "timestamp": datetime.now().isoformat(),
+                "query": query,
+                "fields": fields,
+                "date_start": str(date_start),
+                "date_end": str(date_end),
+                "grand_total": grand_total,
+                "total_retrieved": 0,
+                "total_downloaded": 0,
+                "unknown_date_count": 0,
+                "use_batches": True,
+                "batch_threshold": batch_threshold,
+                "view": view,
+                "subscriber": subscriber,
+                "error": error_info,
+            }
+            with open(meta_path, "w", encoding="utf-8") as f:
+                json.dump(meta, f, indent=2)
+            print(f"ERROR: {error_info['message']} — see {meta_path}")
+            return 0, grand_total
+
+        batch_queries = year_queries
+
+    # ── Download ─────────────────────────────────────────────────────────────
+    output_path = Path(output_path)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+
+    total_retrieved = 0
+    total_downloaded = 0
+    unknown_date_count = 0
+    error_info = None
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        for year_label, batch_query in batch_queries:
+            if year_label is not None:
+                print(f"\nYear {year_label}")
+
+            success = False
+            for attempt in range(1, max_retries + 1):
+                try:
+                    print(f"  Fetching | total so far: {total_downloaded}")
+                    search = ScopusSearch(
+                        batch_query,
+                        download=True,
+                        view=view,
+                        subscriber=subscriber,
+                        verbose=True,
+                        refresh=refresh,
+                    )
+
+                    docs = search.results or []
+                    total_retrieved += len(docs)
+
+                    for doc in docs:
+                        if doc.coverDate is None:
+                            f.write(json.dumps(scopus_doc_to_dict(doc, fields)) + "\n")
+                            unknown_date_count += 1
+                            total_downloaded += 1
+                            continue
+                        if not (date_start_str <= doc.coverDate <= date_end_str):
+                            continue
+                        f.write(json.dumps(scopus_doc_to_dict(doc, fields)) + "\n")
+                        total_downloaded += 1
+
+                    success = True
+                    break
+
+                except Scopus429Error:
+                    print(f"  Rate limit hit [attempt {attempt}/{max_retries}] — sleeping 90s")
+                    time.sleep(90)
+
+                except ScopusServerError as err:
+                    wait = backoff_factor ** (attempt - 1)
+                    print(
+                        f"  Server error [attempt {attempt}/{max_retries}]: {err} "
+                        f"— retrying in {wait}s"
+                    )
+                    time.sleep(wait)
+
+                except (Scopus401Error, Scopus403Error, ScopusQueryError) as err:
+                    print(f"  Fatal error: {type(err).__name__}: {err}")
+                    error_info = {
+                        "type": type(err).__name__,
+                        "message": str(err),
+                        "attempt": attempt,
+                        "batch_query": batch_query,
+                        "timestamp": datetime.now().isoformat(),
+                    }
+                    break
+
+                except Exception as err:
+                    print(f"  Unexpected error: {err}")
+                    error_info = {
+                        "type": type(err).__name__,
+                        "message": str(err),
+                        "batch_query": batch_query,
+                        "timestamp": datetime.now().isoformat(),
+                    }
+                    break
+
+            if not success and error_info:
+                break
+
+    # ── Mismatch check ───────────────────────────────────────────────────────
+    if grand_total and total_retrieved < grand_total:
+        print(
+            f"WARNING: API returned {total_retrieved} papers but reported {grand_total}. "
+            f"Check the metadata sidecar for details."
+        )
+
+    # ── Metadata sidecar ─────────────────────────────────────────────────────
+    meta_path = output_path.with_name(output_path.stem + "_meta.json")
+    meta = {
+        "timestamp": datetime.now().isoformat(),
+        "query": query,
+        "fields": fields,
+        "date_start": str(date_start),
+        "date_end": str(date_end),
+        "grand_total": grand_total,
+        "total_retrieved": total_retrieved,
+        "total_downloaded": total_downloaded,
+        "unknown_date_count": unknown_date_count,
+        "use_batches": use_batches,
+        "batch_threshold": batch_threshold,
+        "view": view,
+        "subscriber": subscriber,
+        "error": error_info,
+    }
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2)
+
+    if error_info:
+        print(f"ERROR during collection — check {meta_path}")
+    else:
+        print(
+            f"Done — {total_downloaded} papers saved to {output_path} "
+            f"({unknown_date_count} with unknown date included)\n"
+        )
+
+    return total_downloaded, grand_total
