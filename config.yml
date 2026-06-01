@@ -60,3 +60,34 @@ acl:
     - venue_acronym   # e.g. "ACL", "EMNLP"
     - venue_full_id   # Volume full ID, e.g. "2022.emnlp-main"
 
+
+scopus:
+  # Fields available directly from ScopusSearch results (pybliometrics Document namedtuple).
+  # Field names match pybliometrics attribute names exactly.
+  # Note: "description" is what other sources call "abstract" — intentional naming.
+  #
+  # NOT available via ScopusSearch — require separate enrichment steps:
+  #   - language    → to be handled at a later stage
+  #   - references  → cited papers; not available via ScopusSearch
+
+  fields_lite:
+    - eid              # unique Scopus identifier (e.g. "2-s2.0-85193728453")
+    - doi              # Digital Object Identifier
+    - title            # paper title
+    - coverDate        # publication date ("YYYY-MM-DD")
+
+  fields_full:
+    - eid              # unique Scopus identifier (e.g. "2-s2.0-85193728453")
+    - doi              # Digital Object Identifier
+    - title            # paper title
+    - description      # abstract (Scopus API field: dc:description) — requires view="COMPLETE"
+    - coverDate        # publication date ("YYYY-MM-DD")
+    - publicationName  # journal or proceedings name (e.g. "Proceedings of EMNLP")
+    - aggregationType  # venue category ("Journal", "Conference Proceeding", "Book Series")
+    - subtypeDescription  # document type ("Article", "Conference Paper", "Review", ...)
+    - authkeywords     # pipe-separated author-supplied keywords — requires view="COMPLETE"
+    - citedby_count    # number of times this paper has been cited
+    - openaccess       # open access status (1 = open access, 0 = not)
+    - affilname        # semicolon-separated unique institution names (paper-level, deduplicated)
+    - afid             # Scopus affiliation IDs, parallel to affilname by position
+
