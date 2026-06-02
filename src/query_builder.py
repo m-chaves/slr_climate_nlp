@@ -261,6 +261,64 @@ def build_wos_query(logic_string, keywords_path):
     return to_wos(generic_query)
 
 # ─────────────────────────────────────────────
+# ACM QUERY BUILDING
+# ─────────────────────────────────────────────
+
+def to_acm(query_string):
+    """
+    Convert a source-agnostic AND/OR query string to ACM Digital Library syntax.
+
+    ACM uses AND/OR natively so no operator conversion is needed.
+
+    Two token-level transformations are applied:
+
+    1. Quoted single-word wildcards are unquoted so ACM expands them.
+       ACM does NOT expand wildcards inside quoted phrases — "LLM*" would be
+       treated literally. Quotes are stripped: "LLM*" -> LLM*, "transformer*" -> transformer*.
+       If the resulting bare wildcard token contains / or -, those are backslash-escaped.
+
+    2. Bare tokens containing / or - are backslash-escaped.
+       Both are reserved characters in ACM's query syntax.
+       / is a special operator; a bare - acts as NOT: web -based = web NOT base.
+       Escaping forces literal matching: Twitter/X -> Twitter\\/X, alt-tech -> alt\\-tech.
+
+    Known limitations:
+    - Bare 'X' as a standalone keyword will match every paper using X as a symbol.
+      Consider removing it from keywords.yml; Twitter/X and Twitter are already present.
+    - Wildcards match any characters: LLM* matches LLMs, LLM-based, LLM-generated, etc.
+    - Wildcards cannot be at the start of a term (ACM restriction).
+    - Full-text search: ACM searches full text by default, unlike WoS's TS=() field scoping.
+    """
+    def transform(m):
+        token = m.group(0)
+        if token.startswith('"') and token.endswith('"'):
+            inner = token[1:-1]
+            # Single-word wildcard inside quotes: strip quotes so ACM expands the wildcard
+            if ' ' not in inner and ('*' in inner or '?' in inner):
+                return inner.replace('/', r'\/').replace('-', r'\-')
+            return token
+        # Bare token with / or -: escape to prevent reserved-character misparse
+        if '/' in token or '-' in token:
+            return token.replace('/', r'\/').replace('-', r'\-')
+        return token
+
+    return re.sub(r'"[^"]*"|[^\s()]+', transform, query_string)
+
+
+def build_acm_query(logic_string, keywords_path):
+    """
+    Load keywords, build generic query, convert to ACM Digital Library syntax.
+    Parameters:
+    - logic_string: a string like "climate AND nlp AND (misinformation OR polarization)"
+    - keywords_path: path to YAML file defining keyword groups
+
+    The result can be pasted directly into the ACM Advanced Search "Edit Query" input.
+    """
+    groups = load_keywords(keywords_path)
+    generic_query = build_query(logic_string, groups)
+    return to_acm(generic_query)
+
+# ─────────────────────────────────────────────
 # ACL ANTHOLOGY TEXT MATCHING
 # ─────────────────────────────────────────────
 
