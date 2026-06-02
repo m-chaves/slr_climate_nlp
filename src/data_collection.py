@@ -750,3 +750,56 @@ def collect_scopus_data(
         )
 
     return total_downloaded, grand_total
+
+
+# ─────────────────────────────────────────────
+# WEB OF SCIENCE METADATA
+# ─────────────────────────────────────────────
+
+def create_wos_metadata(
+    data_path,
+    wos_query,
+    date_start=None,
+    date_end=None,
+):
+    """
+    Create a metadata sidecar JSON for a manually downloaded WoS export file.
+
+    WoS data collection is manual: the researcher runs the query in the WoS
+    Advanced Search interface, exports the results as a tagged .txt file, and
+    saves it locally. 
+
+    Args:
+        data_path (str): Path to the WoS tagged text export file (.txt).
+        wos_query (str): The query string used in the WoS Advanced Search interface to generate the export file.
+        date_start: Start of the search date range (optional). Accepts
+            datetime.date or "YYYY-MM-DD" str. Used for documentation only.
+        date_end: End of the search date range (optional). Same format.
+
+    Returns:
+        Path: Path to the written metadata JSON file.
+    """
+    import wosfile
+
+    data_path = Path(data_path)
+
+    n_papers = sum(1 for _ in wosfile.read(data_path))
+    file_mtime = datetime.fromtimestamp(data_path.stat().st_mtime).isoformat()
+
+    meta_path = data_path.with_name(data_path.stem + "_meta.json")
+    meta = {
+        "timestamp": file_mtime,
+        "query": wos_query,
+        "date_start": str(date_start) if date_start is not None else None,
+        "date_end": str(date_end) if date_end is not None else None,
+        "total_downloaded": n_papers,
+        "data_path": str(data_path),
+    }
+
+    with open(meta_path, "w", encoding="utf-8") as f:
+        json.dump(meta, f, indent=2)
+
+    print(f"Done — {n_papers} papers found in {data_path}")
+    print(f"Metadata saved to {meta_path}\n")
+
+    return meta_path
