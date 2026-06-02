@@ -191,6 +191,76 @@ def build_semantic_scholar_query(logic_string, keywords_path):
     return to_semantic_scholar(generic_query)
 
 # ─────────────────────────────────────────────
+# Web of Science QUERY BUILDING
+# ─────────────────────────────────────────────
+
+def to_wos(query_string):
+    """
+    Convert a source-agnostic AND/OR query string to Web of Science (WoS) syntax.
+
+    WoS uses AND/OR natively so no operator conversion is needed. The query is
+    wrapped in TS=(...), which searches Title + Abstract + Author Keywords +
+    Keywords Plus — the WoS equivalent of Scopus's TITLE-ABS-KEY.
+
+    Three token-level transformations are applied:
+
+    1. Quoted single-word wildcards are unquoted so WoS expands them.
+       WoS does NOT expand wildcards inside quoted phrases — "LLM*" would
+       be treated as a literal search for the string LLM* with an asterisk.
+       Quotes are stripped: "LLM*" -> LLM*, "transformer*" -> transformer*.
+
+    2. Bare tokens containing / are quoted to prevent misparse. 
+        Quoting forces literal phrase matching: "Twitter/X".
+
+    3. Bare tokens containing - are quoted.
+       WoS treats hyphens as spaces, so bare alt-tech searches as "alt tech"
+       (any paper containing both words anywhere). Quoting restricts to the phrase.
+
+    Known limitations:
+    - Case insensitivity: WoS is always case-insensitive. "Signal" (the platform)
+      and "signal" (the general word) cannot be distinguished.
+    - Wildcard + hyphen: hyphens are token separators in WoS, so LLM* matches LLMs
+      but NOT LLM-based; transformer* does not match transformer-based. Add explicit
+      hyphenated variants to keywords.yml if needed (e.g. "LLM-based").
+
+    Note on the "Exact Search" UI toggle in WoS:
+    Enabling it prevents stemming on bare single-word terms (e.g. without it,
+    "climate" may also return "climatic"). Recommended for predictable results.
+    """
+    def transform(m):
+        token = m.group(0)
+        if token.startswith('"') and token.endswith('"'):
+            inner = token[1:-1]
+            # Single-word wildcard inside quotes: strip quotes so WoS expands the wildcard
+            if ' ' not in inner and ('*' in inner or '?' in inner):
+                return inner
+            return token
+        # Bare token with / or -: quote to prevent proximity misparse or hyphen-as-space expansion
+        if '/' in token or '-' in token:
+            return f'"{token}"'
+        return token
+
+    transformed = re.sub(r'"[^"]*"|[^\s()]+', transform, query_string)
+    return f"TS=({transformed})"
+
+
+def build_wos_query(logic_string, keywords_path):
+    """
+    Load keywords, build generic query, convert to WoS syntax.
+    Parameters:
+    - logic_string: a string like "climate AND nlp AND (misinformation OR polarization)"
+    - keywords_path: path to YAML file defining keyword groups
+
+    The result can be copied and pasted directly into the WoS Advanced Search
+    interface. Recommend enabling "Exact Search" in the UI to prevent unintended
+    stemming on bare single-word terms.
+    """
+    groups = load_keywords(keywords_path)
+    generic_query = build_query(logic_string, groups)
+
+    return to_wos(generic_query)
+
+# ─────────────────────────────────────────────
 # ACL ANTHOLOGY TEXT MATCHING
 # ─────────────────────────────────────────────
 
