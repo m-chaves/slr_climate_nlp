@@ -36,7 +36,7 @@ import networkx as nx
 from rapidfuzz import fuzz
 
 from src.data_loading import DEFAULT_DATA_DIR, load_all_sources
-from src.data_normalization import normalize_title_for_matching, normalize_venue, normalize_paper_type
+from src.data_normalization import normalize_title_for_matching, normalize_published_in, normalize_paper_type, clean_abstract
 
 logger = logging.getLogger(__name__)
 
@@ -328,7 +328,6 @@ _FIELD_PRIORITY: dict[str, list[str]] = {
     "title":      ["scopus", "wos", "semantic_scholar", "acl", "acm"],
     "abstract":   ["scopus", "semantic_scholar", "wos", "acl", "acm"],
     "year":       ["wos", "scopus", "semantic_scholar", "acl", "acm"],
-    "venue":      ["scopus", "wos", "semantic_scholar", "acl", "acm"],
     "paper_type": ["scopus", "wos", "semantic_scholar", "acl", "acm"],
 }
 
@@ -396,14 +395,18 @@ def _coalesce(nodes_by_source: dict[str, dict], field: str) -> tuple:
     return selected, conflict
 
 
-def _venue_from_raw(raw: dict, source: str) -> str | None:
+def _published_in_from_raw(raw: dict, source: str) -> str | None:
     if source == "scopus":
         return raw.get("publicationName")
     if source == "wos":
         return raw.get("SO")
     if source == "semantic_scholar":
         pv = raw.get("publicationVenue") or {}
-        return pv.get("name") if isinstance(pv, dict) else None
+        pv_name = pv.get("name") if isinstance(pv, dict) else None
+        if pv_name:
+            return pv_name
+        journal = raw.get("journal") or {}
+        return journal.get("name") if isinstance(journal, dict) else None
     if source == "acl":
         return raw.get("volume_title") or raw.get("journal_title")
     return None
@@ -476,14 +479,16 @@ def _merge_component(component: set[str], G: nx.Graph) -> dict:
     merged: dict = {}
     for field in ("doi", "arxiv_id", "title", "abstract", "year"):
         val, conflict = _coalesce(nodes_by_source, field)
+        if field == "abstract":
+            val = clean_abstract(val)
         merged[field] = val
         if conflict:
             conflicts[field] = conflict
             logger.debug("Conflict on '%s': %s", field, conflict)
 
-    # Venue and paper type (unnormalized stubs)
-    venue_candidates = {
-        src: normalize_venue(_venue_from_raw(node["_raw"], src), src)
+    # Published-in and paper type (unnormalized stubs)
+    published_in_candidates = {
+        src: normalize_published_in(_published_in_from_raw(node["_raw"], src), src)
         for src, node in nodes_by_source.items()
     }
     paper_type_candidates = {
@@ -502,9 +507,9 @@ def _merge_component(component: set[str], G: nx.Graph) -> dict:
         "title":     merged["title"],
         "abstract":  merged["abstract"],
         "year":      merged["year"],
-        "venue":     {
+        "published_in": {
             src: val
-            for src, val in sorted(venue_candidates.items(), key=lambda x: _source_rank(x[0]))
+            for src, val in sorted(published_in_candidates.items(), key=lambda x: _source_rank(x[0]))
             if val
         },
         "paper_type": {

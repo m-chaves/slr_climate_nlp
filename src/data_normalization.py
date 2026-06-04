@@ -9,8 +9,43 @@ input unchanged.  They define the interface and document each source's
 vocabulary so that implementations can be added without changing callers.
 """
 
+import html
 import re
 import unicodedata
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Abstract cleaning  (fully implemented)
+# ──────────────────────────────────────────────────────────────────────────────
+
+def clean_abstract(abstract: str | None) -> str | None:
+    """
+    Return a clean prose abstract suitable for storage and downstream NLP.
+
+    Applied after source coalescing in _merge_component; the cleaned value
+    is what gets written to the merged output.  Handles artifacts observed
+    across Scopus, Semantic Scholar, and WoS records:
+
+      1. HTML entity decoding  — &#8211; → –, &amp; → &, &lt;/&gt; → <>
+      2. HTML tag stripping    — <p>, </p>, <br/>, <div>, etc.
+      3. Newline/tab collapse  — \\n, \\r, \\t (and combinations) → single space
+      4. Multiple space collapse
+      5. Strip leading/trailing whitespace
+      6. Remove leading "Abstract." / "Abstract:" prefix (some WoS records)
+
+    Structured abstract headers (Purpose:, Findings:, etc.) are intentionally
+    preserved — they are meaningful content and already tracked as
+    conflict_type="formatting" in _conflicts.
+    """
+    if not abstract:
+        return abstract
+    text = html.unescape(abstract)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = re.sub(r"[\r\n\t]+", " ", text)
+    text = re.sub(r" {2,}", " ", text)
+    text = text.strip()
+    text = re.sub(r"^Abstract[.:]\s*", "", text, flags=re.IGNORECASE)
+    return text or None
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -46,26 +81,25 @@ def normalize_title_for_matching(title: str | None) -> str | None:
 
 
 # ──────────────────────────────────────────────────────────────────────────────
-# Venue normalization  (stub)
+# Published-in normalization  (stub)
 # ──────────────────────────────────────────────────────────────────────────────
 
-def normalize_venue(venue: str | None, source: str) -> str | None:
+def normalize_published_in(published_in: str | None, source: str) -> str | None:
     """
-    Return a canonical venue name.  Currently a stub — returns input unchanged.
+    Return a canonical publication name.  Currently a stub — returns input unchanged.
 
     TODO: Implement entity resolution to map variant strings to a canonical
-    venue name.  Known variants for the same venue observed across sources:
+    publication name.  Known variants for the same venue observed across sources:
 
       Scopus publicationName:
         "Proceedings of the 2024 Conference on Empirical Methods in NLP"
         "Findings of the Association for Computational Linguistics: EMNLP 2024"
       WoS SO:
         "PROCEEDINGS OF THE 2024 CONFERENCE ON EMPIRICAL METHODS IN NLP"
-        (WoS SO is always uppercase)
+        (WoS SO is always uppercase — requires .lower() before any lookup)
       Semantic Scholar publicationVenue.name:
         "Conference on Empirical Methods in Natural Language Processing"
         or publicationVenue.alternate_names: ["EMNLP"]
-      ACL venue_acronym: "EMNLP"
       ACL volume_title: "Proceedings of the 2024 Conference on EMNLP"
 
     Recommended implementation strategy:
@@ -77,10 +111,10 @@ def normalize_venue(venue: str | None, source: str) -> str | None:
       3. WoS SO requires .lower() before lookup (field is always uppercase)
 
     Args:
-        venue: raw venue string from the source record
+        published_in: raw publication name string from the source record
         source: one of "scopus", "acl", "semantic_scholar", "wos", "acm"
     """
-    return venue
+    return published_in
 
 
 # ──────────────────────────────────────────────────────────────────────────────
