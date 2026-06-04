@@ -6,3 +6,5 @@ acl-anthology
 pybliometrics # for Scopus API
 wosfile # for parsing WoS tagged text exports
 networkx  # for citation network graph construction
+rapidfuzz # for fuzzy title matching in data merge
+pandas
