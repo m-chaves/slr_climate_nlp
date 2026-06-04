@@ -1,56 +1,10 @@
-import re
 from collections import Counter
 
 import networkx as nx
 import matplotlib.pyplot as plt
 import wosfile
 
-
-def parse_cr_doi(cr_entry: str) -> str | None:
-    """
-    Extract a canonical lowercase DOI from one WoS CR line.
-
-    Handles all bracket and non-bracket formats observed in the data:
-      - DOI 10.1002/aaai.12188
-      - DOI DOI 10.1145/3589335.3651910       (double prefix)
-      - DOI arXiv:2404.12065
-      - DOI [10.1609/..., DOI 10.1609/...]    (bracket, duplicates)
-      - DOI [arXiv:..., 10.18653/...]         (bracket, prefer real DOI)
-      - DOI [arXiv:..., 10.48550/arXiv....]   (bracket, all arXiv)
-
-    Returns the DOI string (lowercased) or None if no DOI is found.
-    Trailing punctuation (.,;)][) is stripped from every extracted token.
-    """
-    bracket_match = re.search(r'DOI\s+\[([^\]]+)\]', cr_entry, re.IGNORECASE)
-    if bracket_match:
-        tokens = [t.strip() for t in bracket_match.group(1).split(',')]
-        cleaned = []
-        for t in tokens:
-            t = re.sub(r'^DOI\s+', '', t, flags=re.IGNORECASE).strip()
-            t = t.rstrip('.,;)][').lower()
-            cleaned.append(t)
-
-        # Prefer non-arXiv journal/conference DOIs (not 10.48550)
-        real = [t for t in cleaned if re.match(r'^10\.(?!48550)', t)]
-        if real:
-            return real[0]
-        # Fall back to arXiv DOIs (10.48550/...)
-        arxiv_doi = [t for t in cleaned if t.startswith('10.48550')]
-        if arxiv_doi:
-            return arxiv_doi[0]
-        # Fall back to arXiv: identifiers
-        arxiv_id = [t for t in cleaned if t.startswith('arxiv:')]
-        if arxiv_id:
-            return arxiv_id[0]
-        return None
-
-    # Non-bracket: "DOI [DOI] token" — optional double prefix
-    match = re.search(r'\bDOI\s+(?:DOI\s+)?(\S+)', cr_entry, re.IGNORECASE)
-    if match:
-        doi = match.group(1).rstrip('.,;)][').lower()
-        return doi or None
-
-    return None
+from doi_utils import parse_cr_doi  # noqa: F401 — re-exported for callers
 
 
 def build_citation_graph(
