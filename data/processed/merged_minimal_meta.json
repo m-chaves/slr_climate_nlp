@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-06-03T23:51:19.336987+00:00",
+  "n_input_records": 303,
+  "n_output_records": 186,
+  "n_doi_edges": 106,
+  "n_acl_edges": 0,
+  "n_arxiv_edges": 0,
+  "n_title_year_edges": 11,
+  "n_singletons": 111,
+  "fuzzy_threshold": 95,
+  "year_tolerance": 1,
+  "n_conflicts_by_field": {
+    "abstract": 48,
+    "year": 13,
+    "title": 14,
+    "doi": 1
+  },
+  "n_content_conflicts": 75,
+  "source_hashes": {
+    "scopus": "eb5ee2381ebabc6786884fcd5f2c9152",
+    "acl": "d5a4f5c72cc7d89e2abe051bb19e6f09",
+    "semantic_scholar": "03bf21e58ae2317bebcc115d4be0da13",
+    "wos": "a9de9deaaa647f3b996e3fab219fa8f2"
+  }
+}
