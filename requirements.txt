@@ -9,3 +9,6 @@ networkx  # for citation network graph construction
 rapidfuzz # for fuzzy title matching in data merge
 pandas
 openpyxl
+scikit-learn # for Cohen's kappa in IAA analysis
+krippendorff # for Krippendorff's alpha in IAA analysis
+tabulate # pretty-print pandas df to markdown, latex, etc
