@@ -427,7 +427,7 @@ def _paper_type_from_raw(raw: dict, source: str) -> str | None:
     return None
 
 
-def _generate_paper_id(nodes_by_source: dict[str, dict]) -> str:
+def _generate_paper_id(nodes_by_source: dict[str, dict], print_key: bool = False) -> str:
     """Deterministic 16-char SHA-256 id from the highest-priority identifier."""
     for src in ["wos", "scopus", "semantic_scholar", "acl", "acm"]:
         node = nodes_by_source.get(src)
@@ -454,8 +454,11 @@ def _generate_paper_id(nodes_by_source: dict[str, dict]) -> str:
             key = f"acl:{acl_id}"
             break
     else:
-        # fallback: hash all node ids together
-        key = "|".join(sorted(nodes_by_source.keys()))
+        # fallback: hash all node ids together (node ids are unique per source
+        # record, so id-less components from the same set of sources don't collide)
+        key = "|".join(sorted(node["_node_id"] for node in nodes_by_source.values()))
+    if print_key:
+        print(key)
     return hashlib.sha256(key.encode()).hexdigest()[:16]
 
 
@@ -557,6 +560,15 @@ def minimal_merge(
     components = list(nx.connected_components(G))
     merged = [_merge_component(comp, G) for comp in components]
     merged.sort(key=lambda r: r["paper_id"])
+
+    # Guard: paper_id must uniquely identify a merged record.
+    id_counts = Counter(rec["paper_id"] for rec in merged)
+    duplicate_ids = {pid: n for pid, n in id_counts.items() if n > 1}
+    if duplicate_ids:
+        raise ValueError(
+            f"minimal_merge produced {len(duplicate_ids)} duplicate paper_id(s) "
+            f"across {len(merged)} records: {dict(list(duplicate_ids.items())[:10])}"
+        )
 
     # Statistics
     stage_edges = Counter(G.edges[u, v]["match_stage"] for u, v in G.edges()) if G.edges() else Counter()
