@@ -12,3 +12,6 @@ openpyxl
 scikit-learn # for Cohen's kappa in IAA analysis
 krippendorff # for Krippendorff's alpha in IAA analysis
 tabulate # pretty-print pandas df to markdown, latex, etc
+bertopic # topic modelling of abstracts (pulls in umap-learn, hdbscan, sentence-transformers, torch)
+gensim # LDA topic modelling
+nltk # stopwords / lemmatization for LDA preprocessing
