@@ -52,6 +52,7 @@ RETRIEVAL_DIR = Path("data/processed/retrieval")
 IDENTIFIERS_PATH = RETRIEVAL_DIR / "zotero_identifiers.txt"
 TRACKING_PATH = RETRIEVAL_DIR / "retrieval_tracking.xlsx"
 WORKLIST_PATH = RETRIEVAL_DIR / "manual_worklist.html"
+AUDIT_PATH = RETRIEVAL_DIR / "collection_audit.xlsx"
 
 ZOTERO_API = "https://api.zotero.org"
 ZOTERO_API_VERSION = "3"
@@ -66,6 +67,12 @@ ZOTERO_RESOLVABLE = ["doi", "arxiv_id"]
 TITLE_MATCH_THRESHOLD = 90
 
 PDF_LINK_MODES = {"imported_file", "imported_url"}
+
+# Columns `_describe_item` produces. Pinned so that an empty audit still yields a frame
+# with the right schema -- `pd.DataFrame([])` has no columns at all, so callers indexing
+# a column would hit a KeyError exactly when there is nothing wrong to report.
+UNKNOWN_COLUMNS = ["zotero_key", "item_type", "title", "year", "doi", "arxiv_id",
+                   "url", "has_pdf", "duplicate_of"]
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -92,25 +99,34 @@ def parse_ids(ids_cell: str | None) -> dict[str, str]:
     return out
 
 
-def load_included(screening_path: Path = SCREENING_PATH) -> pd.DataFrame:
+def load_screened(screening_path: Path = SCREENING_PATH,
+                  include: bool | None = True) -> pd.DataFrame:
     """
-    The papers that passed screening, with the `ids` column exploded into columns.
+    Screened papers with the `ids` column exploded into one column per id type.
 
-    One row per paper, indexed positionally, carrying `paper_id`, `title`, `year`,
-    and one column per identifier type (blank where the paper lacks that id).
+    `include=True` keeps the papers that passed screening, `False` the ones that were
+    excluded, `None` all of them. One row per paper, indexed positionally, carrying
+    `paper_id`, `title`, `year`, and a blank wherever a paper lacks that id.
     """
     df = pd.read_excel(screening_path)
-    included = df[df["include"] == True].copy()  # noqa: E712 -- Excel booleans
+    if include is not None:
+        df = df[df["include"] == include]
+    papers = df.copy()
 
-    exploded = included["ids"].map(parse_ids)
+    exploded = papers["ids"].map(parse_ids)
     for id_type in ["doi", "arxiv_id", "wos_id", "acl_id", "scopus_eid", "semantic_scholar_id"]:
-        included[id_type] = exploded.map(lambda d, t=id_type: d.get(t)).astype(object)
+        papers[id_type] = exploded.map(lambda d, t=id_type: d.get(t)).astype(object)
 
     # pandas turns an all-missing column into floats, so guard before normalizing.
-    included["doi"] = included["doi"].map(
+    papers["doi"] = papers["doi"].map(
         lambda v: normalize_doi(v) if isinstance(v, str) else None
     )
-    return included.reset_index(drop=True)
+    return papers.reset_index(drop=True)
+
+
+def load_included(screening_path: Path = SCREENING_PATH) -> pd.DataFrame:
+    """The papers that passed screening. Thin wrapper over `load_screened`."""
+    return load_screened(screening_path, include=True)
 
 
 # ──────────────────────────────────────────────────────────────────────────────
@@ -465,6 +481,127 @@ same collection, then re-run <code>python -m src.zotero_retrieval reconcile</cod
 
 
 # ──────────────────────────────────────────────────────────────────────────────
+# The reverse check -- what is in Zotero that should not be
+# ──────────────────────────────────────────────────────────────────────────────
+
+@dataclass
+class CollectionAudit:
+    """
+    Both directions of the comparison between the collection and the screening table.
+
+    `tracking` is the forward check (one row per included paper). The other two are
+    the reverse: items sitting in Zotero that no longer correspond to an included
+    paper, split by why.
+    """
+
+    tracking: pd.DataFrame          # one row per included paper
+    excluded_present: pd.DataFrame  # screening says exclude, but it is in the collection
+    unknown: pd.DataFrame           # matches no screened paper at all
+    n_items: int                    # top-level items in the collection
+
+
+def _describe_item(item: dict, attachments: dict[str, list[dict]],
+                   included: pd.DataFrame) -> dict:
+    """
+    Flatten a Zotero item for the audit report.
+
+    `duplicate_of` is filled when the item looks like a second copy of a paper that
+    already matched: the first item wins the DOI lookup in `match_items`, so any
+    further copy falls through to the unknown pile and would otherwise look like a
+    stray.
+    """
+    data = item["data"]
+    doi = _item_doi(data)
+    arxiv = _item_arxiv_id(data)
+    title = str(data.get("title", ""))
+
+    duplicate_of = None
+    if doi is not None:
+        hit = included[included["doi"] == doi]
+        if not hit.empty:
+            duplicate_of = hit.iloc[0]["paper_id"]
+    if duplicate_of is None and title:
+        scores = included["title"].astype(str).map(
+            lambda t: fuzz.token_set_ratio(title.lower(), t.lower())
+        )
+        if not scores.empty and scores.max() >= TITLE_MATCH_THRESHOLD:
+            duplicate_of = included.loc[scores.idxmax(), "paper_id"]
+
+    pdfs = [a for a in attachments.get(item["key"], []) if _is_pdf(a)]
+    return {
+        "zotero_key": item["key"],
+        "item_type": data.get("itemType"),
+        "title": title,
+        "year": str(data.get("date", ""))[:4],
+        "doi": doi,
+        "arxiv_id": arxiv,
+        "url": data.get("url"),
+        "has_pdf": bool(pdfs),
+        "duplicate_of": duplicate_of,
+    }
+
+
+def audit_collection(collection_name: str,
+                     screening_path: Path = SCREENING_PATH,
+                     library_type: str = "users") -> CollectionAudit:
+    """
+    Compare the Zotero collection against the screening table in both directions.
+
+    The forward direction is `reconcile`: which included papers are missing. This
+    adds the reverse, which matters once screening decisions change after the
+    collection was populated -- a paper flipped to exclude stays in Zotero unless
+    somebody removes it, and would otherwise silently reach the synthesis.
+
+    Every item is accounted for exactly once: matched to an included paper, matched
+    to an excluded one, or listed as unknown. Read-only, like everything here.
+    """
+    library_id, api_key = get_credentials()
+    library = ZoteroLibrary(library_id=library_id, api_key=api_key,
+                            library_type=library_type)
+
+    collection = library.find_collection(collection_name)
+    items = library.collection_items(collection["key"])
+    attachments = library.attachments_by_parent()
+
+    included = load_screened(screening_path, include=True)
+    tracking = match_items(build_identifier_plan(included), items, attachments)
+    claimed = set(tracking["zotero_key"].dropna())
+
+    # Whatever the included papers did not claim, offer to the excluded ones.
+    leftover = [i for i in items if i["key"] not in claimed]
+    excluded_plan = build_identifier_plan(load_screened(screening_path, include=False))
+    excluded_tracking = match_items(excluded_plan, leftover, attachments)
+    excluded_present = excluded_tracking[excluded_tracking["in_zotero"]].copy()
+    claimed |= set(excluded_present["zotero_key"].dropna())
+
+    unknown = pd.DataFrame(
+        [_describe_item(i, attachments, included) for i in items if i["key"] not in claimed],
+        columns=UNKNOWN_COLUMNS,
+    )
+
+    return CollectionAudit(tracking=tracking, excluded_present=excluded_present,
+                           unknown=unknown, n_items=len(items))
+
+
+def summarise_audit(audit: CollectionAudit) -> str:
+    """Human-readable block for the reverse check."""
+    matched = int(audit.tracking["in_zotero"].sum())
+    n_excluded = len(audit.excluded_present)
+    n_unknown = len(audit.unknown)
+    n_dupes = 0 if audit.unknown.empty else int(audit.unknown["duplicate_of"].notna().sum())
+    lines = [
+        f"Items in the Zotero collection    : {audit.n_items}",
+        f"  matching an included paper      : {matched:>3}",
+        f"  matching an EXCLUDED paper      : {n_excluded:>3}  <- remove from Zotero",
+        f"  matching no screened paper      : {n_unknown:>3}",
+        f"    of which look like duplicates : {n_dupes:>3}",
+        "",
+        f"Included papers not in Zotero     : {int((~audit.tracking['in_zotero']).sum())}",
+    ]
+    return "\n".join(lines)
+
+
+# ──────────────────────────────────────────────────────────────────────────────
 # Orchestration
 # ──────────────────────────────────────────────────────────────────────────────
 
@@ -509,16 +646,31 @@ def reconcile(collection_name: str,
     return tracking
 
 
+def write_audit(audit: CollectionAudit, path: Path = AUDIT_PATH) -> None:
+    """Persist the reverse check: one sheet per category of stray item."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    excluded_cols = ["paper_id", "title", "year", "doi", "arxiv_id",
+                     "zotero_key", "zotero_title", "matched_by", "has_pdf"]
+    with pd.ExcelWriter(path) as writer:
+        (audit.excluded_present.reindex(columns=excluded_cols)
+         .to_excel(writer, sheet_name="excluded_in_zotero", index=False))
+        audit.unknown.to_excel(writer, sheet_name="unknown_items", index=False)
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[1])
     sub = parser.add_subparsers(dest="command", required=True)
 
     sub.add_parser("plan", help="write the paste-ready identifier list")
 
-    rec = sub.add_parser("reconcile", help="read Zotero back and refresh the tracking sheet")
-    rec.add_argument("--collection", required=True, help="Zotero collection name")
-    rec.add_argument("--group", action="store_true",
-                     help="the library is a group library, not your personal one")
+    for name, help_text in [
+        ("reconcile", "read Zotero back and refresh the tracking sheet"),
+        ("audit", "also check for items in Zotero that are no longer included"),
+    ]:
+        p = sub.add_parser(name, help=help_text)
+        p.add_argument("--collection", required=True, help="Zotero collection name")
+        p.add_argument("--group", action="store_true",
+                       help="the library is a group library, not your personal one")
 
     args = parser.parse_args()
 
@@ -528,12 +680,22 @@ def main() -> None:
         n_manual = int((plan["route"] == "manual").sum())
         print(f"Wrote {n} identifiers to {IDENTIFIERS_PATH}")
         print(f"{n_manual} papers have no Zotero-resolvable identifier (manual queue)")
-    else:
-        tracking = reconcile(args.collection,
-                             library_type="groups" if args.group else "users")
+        return
+
+    library_type = "groups" if args.group else "users"
+
+    if args.command == "reconcile":
+        tracking = reconcile(args.collection, library_type=library_type)
         print(summarise(tracking))
         print(f"\nTracking sheet : {TRACKING_PATH}")
         print(f"Worklist       : {WORKLIST_PATH}")
+    else:
+        audit = audit_collection(args.collection, library_type=library_type)
+        print(summarise(audit.tracking))
+        print()
+        print(summarise_audit(audit))
+        write_audit(audit)
+        print(f"\nAudit sheet    : {AUDIT_PATH}")
 
 
 if __name__ == "__main__":
