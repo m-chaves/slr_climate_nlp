@@ -15,3 +15,5 @@ tabulate # pretty-print pandas df to markdown, latex, etc
 bertopic # topic modelling of abstracts (pulls in umap-learn, hdbscan, sentence-transformers, torch)
 gensim # LDA topic modelling
 nltk # stopwords / lemmatization for LDA preprocessing
+streamlit[pdf] # full-text assessment tool (src/full_text_assessment/app.py)
+pytest # tests/

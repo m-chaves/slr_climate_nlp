@@ -12,3 +12,8 @@ delete_me*
 # temporary files
 *.tmp
 **/tmp/*
+
+# full-text PDFs copied from Zotero (copyright, size)
+data/pdfs/
+# reviewer name remembered by the full-text assessment app (per machine)
+data/processed/full_text_assessment/.reviewer
