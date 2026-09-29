@@ -1,0 +1,15 @@
+pool,label,added_by,added_at,paper_id,renamed_to
+CLI.domain,Wildfires,Mariana,2026-09-29T20:23:48+02:00,62a4d2a1998f051b,
+CLI.domain,Climate Change,Mariana,2026-09-29T20:24:04+02:00,62a4d2a1998f051b,
+CLI.domain,Climate denial,Mariana,2026-09-29T20:24:50+02:00,⬜ 2014 · Social determinants of content selection in the age of (mis)information,
+MIS.type,Climate denial,Mariana,2026-09-29T20:27:13+02:00,7ce41199140428b1,
+DA.theme,Climate supporters vs deniers,Mariana,2026-09-29T20:42:04+02:00,7ce41199140428b1,
+DA.annot_who,human annotators (not specified if they were trained),Mariana,2026-09-29T20:48:30+02:00,7ce41199140428b1,
+MIS.metrics,percent of posts containing a climate denial stance,Mariana,2026-09-29T20:58:43+02:00,7ce41199140428b1,
+MIS.truth_status,annotator's judgement,Mariana,2026-09-29T21:01:44+02:00,7ce41199140428b1,
+POL.type,interactional polarization,Mariana,2026-09-29T21:18:30+02:00,7ce41199140428b1,
+POL.type,interactional polarization,Mariana,2026-09-29T21:24:41+02:00,7ce41199140428b1,interactional polarization (tendency to interact with like-minded individuals and disengage with those that hold opposing views)
+POL.measure,network descriptive statistics,Mariana,2026-09-29T22:15:13+02:00,7ce41199140428b1,
+POL.measure,user/account statistics,Mariana,2026-09-29T22:16:18+02:00,7ce41199140428b1,
+ML.method,"Classic NLP (tokenization, stemming, POS tagging)",Mariana,2026-09-29T22:47:00+02:00,7ce41199140428b1,
+ML.method,"Sparse representations (BoW, TF-IDF, n-grams)",Mariana,2026-09-29T22:47:24+02:00,7ce41199140428b1,
