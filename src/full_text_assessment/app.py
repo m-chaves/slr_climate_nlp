@@ -743,21 +743,33 @@ def toggle_pause() -> None:
         ss["timer_paused"] = True
 
 
+def sync_timer(reviewer: str, paper_id: str, work: dict, now: float) -> None:
+    """Time the open paper unless it is marked complete; reopening it starts the clock."""
+    if work["status"] == store.COMPLETE:
+        ss["timer"] = None
+    elif not ss.get("timer"):
+        ss["timer"] = {"reviewer": reviewer, "paper": paper_id, "last_tick": now}
+
+
 @st.fragment(run_every=timing.TICK)
-def timer_widget(reviewer: str, paper_id: str) -> None:
+def timer_widget(reviewer: str, paper_id: str, complete: bool) -> None:
     now = time.time()
     credit_time(now)
     total = store.seconds_on(reviewer, paper_id)
-    if ss.get("timer_paused"):
+    if complete:
+        state = "⏹ stopped: paper marked complete (reopen it to count again)"
+    elif ss.get("timer_paused"):
         state = "⏸ paused (any interaction resumes)"
     elif timing.is_idle(now, ss.get("last_interaction", now)):
-        state = "💤 stopped: no interaction for 15 min (any interaction resumes)"
+        state = (f"💤 stopped: no interaction for {timing.IDLE_LIMIT // 60} min "
+                 "(any interaction resumes)")
     else:
         state = "counting"
     left, right = st.columns([4, 1])
     left.caption(f"⏱ **{timing.format_duration(total)}** on this paper · {state}")
-    right.button("▶ Resume" if ss.get("timer_paused") else "⏸ Pause", key="timer_toggle",
-                 on_click=toggle_pause, use_container_width=True)
+    if not complete:
+        right.button("▶ Resume" if ss.get("timer_paused") else "⏸ Pause", key="timer_toggle",
+                     on_click=toggle_pause, use_container_width=True)
 
 
 # ── codebook changes ─────────────────────────────────────────────────────────
@@ -851,7 +863,7 @@ def paper_header(row: pd.Series, work: dict, cb: Codebook) -> None:
             else:
                 st.info("Every question is answered: you can mark it complete.")
 
-    timer_widget(ss["reviewer"], row["paper_id"])
+    timer_widget(ss["reviewer"], row["paper_id"], work["status"] == store.COMPLETE)
     codebook_changes_banner(cb, work)
     for warning in consistency_warnings(cb, row, work["answers"]):
         st.warning(warning)
@@ -888,15 +900,17 @@ def main() -> None:
     st.query_params["paper"] = paper_id
 
     # Every full rerun is a user action: credit the paper that was open up to now,
-    # then restart the clock (and end any pause) on the paper open now.
+    # then restart the clock (and end any pause) on the paper open now, unless it is
+    # complete. Marking complete / reopening is a full rerun, so it stops / restarts here.
     now = time.time()
     credit_time(now)
     ss["last_interaction"] = now
     ss["timer_paused"] = False
-    ss["timer"] = {"reviewer": reviewer, "paper": paper_id, "last_tick": now}
+    ss["timer"] = None
 
     row = info[info["paper_id"] == paper_id].iloc[0]
     work = load_work(cb, reviewer, paper_id)
+    sync_timer(reviewer, paper_id, work, now)
     ss["changes"] = question_changes(cb, work)
     prefix = f"w|{reviewer}|{paper_id}"
 
@@ -929,6 +943,7 @@ def main() -> None:
                      on_change=lambda: work.__setitem__("notes", ss.get(notes_key) or ""))
 
     autosave(cb, reviewer, paper_id, work)
+    sync_timer(reviewer, paper_id, work, now)  # autosave reopens a complete paper left incomplete
 
 
 if "paper_id" not in ss and "paper" in st.query_params:
