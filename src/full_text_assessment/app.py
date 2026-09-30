@@ -518,6 +518,38 @@ def go_to(paper_id: str) -> None:
     ss["paper_select"] = paper_id
 
 
+def paper_label(pid: str, info: pd.DataFrame, status: dict[str, str]) -> str:
+    row = info[info["paper_id"] == pid].iloc[0]
+    return f"{STATUS_ICON.get(status.get(pid, ''), '⬜')} {row['year']} · {row['title'][:80]}"
+
+
+def as_paper_id(value, info: pd.DataFrame) -> str | None:
+    """
+    The paper a selectbox value refers to, or None. Streamlit sends the *displayed*
+    label back and maps it to an id through the current labels; when the label has
+    changed since the browser drew it (the status icon does, as soon as a paper is
+    saved), it returns the raw label instead of the id. Recover the id from the
+    label's "year · title" part, which never changes.
+    """
+    if value in set(info["paper_id"]):
+        return value
+    if not isinstance(value, str) or " " not in value:
+        return None
+    stable = value.split(" ", 1)[1]
+    hits = [pid for pid, year, title in zip(info["paper_id"], info["year"], info["title"])
+            if f"{year} · {title[:80]}" == stable]
+    return hits[0] if len(hits) == 1 else None
+
+
+def on_paper_select(info: pd.DataFrame) -> None:
+    """Switch paper only when the selectbox names one; never guess."""
+    pid = as_paper_id(ss["paper_select"], info)
+    if pid:
+        go_to(pid)
+    else:
+        ss["paper_select"] = ss.get("paper_id")
+
+
 def statuses(cb: Codebook, reviewer: str) -> dict[str, str]:
     """Stored status per paper, or "needs review" when saved under an older codebook."""
     papers = store.load_papers()
@@ -602,22 +634,20 @@ def sidebar(cb: Codebook, info: pd.DataFrame) -> None:
                     and (not search or search in row["title"].lower()))
 
         ids = [r["paper_id"] for _, r in info.iterrows() if keep(r)]
-        current = ss.get("paper_id")
-        if current not in set(info["paper_id"]):
+        # Only the very first run (or a paper that left paper_info.csv) falls back to
+        # the first paper: an unreadable selectbox value must never switch papers.
+        current = (as_paper_id(ss.get("paper_select"), info)
+                   or as_paper_id(ss.get("paper_id"), info))
+        if current is None:
             current = ids[0] if ids else info["paper_id"].iloc[0]
         if current not in ids:
             ids = [current] + ids
-        titles = dict(zip(info["paper_id"], info["title"]))
-        years = dict(zip(info["paper_id"], info["year"]))
 
-        def fmt(pid: str) -> str:
-            return f"{STATUS_ICON.get(status.get(pid, ''), '⬜')} {years[pid]} · {titles[pid][:80]}"
-
-        if ss.get("paper_select") not in ids:
-            ss["paper_select"] = current
-        st.selectbox(f"Paper ({len(ids)} shown)", ids, key="paper_select", format_func=fmt,
-                     on_change=lambda: ss.__setitem__("paper_id", ss["paper_select"]))
-        ss["paper_id"] = ss["paper_select"]
+        ss["paper_select"] = current
+        st.selectbox(f"Paper ({len(ids)} shown)", ids, key="paper_select",
+                     format_func=lambda pid: paper_label(pid, info, status),
+                     on_change=on_paper_select, args=(info,))
+        ss["paper_id"] = current
 
         position = ids.index(ss["paper_id"])
         c1, c2, c3 = st.columns(3)

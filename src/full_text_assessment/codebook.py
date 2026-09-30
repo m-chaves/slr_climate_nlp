@@ -451,7 +451,8 @@ class Codebook:
             if key not in seen:
                 seen.add(key)
                 out.append(label)
-        return out
+        # Escape options ("not reported", "unclear", ...) always come last.
+        return sorted(out, key=lambda label: label.value.casefold() in EXCLUSIVE_LABELS)
 
     def resolve(self, question: Question, value: str) -> str:
         """Current name of a stored label value (renames applied)."""
