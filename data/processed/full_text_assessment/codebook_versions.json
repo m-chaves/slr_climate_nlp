@@ -1,4 +1,1028 @@
 {
+ "1362327129a9": {
+  "questions": {
+   "CLI.domain": {
+    "condition": "",
+    "display_id": "CLI.1",
+    "kind": "multi",
+    "labels": [
+     "unclear",
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "CLI.domain",
+    "section": "CLI",
+    "text": "What is the climate domain? (e.g., climate denial, wildfires)",
+    "updatable": true
+   },
+   "CLI.focus": {
+    "condition": "",
+    "display_id": "CLI.2",
+    "kind": "single",
+    "labels": [
+     "main focus",
+     "case study",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "CLI.focus",
+    "section": "CLI",
+    "text": "Is a climate subject the main focus of the paper, or is it a case study?",
+    "updatable": false
+   },
+   "CON.STEM_hum": {
+    "condition": "",
+    "display_id": "CON.6",
+    "kind": "single",
+    "labels": [
+     "mostly STEM",
+     "mostly SSH"
+    ],
+    "level": "paper",
+    "pool": "CON.STEM_hum",
+    "section": "CON",
+    "text": "Overall, to which research area do the contributions and methods of the study belong to?",
+    "updatable": false
+   },
+   "CON.concl": {
+    "condition": "",
+    "display_id": "CON.1",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "CON.concl",
+    "section": "CON",
+    "text": "What are the conclusions of the study? Cite them verbatim.",
+    "updatable": false
+   },
+   "CON.concl_clear": {
+    "condition": "",
+    "display_id": "CON.2",
+    "kind": "single",
+    "labels": [
+     "yes",
+     "no"
+    ],
+    "level": "paper",
+    "pool": "CON.concl_clear",
+    "section": "CON",
+    "text": "Is there a clear conclusion in terms of climate, misinformation, or polarization besides just an improvement on machine learning metrics?",
+    "updatable": false
+   },
+   "CON.concl_clear_cite": {
+    "condition": "CON.concl_clear='yes'",
+    "display_id": "CON.3",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "CON.concl_clear_cite",
+    "section": "CON",
+    "text": "Which passage states it? Cite and/or explain.",
+    "updatable": false
+   },
+   "CON.limits": {
+    "condition": "",
+    "display_id": "CON.5",
+    "kind": "free",
+    "labels": [
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "CON.limits",
+    "section": "CON",
+    "text": "What are the limitations of the study? Cite them",
+    "updatable": false
+   },
+   "CON.motiv_match": {
+    "condition": "MOT.motiv_cite!='not reported' AND CON.concl not in ('not reported', 'unclear')",
+    "display_id": "CON.4",
+    "kind": "single",
+    "labels": [
+     "0 = conclusions unrelated to motivation",
+     "1 = partially addressed",
+     "2 = addressed",
+     "3 = addressed with explicit reflection on what was and wasn't achieved"
+    ],
+    "level": "paper",
+    "pool": "CON.motiv_match",
+    "section": "CON",
+    "text": "Do the motivations and conclusions match?",
+    "updatable": false
+   },
+   "CON.subfield": {
+    "condition": "",
+    "display_id": "CON.7",
+    "kind": "free",
+    "labels": [
+     "none"
+    ],
+    "level": "paper",
+    "pool": "CON.subfield",
+    "section": "CON",
+    "text": "Report any relevant subfield",
+    "updatable": false
+   },
+   "DA.annot": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.14",
+    "kind": "single",
+    "labels": [
+     "yes",
+     "no",
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.annot",
+    "section": "DA",
+    "text": "Did they perform annotations or produce labelled data?",
+    "updatable": false
+   },
+   "DA.annot_model": {
+    "condition": "DA.annot_who in ('LLM or generative model', 'non-generative classifier')",
+    "display_id": "DA.16",
+    "kind": "multi",
+    "labels": [
+     "prelabel (the model pre-labels with human review)",
+     "voter (treated as one annotator among humans, aggregated by vote or averaging)",
+     "sole annotator",
+     "resolves disagreements between human annotators",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.annot_model",
+    "section": "DA",
+    "text": "How were LLMs or other models used for annotations?",
+    "updatable": true
+   },
+   "DA.annot_who": {
+    "condition": "DA.annot='yes'",
+    "display_id": "DA.15",
+    "kind": "multi",
+    "labels": [
+     "paper's authors",
+     "domain experts",
+     "trained annotators",
+     "crowdworkers",
+     "volunteers",
+     "study participants (survey respondents labeling their own beliefs or content)",
+     "LLM or generative model",
+     "non-generative classifier",
+     "derived from data (labels come from a signal already in the data)",
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.annot_who",
+    "section": "DA",
+    "text": "Who performed the annotations?",
+    "updatable": true
+   },
+   "DA.data_type": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.2",
+    "kind": "free",
+    "labels": [
+     "unclear",
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.data_type",
+    "section": "DA",
+    "text": "What kind of data do they use?",
+    "updatable": false
+   },
+   "DA.dataset_name": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.4",
+    "kind": "free",
+    "labels": [
+     "unnamed",
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.dataset_name",
+    "section": "DA",
+    "text": "What is the name of the dataset?",
+    "updatable": false
+   },
+   "DA.end": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.13",
+    "kind": "year",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.end",
+    "section": "DA",
+    "text": "What is the time span ending?",
+    "updatable": false
+   },
+   "DA.geo": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.7",
+    "kind": "multi",
+    "labels": [
+     "global",
+     "US",
+     "unclear",
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.geo",
+    "section": "DA",
+    "text": "Which geographic location does the data refer to?",
+    "updatable": true
+   },
+   "DA.is_data": {
+    "condition": "",
+    "display_id": "DA.1",
+    "kind": "single",
+    "labels": [
+     "yes",
+     "no",
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "DA.is_data",
+    "section": "DA",
+    "text": "Does the study uses at least one dataset in their analysis?",
+    "updatable": false
+   },
+   "DA.lang": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.6",
+    "kind": "multi",
+    "labels": [
+     "English",
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.lang",
+    "section": "DA",
+    "text": "In which language?",
+    "updatable": true
+   },
+   "DA.modality": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.3",
+    "kind": "multi",
+    "labels": [
+     "text",
+     "images",
+     "video",
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.modality",
+    "section": "DA",
+    "text": "What is the modality?",
+    "updatable": true
+   },
+   "DA.new": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.9",
+    "kind": "single",
+    "labels": [
+     "newly created by the authors",
+     "existing dataset reused as-is",
+     "existing dataset extended with new data or annotations",
+     "subset or sample of an existing dataset",
+     "combination of existing datasets",
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.new",
+    "section": "DA",
+    "text": "Is it a new dataset?",
+    "updatable": false
+   },
+   "DA.platform": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.5",
+    "kind": "multi",
+    "labels": [
+     "Twitter",
+     "Reddit",
+     "YouTube",
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.platform",
+    "section": "DA",
+    "text": "From which platform was the data retrieved?",
+    "updatable": true
+   },
+   "DA.size": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.10",
+    "kind": "integer",
+    "labels": [
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.size",
+    "section": "DA",
+    "text": "What is the size of the dataset?",
+    "updatable": false
+   },
+   "DA.size_unit": {
+    "condition": "DA.size!='not reported'",
+    "display_id": "DA.11",
+    "kind": "single",
+    "labels": [
+     "posts",
+     "sentences",
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.size_unit",
+    "section": "DA",
+    "text": "In which unit is the size expressed?",
+    "updatable": true
+   },
+   "DA.start": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.12",
+    "kind": "year",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "dataset",
+    "pool": "DA.start",
+    "section": "DA",
+    "text": "What is the time span starting?",
+    "updatable": false
+   },
+   "DA.task": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.17",
+    "kind": "multi",
+    "labels": [],
+    "level": "dataset",
+    "pool": "ML.task",
+    "section": "DA",
+    "text": "What is the ML task the dataset is intended for?",
+    "updatable": true
+   },
+   "DA.theme": {
+    "condition": "DA.is_data= 'yes'",
+    "display_id": "DA.8",
+    "kind": "multi",
+    "labels": [
+     "unclear",
+     "not reported"
+    ],
+    "level": "dataset",
+    "pool": "DA.theme",
+    "section": "DA",
+    "text": "What is the thematic?",
+    "updatable": true
+   },
+   "MIS.agent_identification": {
+    "condition": "MIS.agents not in ('NA', 'not reported', 'unclear')",
+    "display_id": "MIS.7",
+    "kind": "free",
+    "labels": [
+     "unclear",
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "MIS.agent_identification",
+    "section": "MIS",
+    "text": "How are the agents identified? (How do they know they created or produced the misinformation?)",
+    "updatable": false
+   },
+   "MIS.agents": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.6",
+    "kind": "multi",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.agents",
+    "section": "MIS",
+    "text": "Which agents of misinformation are mentioned, if any? An agent is the individual or group that creates and/or distributes the message (e.g., a political organisation, the government, an influencer, a media organisation, a public figure)",
+    "updatable": true
+   },
+   "MIS.def": {
+    "condition": "MIS.has_def='yes'",
+    "display_id": "MIS.3",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "MIS.def",
+    "section": "MIS",
+    "text": "What definition of misinformation does the study state? Cite it.",
+    "updatable": false
+   },
+   "MIS.def_src": {
+    "condition": "MIS.has_def='yes'",
+    "display_id": "MIS.4",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.def_src",
+    "section": "MIS",
+    "text": "What is the source of the definition? (e.g., (Zhang et al., 2026), UN)",
+    "updatable": false
+   },
+   "MIS.findings": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.12",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.findings",
+    "section": "MIS",
+    "text": "What are the findings regarding misinformation?",
+    "updatable": false
+   },
+   "MIS.has_def": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.2",
+    "kind": "single",
+    "labels": [
+     "yes",
+     "no"
+    ],
+    "level": "paper",
+    "pool": "MIS.has_def",
+    "section": "MIS",
+    "text": "Is there a definition of misinformation?",
+    "updatable": false
+   },
+   "MIS.is_present": {
+    "condition": "",
+    "display_id": "MIS.1",
+    "kind": "single",
+    "labels": [
+     "yes, direct",
+     "yes, indirect",
+     "no"
+    ],
+    "level": "paper",
+    "pool": "MIS.is_present",
+    "section": "MIS",
+    "text": "Is misinformation present? It is considered DIRECT when the study names misinformation or disinformation in its own framing, and INDIRECT when it is studied via adjacent or proxy constructs without naming it (e.g., propaganda, fake news).",
+    "updatable": false
+   },
+   "MIS.metrics": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.8",
+    "kind": "multi",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.metrics",
+    "section": "MIS",
+    "text": "What metrics are reported? (How do they measure misinformation?)",
+    "updatable": true
+   },
+   "MIS.metrics_desc": {
+    "condition": "MIS.metrics not in ('not reported', 'unclear', 'NA')",
+    "display_id": "MIS.9",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.metrics_desc",
+    "section": "MIS",
+    "text": "Cite any relevant descriptions of the metrics.",
+    "updatable": false
+   },
+   "MIS.responses": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.11",
+    "kind": "multi",
+    "labels": [
+     "no responses are presented",
+     "education (e.g., critical thinking techniques)",
+     "inoculation (e.g., pre-emptively provide correct information, warn people they may be misinformed)",
+     "technological solutions (e.g., early detection of malicious accounts, ranking and selection algorithms)",
+     "response (e.g., corrective approach, counterarguments)",
+     "regulation (e.g., fines, imprisonment)",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.responses",
+    "section": "MIS",
+    "text": "Are responses to misinformation presented? If so, which? (Categories based on Treen et al., 2020)",
+    "updatable": true
+   },
+   "MIS.truth_status": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.10",
+    "kind": "multi",
+    "labels": [
+     "no truth status established",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.truth_status",
+    "section": "MIS",
+    "text": "How is truth status established? (e.g., professional fact checkers, scientific-expert judgement, source-level credibility heuristic, crowd labels, LLM judgement)",
+    "updatable": true
+   },
+   "MIS.type": {
+    "condition": "MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MIS.5",
+    "kind": "multi",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MIS.type",
+    "section": "MIS",
+    "text": "What is the type of misinformation? (e.g., conspiracy theories, climate denial)",
+    "updatable": true
+   },
+   "ML.method": {
+    "condition": "",
+    "display_id": "ML.2",
+    "kind": "multi",
+    "labels": [
+     "Lexicon/rule-based (VADER, LIWC, custom dictionaries)",
+     "Classical ML (LR, SVM, NB, RF, gradient boosting)",
+     "Statistical/econometric (GLM, mixed models, time series)",
+     "Topic models (LDA, NMF, STM, BERTopic)",
+     "Static embeddings (word2vec, GloVe, fastText)",
+     "Sentence embeddings (SBERT, sentence-transformers)",
+     "Non-transformer neural (CNN, RNN/LSTM)",
+     "Encoder-only PLMs (BERT, RoBERTa, XLM-R, ClimateBERT)",
+     "Encoder–decoder (T5, BART)",
+     "Decoder-only LLMs",
+     "Graph methods (community detection, centrality, GNNs)",
+     "Multimodal models (CLIP, VLMs)",
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "ML.method",
+    "section": "ML",
+    "text": "Which computational method do they use?",
+    "updatable": true
+   },
+   "ML.subtechnique": {
+    "condition": "",
+    "display_id": "ML.3",
+    "kind": "multi",
+    "labels": [
+     "zero-shot",
+     "few-shot",
+     "Chain of Thought",
+     "prompt-engineered",
+     "instruction tuning",
+     "(LoRA) fine-tuning",
+     "regular fine-tuning",
+     "RAG",
+     "knowledge distillation",
+     "role-played personas",
+     "agentic",
+     "none"
+    ],
+    "level": "paper",
+    "pool": "ML.subtechnique",
+    "section": "ML",
+    "text": "Which ML subtechniques or frameworks are used?",
+    "updatable": true
+   },
+   "ML.task": {
+    "condition": "",
+    "display_id": "ML.1",
+    "kind": "multi",
+    "labels": [
+     "stance detection or classification",
+     "sentiment",
+     "misinformation or fake-news detection",
+     "hate speech or toxicity detection",
+     "topic modeling",
+     "argument mining",
+     "retrieval",
+     "network analysis (incl. community detection)",
+     "time-series analysis",
+     "regression or statistical inference",
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "ML.task",
+    "section": "ML",
+    "text": "Which ML task(s) do they tackle?",
+    "updatable": true
+   },
+   "MOT.action": {
+    "condition": "",
+    "display_id": "MOT.8",
+    "kind": "single",
+    "labels": [
+     "0 = none",
+     "1 = generic \"this could be useful for practitioners\" gesture",
+     "2 = concrete implications for a named actor and decision",
+     "3 = an artifact usable for decision-making (deployed tool, dashboard, released system, intervention design)",
+     "4 = evaluated in a real decision context or with the intended users"
+    ],
+    "level": "paper",
+    "pool": "MOT.action",
+    "section": "MOT",
+    "text": "Is the methodology actionable? (“Actionability refers to the degree to which the method proposed enables decision-making or intervention”, definition modified from (Delobelle et al., 2024))",
+    "updatable": false
+   },
+   "MOT.action_why": {
+    "condition": "MOT.action!=0",
+    "display_id": "MOT.9",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "MOT.action_why",
+    "section": "MOT",
+    "text": "Why? Cite and/or explain.",
+    "updatable": false
+   },
+   "MOT.motiv_cat": {
+    "condition": "MOT.motiv_cite!= 'not reported'",
+    "display_id": "MOT.2",
+    "kind": "multi",
+    "labels": [
+     "ML model advance",
+     "dataset creation",
+     "empirical understanding of discourse",
+     "theory testing",
+     "intervention or countermeasure design",
+     "policy or practitioner support",
+     "transfer to a new language or platform",
+     "instrument development",
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MOT.motiv_cat",
+    "section": "MOT",
+    "text": "Under which categories do those motivations fall?",
+    "updatable": true
+   },
+   "MOT.motiv_cite": {
+    "condition": "",
+    "display_id": "MOT.1",
+    "kind": "free",
+    "labels": [
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "MOT.motiv_cite",
+    "section": "MOT",
+    "text": "What are the motivation(s) of the study? Cite them.",
+    "updatable": false
+   },
+   "MOT.motiv_clear": {
+    "condition": "MOT.motiv_cite!= 'not reported'",
+    "display_id": "MOT.3",
+    "kind": "single",
+    "labels": [
+     "yes",
+     "no"
+    ],
+    "level": "paper",
+    "pool": "MOT.motiv_clear",
+    "section": "MOT",
+    "text": "Is there a clear motivation in terms of climate, misinformation, or polarization besides just an improvement on machine learning metrics?",
+    "updatable": false
+   },
+   "MOT.motiv_clear_cite": {
+    "condition": "MOT.motiv_clear='yes'",
+    "display_id": "MOT.4",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "MOT.motiv_clear_cite",
+    "section": "MOT",
+    "text": "Which passage states it? Cite and/or explain.",
+    "updatable": false
+   },
+   "MOT.theory": {
+    "condition": "",
+    "display_id": "MOT.5",
+    "kind": "single",
+    "labels": [
+     "0 = construct never defined, measure unjustified",
+     "1 = construct defined but measure not linked to the definition",
+     "2 = partial or implicit link",
+     "3 = explicit link, measure justified against the stated definition",
+     "4 = explicit link plus validation (human validation, sensitivity analysis, comparison of alternative operationalizations)"
+    ],
+    "level": "paper",
+    "pool": "MOT.theory",
+    "section": "MOT",
+    "text": "Is there a theoretical basis for the methodological approach? That is, does the methodology they define align with the construct they measure? E.g., the definition of polarization matches the metrics of polarization they propose.",
+    "updatable": false
+   },
+   "MOT.theory_why": {
+    "condition": "MOT.theory!=0",
+    "display_id": "MOT.6",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "MOT.theory_why",
+    "section": "MOT",
+    "text": "Why? Cite and/or explain.",
+    "updatable": false
+   },
+   "MOT.validation": {
+    "condition": "MOT.theory=4",
+    "display_id": "MOT.7",
+    "kind": "multi",
+    "labels": [
+     "human validation",
+     "sensitivity analysis",
+     "comparison of alternative operationalizations",
+     "evaluated across multiple datasets"
+    ],
+    "level": "paper",
+    "pool": "MOT.validation",
+    "section": "MOT",
+    "text": "What type of validation was used?",
+    "updatable": true
+   },
+   "MP.rel_cite": {
+    "condition": "MP.rel_claimed not in ('unclear', 'not reported', 'NA')",
+    "display_id": "MP.4",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "MP.rel_cite",
+    "section": "MP",
+    "text": "Cite the text stating the concluding relationship between misinformation and polarization",
+    "updatable": false
+   },
+   "MP.rel_claimed": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect') AND MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MP.2",
+    "kind": "multi",
+    "labels": [
+     "independent (they are treated separately)",
+     "associational or correlational",
+     "causal, misinformation causes polarization",
+     "causal, polarization causes misinformation",
+     "causal, bidirectional",
+     "causal, direction unspecified",
+     "common cause, both are attributed to a third factor",
+     "unclear",
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "MP.rel_claimed",
+    "section": "MP",
+    "text": "What relationship between misinformation and polarization does the paper claim to have shown?",
+    "updatable": true
+   },
+   "MP.rel_evidence": {
+    "condition": "MP.rel_claimed not in ('unclear', 'not reported', 'NA')",
+    "display_id": "MP.3",
+    "kind": "multi",
+    "labels": [
+     "descriptive co-occurrence, both constructs observed in the same corpus, no statistic relating them",
+     "correlation, chi-square, or similar bivariate association",
+     "multivariate model, e.g. regression",
+     "temporal precedence, lagged models, time-ordered measurement, change-point alignment",
+     "network evidence, e.g. community structure, exposure paths, diffusion within or across clusters",
+     "simulations",
+     "qualitative analysis",
+     "prior literature only",
+     "asserted without evidence",
+     "unclear",
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "MP.rel_evidence",
+    "section": "MP",
+    "text": "What evidence does the paper offer in support of the relationship it claims to have shown?",
+    "updatable": true
+   },
+   "MP.rel_measured": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect') AND MIS.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "MP.1",
+    "kind": "multi",
+    "labels": [
+     "independent (they are treated separately)",
+     "associational or correlational",
+     "causal, misinformation causes polarization",
+     "causal, polarization causes misinformation",
+     "causal, bidirectional",
+     "causal, direction unspecified",
+     "common cause, both are attributed to a third factor",
+     "unclear",
+     "not reported"
+    ],
+    "level": "paper",
+    "pool": "MP.rel_measured",
+    "section": "MP",
+    "text": "What relationship between misinformation and polarisation do the paper's measures and analysis support?",
+    "updatable": true
+   },
+   "POL.change": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "POL.9",
+    "kind": "single",
+    "labels": [
+     "increasing",
+     "decreasing",
+     "stable",
+     "mixed",
+     "not assessed over time"
+    ],
+    "level": "paper",
+    "pool": "POL.change",
+    "section": "POL",
+    "text": "What is the change in polarization?",
+    "updatable": true
+   },
+   "POL.def": {
+    "condition": "POL.has_def='yes'",
+    "display_id": "POL.3",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "POL.def",
+    "section": "POL",
+    "text": "What definition of polarization does the study state? Cite it.",
+    "updatable": false
+   },
+   "POL.def_src": {
+    "condition": "POL.has_def='yes'",
+    "display_id": "POL.4",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "POL.def_src",
+    "section": "POL",
+    "text": "What is the source of the definition? (e.g., (Zhang et al., 2026), UN)",
+    "updatable": false
+   },
+   "POL.findings": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "POL.8",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "POL.findings",
+    "section": "POL",
+    "text": "What are the findings regarding polarization?",
+    "updatable": false
+   },
+   "POL.has_def": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "POL.2",
+    "kind": "single",
+    "labels": [
+     "yes",
+     "no"
+    ],
+    "level": "paper",
+    "pool": "POL.has_def",
+    "section": "POL",
+    "text": "Is there a definition of polarization?",
+    "updatable": false
+   },
+   "POL.is_present": {
+    "condition": "",
+    "display_id": "POL.1",
+    "kind": "single",
+    "labels": [
+     "yes, direct",
+     "yes, indirect",
+     "no"
+    ],
+    "level": "paper",
+    "pool": "POL.is_present",
+    "section": "POL",
+    "text": "Is polarization present? It is considered DIRECT when the study names polarization in its own framing, and INDIRECT when it is studied via adjacent or proxy constructs without naming it (e.g., network or community analysis, echo chambers, homophily, changes in discourse).",
+    "updatable": false
+   },
+   "POL.measure": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "POL.6",
+    "kind": "multi",
+    "labels": [
+     "network communities",
+     "opinion-distribution statistics",
+     "embedding or semantic distance",
+     "outgroup sentiment or toxicity",
+     "stance-label distribution",
+     "retweet or interaction-network structure",
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "POL.measure",
+    "section": "POL",
+    "text": "How is polarization measured?",
+    "updatable": true
+   },
+   "POL.measure_cite": {
+    "condition": "POL.measure not in ('not reported', 'unclear')",
+    "display_id": "POL.7",
+    "kind": "free",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "POL.measure_cite",
+    "section": "POL",
+    "text": "Cite any relevant descriptions on how they measure polarization.",
+    "updatable": false
+   },
+   "POL.type": {
+    "condition": "POL.is_present in ('yes, direct', 'yes, indirect')",
+    "display_id": "POL.5",
+    "kind": "multi",
+    "labels": [
+     "not reported",
+     "unclear"
+    ],
+    "level": "paper",
+    "pool": "POL.type",
+    "section": "POL",
+    "text": "What is the type of polarization? (e.g., political polarization, affective polarization)",
+    "updatable": true
+   },
+   "STAK.are_stakeholders": {
+    "condition": "",
+    "display_id": "STAK.1",
+    "kind": "single",
+    "labels": [
+     "0 = not mentioned",
+     "1 = generic \"this could be useful for practitioners\" gesture",
+     "2 = consulted (interviews, requirements gathering, feedback)",
+     "3 = involved in design or evaluation (participatory, co-design, they evaluated outputs)",
+     "4 = co-authors"
+    ],
+    "level": "paper",
+    "pool": "STAK.are_stakeholders",
+    "section": "STAK",
+    "text": "Are stakeholders (e.g., fact checkers, policy makers) mentioned, and at what level of engagement?",
+    "updatable": false
+   },
+   "STAK.cite": {
+    "condition": "STAK.are_stakeholders!=0",
+    "display_id": "STAK.3",
+    "kind": "free",
+    "labels": [],
+    "level": "paper",
+    "pool": "STAK.cite",
+    "section": "STAK",
+    "text": "Which passage evidences this? Cite it.",
+    "updatable": false
+   },
+   "STAK.who": {
+    "condition": "STAK.are_stakeholders!=0",
+    "display_id": "STAK.2",
+    "kind": "multi",
+    "labels": [
+     "fact-checkers",
+     "policy makers"
+    ],
+    "level": "paper",
+    "pool": "STAK.who",
+    "section": "STAK",
+    "text": "Who are the stakeholders?",
+    "updatable": true
+   }
+  },
+  "recorded_at": "2026-10-01T19:03:30+02:00"
+ },
  "bbc89907ae72": {
   "questions": {
    "CLI.domain": {

@@ -29,8 +29,9 @@ flowchart LR
     POL_def_src["POL.def_src <small>(POL.4)</small><br/><small>What is the source of the definition?…</small>"]
     POL_type["POL.type <small>(POL.5)</small><br/><small>What is the type of polarization? (e.…</small>"]
     POL_measure["POL.measure <small>(POL.6)</small><br/><small>How is polarization measured?</small>"]
-    POL_findings["POL.findings <small>(POL.7)</small><br/><small>What are the findings regarding polar…</small>"]
-    POL_change["POL.change <small>(POL.8)</small><br/><small>What is the change in polarization?</small>"]
+    POL_measure_cite["POL.measure_cite <small>(POL.7)</small><br/><small>Cite any relevant descriptions on how…</small>"]
+    POL_findings["POL.findings <small>(POL.8)</small><br/><small>What are the findings regarding polar…</small>"]
+    POL_change["POL.change <small>(POL.9)</small><br/><small>What is the change in polarization?</small>"]
   end
   subgraph MP["Intersection (Misinfo. and Polar.)"]
     MP_rel_measured["MP.rel_measured <small>(MP.1)</small><br/><small>What relationship between misinformat…</small>"]
@@ -103,6 +104,7 @@ flowchart LR
   POL_has_def -->|"= yes"| POL_def_src
   POL_is_present -->|"∈ yes, direct / yes, indirect"| POL_type
   POL_is_present -->|"∈ yes, direct / yes, indirect"| POL_measure
+  POL_measure -->|"∉ not reported / unclear"| POL_measure_cite
   POL_is_present -->|"∈ yes, direct / yes, indirect"| POL_findings
   POL_is_present -->|"∈ yes, direct / yes, indirect"| POL_change
   POL_is_present -->|"∈ yes, direct / yes, indirect"| MP_rel_measured
@@ -141,5 +143,5 @@ flowchart LR
   classDef dataset fill:#fdeee7,stroke:#eb6834
   classDef paper fill:#e8f1fb,stroke:#2a78d6
   class DA_data_type,DA_modality,DA_dataset_name,DA_platform,DA_lang,DA_geo,DA_theme,DA_new,DA_size,DA_size_unit,DA_start,DA_end,DA_annot,DA_annot_who,DA_annot_model,DA_task dataset
-  class CLI_domain,CLI_focus,MIS_is_present,MIS_has_def,MIS_def,MIS_def_src,MIS_type,MIS_agents,MIS_agent_identification,MIS_metrics,MIS_metrics_desc,MIS_truth_status,MIS_responses,MIS_findings,POL_is_present,POL_has_def,POL_def,POL_def_src,POL_type,POL_measure,POL_findings,POL_change,MP_rel_measured,MP_rel_claimed,MP_rel_evidence,MP_rel_cite,MOT_motiv_cite,MOT_motiv_cat,MOT_motiv_clear,MOT_motiv_clear_cite,MOT_theory,MOT_theory_why,MOT_validation,MOT_action,MOT_action_why,STAK_are_stakeholders,STAK_who,STAK_cite,CON_concl,CON_concl_clear,CON_concl_clear_cite,CON_motiv_match,CON_limits,CON_STEM_hum,CON_subfield,DA_is_data,ML_task,ML_method,ML_subtechnique paper
+  class CLI_domain,CLI_focus,MIS_is_present,MIS_has_def,MIS_def,MIS_def_src,MIS_type,MIS_agents,MIS_agent_identification,MIS_metrics,MIS_metrics_desc,MIS_truth_status,MIS_responses,MIS_findings,POL_is_present,POL_has_def,POL_def,POL_def_src,POL_type,POL_measure,POL_measure_cite,POL_findings,POL_change,MP_rel_measured,MP_rel_claimed,MP_rel_evidence,MP_rel_cite,MOT_motiv_cite,MOT_motiv_cat,MOT_motiv_clear,MOT_motiv_clear_cite,MOT_theory,MOT_theory_why,MOT_validation,MOT_action,MOT_action_why,STAK_are_stakeholders,STAK_who,STAK_cite,CON_concl,CON_concl_clear,CON_concl_clear_cite,CON_motiv_match,CON_limits,CON_STEM_hum,CON_subfield,DA_is_data,ML_task,ML_method,ML_subtechnique paper
 ```
