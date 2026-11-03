@@ -31,6 +31,13 @@ conditions compare against it (`MOT.theory=4`). A coded question may also carry
 uncoded escape labels (see `EXCLUSIVE_LABELS`), stored as their text, so that "not
 applicable" answers never end up in the numeric scale.
 
+One rule lives here rather than in the xlsx: the *exclusion gate*. When `EX.exclude`
+is answered "yes", every question outside the EX section is skipped. Writing that as a
+clause on every Condition would bury the real branching logic.
+
+A question's "Default response" is the answer it starts with. It is filled in only for
+questions a paper has never seen (see `store.fill_defaults`), never over a saved answer.
+
 Questions are keyed by their **fixID** (`MIS.def`), which never changes when questions
 are added, removed or reordered. The xlsx `ID` column (`MIS.3`) is kept as
 `display_id` for the UI only. Conditions, label pools and the answer CSVs all use
@@ -52,6 +59,11 @@ PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CODEBOOK_PATH = PROJECT_ROOT / "documents" / "full-text_assessment_questions.xlsx"
 
 NA = "NA"                      # value written for a question the logic skipped
+
+# The exclusion gate: an answer in EXCLUSION_VALUES to EXCLUSION_QID skips every
+# question outside that question's own section.
+EXCLUSION_QID = "EX.exclude"
+EXCLUSION_VALUES = {"yes"}
 MULTI_SEP = " | "              # joins multi-select answers in the CSVs
 
 # Labels that mean "no substantive answer". In a multi-select they cannot be combined
@@ -108,6 +120,8 @@ class Question:
     raw_type: str = ""
     raw_labels: str = ""
     display_id: str = ""       # the xlsx "ID" column (MIS.3); changes when rows move
+    default: str | list[str] | None = None   # the "Default response", as a stored value
+    raw_default: str = ""
 
     @property
     def label_ids(self) -> str:
@@ -391,6 +405,19 @@ def _parse_labels(raw: str) -> list[Label]:
     return labels
 
 
+def _parse_default(raw: str, kind: str, labels: list[Label]) -> str | list[str] | None:
+    """The "Default response" cell as a stored value: a label's code or text."""
+    if not raw:
+        return None
+    by_text = {}
+    for label in labels:
+        by_text[label.text.casefold()] = label.value
+        by_text[label.value.casefold()] = label.value
+    parts = [line.strip() for line in raw.split("\n") if line.strip()]
+    values = [by_text.get(part.casefold(), part) for part in parts]
+    return values if kind == "multi" else (values[0] if len(values) == 1 else raw)
+
+
 def _parse_kind(raw_type: str) -> tuple[str | None, bool]:
     low = raw_type.strip().lower()
     updatable = low.startswith("updatable ")
@@ -482,7 +509,19 @@ class Codebook:
                 continue
             result = _evaluate(question.condition, state, answers)
             state[question.id] = {True: SHOWN, False: SKIPPED, None: PENDING}[result]
+        if self.is_excluded(answers):
+            gate = self.by_id[EXCLUSION_QID].section_key
+            for question in questions:
+                if question.section_key != gate:
+                    state[question.id] = SKIPPED
         return state
+
+    def is_excluded(self, answers: dict[str, Answer]) -> bool:
+        """Whether the exclusion gate is closed. Dataset-level callers must pass the
+        paper's answers merged in, as they already do for conditions."""
+        if EXCLUSION_QID not in self.by_id:
+            return False
+        return bool(_as_set(answers.get(EXCLUSION_QID)) & EXCLUSION_VALUES)
 
     def dependency_order(self, questions: list[Question]) -> list[Question]:
         """Questions reordered so every parent comes before its children."""
@@ -570,6 +609,7 @@ def load_codebook(path: Path = CODEBOOK_PATH,
             except ConditionError as exc:
                 errors.append((qid, str(exc)))
 
+        raw_default = _clean(row.get("Default response"))
         counter = row.get("Section counter")
         section_key = _clean(row.get("Section key"))
         questions.append(Question(
@@ -588,6 +628,8 @@ def load_codebook(path: Path = CODEBOOK_PATH,
             raw_type=raw_type,
             raw_labels=raw_labels,
             display_id=display_id,
+            default=_parse_default(raw_default, kind, labels),
+            raw_default=raw_default,
         ))
 
     if not sections:
@@ -617,7 +659,8 @@ def fingerprint(q: Question) -> dict:
     """The parts of a question whose change a reviewer should look at again.
 
     Labels added in the tool are left out on purpose: they grow while reading and
-    are not a change to the codebook.
+    are not a change to the codebook. So is the default response: it only pre-fills
+    questions a paper has never seen, so changing it asks nothing of past answers.
     """
     return {
         "display_id": q.display_id,

@@ -91,6 +91,7 @@ def load_work(cb: Codebook, reviewer: str, paper_id: str) -> dict:
     stored_ds = store.get_datasets(cb, paper_id, reviewer)
     datasets = {d["idx"]: {"label": d["label"], "answers": d["answers"], "free": d["free"]}
                 for d in stored_ds}
+    unseen = store.unseen_questions(cb, paper["codebook_version"])
     entry = {"answers": paper["answers"], "free": paper["free"], "notes": paper["notes"],
              "status": paper["status"], "datasets": datasets,
              "current_ds": min(datasets) if datasets else None, "saved_ds": {},
@@ -98,9 +99,21 @@ def load_work(cb: Codebook, reviewer: str, paper_id: str) -> dict:
              "codebook_version": paper["codebook_version"] or cb.version,
              "retired": paper["retired"],
              "retired_ds": {d["label"]: d["retired"] for d in stored_ds if d["retired"]}}
-    entry["saved"] = paper_signature(cb, entry)
-    for idx in datasets:
-        entry["saved_ds"][idx] = dataset_signature(cb, entry, idx)
+    # Defaults fill the questions this paper has never seen. A saved paper keeps its
+    # pre-default signature, so the defaults are written on the next autosave; a new
+    # paper is not saved just for being opened.
+    def take_signatures() -> None:
+        entry["saved"] = paper_signature(cb, entry)
+        for idx in datasets:
+            entry["saved_ds"][idx] = dataset_signature(cb, entry, idx)
+
+    if paper["codebook_version"]:
+        take_signatures()
+    store.fill_defaults(cb, entry, "paper", unseen)
+    for ds in datasets.values():
+        store.fill_defaults(cb, ds, "dataset", unseen)
+    if not paper["codebook_version"]:
+        take_signatures()
     work[key] = entry
     return entry
 
@@ -395,6 +408,8 @@ def render_questions(cb: Codebook, questions: list[Question], bucket: dict,
 def add_dataset(cb: Codebook, work: dict, sel_key: str | None = None) -> None:
     idx = max(work["datasets"], default=0) + 1
     work["datasets"][idx] = {"label": f"dataset {idx}", **blank_bucket(cb, "dataset")}
+    store.fill_defaults(cb, work["datasets"][idx], "dataset",
+                        {q.id for q in cb.level("dataset")})
     work["saved_ds"][idx] = dataset_signature(cb, work, idx)   # nothing to save yet
     work["current_ds"] = idx
     if sel_key:

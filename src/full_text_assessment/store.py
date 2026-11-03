@@ -229,6 +229,27 @@ def finalize(codebook: Codebook, answers: dict[str, Answer], level: str,
     return out
 
 
+def unseen_questions(codebook: Codebook, version: str) -> set[str]:
+    """
+    fixIDs a paper reviewed under `version` has never seen: all of them for a paper
+    never saved, none when that version is not on record (we can't tell).
+    """
+    if not version:
+        return {q.id for q in codebook.questions}
+    old = snapshot_of(version)
+    return set() if old is None else {q.id for q in codebook.questions if q.id not in old}
+
+
+def fill_defaults(codebook: Codebook, bucket: dict, level: str, qids: set[str]) -> None:
+    """Give the blank questions in `qids` their default response, in place."""
+    for q in codebook.level(level):
+        if q.default is None or q.id not in qids or not is_blank(bucket["answers"].get(q.id)):
+            continue
+        bucket["answers"][q.id] = list(q.default) if isinstance(q.default, list) else q.default
+        if q.kind == "free":
+            bucket["free"][q.id] = q.default not in {label.value for label in q.labels}
+
+
 def missing(codebook: Codebook, answers: dict[str, Answer], level: str,
             context: dict[str, str] | None = None) -> list[str]:
     """

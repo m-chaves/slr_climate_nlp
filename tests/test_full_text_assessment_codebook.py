@@ -182,3 +182,35 @@ def test_rename_into_existing_label_merges():
 def test_additions_do_not_leak_to_other_questions():
     cb = load_codebook(label_log=_log(("CLI.domain", "floods", "a", "t", "p1", "")))
     assert "floods" not in [l.text for l in cb.labels(cb.by_id["MIS.type"])]
+
+
+# ── exclusion gate ────────────────────────────────────────────────────────────
+
+def test_exclusion_yes_skips_every_other_section(cb):
+    state = paper_state(cb, {"EX.exclude": "yes", "MIS.is_present": "yes, direct"})
+    assert state["EX.exclude"] == SHOWN and state["EX.why"] == SHOWN
+    for q in cb.level("paper"):
+        if q.section_key != "EX":
+            assert state[q.id] == SKIPPED, q.id
+    assert cb.datasets_applicable({"EX.exclude": "yes", "DA.is_data": "yes"}) is False
+
+
+def test_exclusion_gate_reaches_dataset_level(cb):
+    answers = {"EX.exclude": "yes", "DA.is_data": "yes"}
+    ctx = paper_state(cb, answers)
+    ds_state = cb.visibility(answers, cb.level("dataset"), ctx)
+    assert all(v == SKIPPED for k, v in ds_state.items() if k in {q.id for q in cb.level("dataset")})
+
+
+@pytest.mark.parametrize("answer", ["no", "maybe", None])
+def test_exclusion_other_answers_leave_the_paper_open(cb, answer):
+    state = paper_state(cb, {"EX.exclude": answer})
+    assert state["CLI.domain"] == SHOWN and state["MOT.motiv_cite"] == SHOWN
+    assert state["EX.why"] == {"no": SKIPPED, "maybe": SHOWN, None: PENDING}[answer]
+
+
+# ── default responses ─────────────────────────────────────────────────────────
+
+def test_default_response_is_read_from_the_xlsx(cb):
+    assert cb.by_id["EX.exclude"].default == "no"
+    assert cb.by_id["EX.why"].default is None

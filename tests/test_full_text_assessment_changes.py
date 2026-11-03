@@ -288,3 +288,42 @@ def test_time_log_accumulates_per_reviewer_and_paper(tmp_store):
     table = store.time_per_paper()
     assert table.loc["p1", "Alan Turing"] == 1.0
     assert "Ada Lovelace" in store.reviewers()
+
+
+# ── default responses ─────────────────────────────────────────────────────────
+
+def bucket(cb, level="paper"):
+    return {"answers": {q.id: ([] if q.kind == "multi" else None) for q in cb.level(level)},
+            "free": {q.id: False for q in cb.level(level)}}
+
+
+def test_defaults_fill_only_blank_unseen_questions(tmp_store):
+    cb = load_codebook()
+    new = bucket(cb)
+    store.fill_defaults(cb, new, "paper", store.unseen_questions(cb, ""))   # never saved
+    assert new["answers"]["EX.exclude"] == "no"
+
+    answered = bucket(cb)
+    answered["answers"]["EX.exclude"] = "yes"
+    store.fill_defaults(cb, answered, "paper", {"EX.exclude"})
+    assert answered["answers"]["EX.exclude"] == "yes"                    # never overwritten
+
+    store.record_version(cb)
+    assert store.unseen_questions(cb, cb.version) == set()               # nothing new
+    assert store.unseen_questions(cb, "not-on-record") == set()
+
+
+def test_defaults_reach_questions_added_since_the_saved_version(tmp_store):
+    old = load_codebook(write_codebook(tmp_store, lambda df: df[~df["fixID"].str.startswith("EX.")]))
+    store.record_version(old)
+    cb = load_codebook()
+    assert store.unseen_questions(cb, old.version) == {"EX.exclude", "EX.why"}
+
+
+def test_audit_rejects_a_default_that_is_not_a_label(tmp_path):
+    def edit(df):
+        df.loc[df["fixID"] == "EX.exclude", "Default response"] = "nope"
+        return df
+    cb = load_codebook(write_codebook(tmp_path, edit))
+    assert any(i.qid == "EX.exclude" and i.check == "default" and i.severity == ERROR
+               for i in audit(cb))

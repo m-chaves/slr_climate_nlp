@@ -18,8 +18,8 @@ from dataclasses import dataclass
 import pandas as pd
 
 from src.full_text_assessment.codebook import (
-    EXCLUSIVE_LABELS, LEVELS, MULTI_SEP, NA, QID_PATTERN, Codebook, Comparison, BoolOp,
-    Question,
+    EXCLUSION_QID, EXCLUSION_VALUES, EXCLUSIVE_LABELS, LEVELS, MULTI_SEP, NA, QID_PATTERN,
+    Codebook, Comparison, BoolOp, Question,
 )
 
 ERROR, WARNING, INFO = "error", "warning", "info"
@@ -163,6 +163,44 @@ def audit(codebook: Codebook) -> list[Issue]:
                     "unconditional, and no 'not reported'/'unclear'-type label to "
                     "answer with when the paper is silent")
 
+    # ── default responses ────────────────────────────────────────────────────
+    for q in codebook.questions:
+        if q.default is None:
+            continue
+        if q.kind in ("single", "multi"):
+            known = {label.value.casefold() for label in codebook.labels(q)}
+            values = q.default if isinstance(q.default, list) else [q.default]
+            for value in values:
+                if value.casefold() not in known:
+                    add(ERROR, q.id, "default",
+                        f"default response {value!r} is not one of its labels")
+            if q.kind == "single" and q.raw_default.count("\n"):
+                add(ERROR, q.id, "default", "single-select with more than one default")
+        elif q.kind in ("integer", "year") and not str(q.default).isdigit():
+            if q.default.casefold() not in {l.value.casefold() for l in codebook.labels(q)}:
+                add(ERROR, q.id, "default",
+                    f"default response {q.default!r} is neither a number nor a label")
+        if q.condition is not None:
+            add(INFO, q.id, "default",
+                "conditional question with a default: the default is stored only "
+                "when the question is shown")
+
+    # ── exclusion gate ───────────────────────────────────────────────────────
+    gate = codebook.by_id.get(EXCLUSION_QID)
+    if gate is None:
+        add(INFO, EXCLUSION_QID, "exclusion",
+            f"no {EXCLUSION_QID} question: the exclusion gate is off")
+    else:
+        if gate.level != "paper":
+            add(ERROR, gate.id, "exclusion", "the exclusion question must be paper-level")
+        if gate.condition is not None:
+            add(WARNING, gate.id, "exclusion",
+                "the exclusion question is conditional; it should always be shown")
+        known = {label.value.casefold() for label in codebook.labels(gate)}
+        for value in sorted(EXCLUSION_VALUES - known):
+            add(ERROR, gate.id, "exclusion",
+                f"closes the gate on {value!r}, which is not one of its labels")
+
     # ── conditions ───────────────────────────────────────────────────────────
     for q in codebook.questions:
         for comp in _comparisons(q.condition):
@@ -230,6 +268,8 @@ def question_table(codebook: Codebook) -> pd.DataFrame:
             "children": ", ".join(c.id for c in codebook.children(q.id)),
             "label pool": q.pool if q.pool != q.id else "",
             "n labels": len(labels),
+            "default": (MULTI_SEP.join(q.default) if isinstance(q.default, list)
+                        else q.default or ""),
             "escape labels": ", ".join(l.text for l in labels
                                        if l.text.casefold() in EXCLUSIVE_LABELS),
         })
