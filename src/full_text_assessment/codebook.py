@@ -27,7 +27,9 @@ list; `X not in (..)` is true when at least one selected label is outside it. `=
 `!=` are the one-element versions of the same. Comparisons are case-insensitive.
 
 Labels written as "N = description" are *coded*: the answer stored is the code N, and
-conditions compare against it (`MOT.theory=4`).
+conditions compare against it (`MOT.theory=4`). A coded question may also carry
+uncoded escape labels (see `EXCLUSIVE_LABELS`), stored as their text, so that "not
+applicable" answers never end up in the numeric scale.
 
 Questions are keyed by their **fixID** (`MIS.def`), which never changes when questions
 are added, removed or reordered. The xlsx `ID` column (`MIS.3`) is kept as
@@ -57,6 +59,7 @@ MULTI_SEP = " | "              # joins multi-select answers in the CSVs
 EXCLUSIVE_LABELS = {
     "na", "not reported", "unclear", "none",
     "no responses are presented", "no truth status established",
+    "no methodological or measuring design",
 }
 
 KINDS = {                      # xlsx "Type" (lower-cased, "updatable " stripped) -> kind

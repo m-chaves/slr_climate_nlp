@@ -75,6 +75,16 @@ def test_numeric_codes(cb):
     assert paper_state(cb, {"STAK.are_stakeholders": "0"})["STAK.who"] == SKIPPED
 
 
+def test_uncoded_escape_label_on_coded_question(cb):
+    escape = "no methodological or measuring design"
+    theory = cb.by_id["MOT.theory"]
+    assert escape in [label.value for label in cb.labels(theory)]
+    assert cb.labels(theory)[-1].value == escape                # escapes sort last
+    state = paper_state(cb, {"MOT.theory": escape})
+    assert state["MOT.theory_why"] == SHOWN                     # "!=0": a reason is still given
+    assert state["MOT.validation"] == SKIPPED
+
+
 def test_motivation_not_reported(cb):
     state = paper_state(cb, {"MOT.motiv_cite": "not reported", "CON.concl": "they conclude x"})
     for qid in ("MOT.motiv_cat", "MOT.motiv_clear", "MOT.motiv_clear_cite", "CON.motiv_match"):

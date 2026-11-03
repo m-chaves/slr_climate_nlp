@@ -137,10 +137,14 @@ def audit(codebook: Codebook) -> list[Issue]:
                 add(ERROR, q.id, "labels", f"label {text!r} contains the separator '|'")
             if text.endswith("*"):
                 add(WARNING, q.id, "labels", f"label {text!r} still ends with '*'")
-        codes = [label.code for label in q.labels]
+        # Escape labels may sit uncoded next to coded ones: they are stored as text,
+        # so they never pass for a point on the numeric scale.
+        codes = [label.code for label in q.labels
+                 if label.code is not None or label.text.casefold() not in EXCLUSIVE_LABELS]
         if any(c is not None for c in codes):
             if None in codes:
-                add(ERROR, q.id, "labels", "mixes coded ('N = ...') and uncoded labels")
+                add(ERROR, q.id, "labels", "mixes coded ('N = ...') and uncoded labels "
+                    "(only escape labels may be uncoded)")
             if len(set(codes)) != len(codes):
                 add(ERROR, q.id, "labels", "duplicate codes")
             if q.updatable:
