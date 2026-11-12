@@ -1,0 +1,11 @@
+# Filtering criteria for screening stage
+Annotators should read the title and abstract of the paper, along with other relevant information such as the conference or journal where it was published, and apply these criteria to determine whether a paper is included or excluded from the full text assessment in our systematic literature review. A paper must meet all of the following criteria. 
+
+1. It must be written in **English**
+2. It must have been published in a **peer-reviewed** journal or conference proceedings only. 
+3. It must be a “regular” research paper, survey paper, position paper, demo paper. (Exclude books, book chapters, theses, technical reports, magazines, standards, preprints)
+4. It must address **climate** change, global warming, climate denial, or closely related environmental phenomena (e.g., energy transition, climate action) **as a primary or substantial topic**. Such topics can be the main topic or one of the main topics (e.g., a study focuses on climate and political data).  
+5. It must employ at least one **computational, NLP, or AI-based** method as part of its methodology.
+6. It must substantially address **at least one of the following**: (a) **misinformation**, disinformation, fake news, or conspiracy theories; **OR** (b) **polarization**, echo chambers, or related phenomena of opinion divergence. Such topics can be mentioned explicitly or implicitly (e.g., a data analysis that describes a way of measuring polarization, but it does not state the word “polarization”). 
+7. It must **either** (a) **use data from at least one social media platform** as the primary empirical basis, **OR** (b) **substantially address social media as the primary context** of study (e.g. survey papers, literature reviews, or theoretical frameworks explicitly focused on social media). 
+
