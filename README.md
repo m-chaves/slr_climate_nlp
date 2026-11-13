@@ -2,27 +2,24 @@
 
 A project by the Computational Linguistics group (GroNLP) and the Research Centre for Media and Journalism Studies of the University of Groningen.
 
-This repository holds the data, analyses and tools behind a systematic literature review (SLR) of
-studies that use computational methods (natural language processing, machine learning, AI) to study
-**climate-related misinformation and polarization on social media**. This page describes the
-motivation, what has been done so far, and where to find the details.
-
 ## Summary
 
-- **Sources.** Five literature databases were searched: Scopus, Web of Science, Semantic Scholar, the
-  ACL Anthology and the ACM Digital Library.
-- **Topics.** The review covers papers on climate that use NLP or AI methods to study misinformation or
-  polarization on social media. The main query is:
+This repository supports a systematic literature review (SLR) of studies that use **natural language processing** (NLP) and other AI methods to study **climate misinformation** and **polarization** on
+**social media**. 
 
-  > **climate** AND **NLP** AND **social media** AND (**misinformation** OR **polarization**)
+This SLR captures aspects of scientific publications that are somewhat overlooked in surveys in the field of computer science. That is, it goes beyond listing available datasets and model performance. It also intends to capture whether each paper builds on a theoretical framework (e.g., a definition or typology of misinformation or polarization) and uses methods that match it. It records whether the paper draws conclusions about climate, misinformation or polarization rather than only about its machine learning models, and whether the paper examines the link (association or causation) between misinformation and polarization. It asks if the methods proposed are actionable and involve stakeholders. Additionaly it reports the role of LLMs and other models in annotating data and stablishing what is consider the ground truth in the misinformation setting. 
 
-  Each topic in the query stands for a set of keywords, and a paper matches a topic if its title or
-  abstract contains any one of them. For example, *climate* contains "climate change", "global warming", "climate denial", "climate crisis", and so on; *social media* includes "social media", "Twitter", "Reddit", "TikTok", "YouTube" and many other platforms. The full keyword lists are described in [Step 1](#3-step-1-literature-search).
-- **Time period.** Papers published from January 2010 to April 2026, inclusive. The search starts in
-  2010 because by then social media had reached maturity.
-- **Papers.** The search returned **303** records. After removing duplicates, **186** unique papers
-  remained. After screening their titles and abstracts, **81** papers were selected for the full-text
-  assessment.
+We searched five databases (Scopus, Web of Science, Semantic Scholar, the ACL Anthology and the ACM
+Digital Library) for papers published between January 2010 and April 2026 that match the query
+
+> **climate** AND **NLP** AND **social media** AND (**misinformation** OR **polarization**)
+
+where each topic stands for a set of keywords searched in titles and abstracts. The search returned
+303 records, which became **186** unique papers after removing duplicates. Three annotators screened
+titles and abstracts in two rounds, on samples of 50 and 20 papers. After each round they refined the
+inclusion criteria, and in the second round they reached an agreement of 0.93 (Krippendorff's alpha).
+A single annotator then screened the remaining 116 papers. **81** papers were selected for the
+full-text assessment, for which a questionnaire of **68 questions** and its respective web application were created. The full-text assessment phase is currently on going. 
 
 ---
 
