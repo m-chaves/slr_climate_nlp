@@ -213,3 +213,17 @@ MIS.type,disinformation networks,Mariana,2026-11-15T20:14:59+01:00,f85e0220a279a
 MIS.truth_status,"source-level credibility derived from gold data (e.g., UN or NGO reports)",Mariana,2026-11-15T20:22:03+01:00,f85e0220a279a539,
 MIS.truth_status,"source-level credibility derived from gold data (e.g., UN or NGO reports)",Mariana,2026-11-15T20:24:46+01:00,f85e0220a279a539,"source-level credibility derived from other studies (e.g., a report listing misinformation actors)"
 DA.theme,climate denial,Mariana,2026-11-15T20:28:35+01:00,f85e0220a279a539,
+DA.platform,Weibo,Mariana,2026-11-17T14:48:30+01:00,edcbd3d0798f0308,
+DA.geo,China,Mariana,2026-11-17T14:48:40+01:00,edcbd3d0798f0308,
+MIS.metrics,percent of posts containing a climate denial stance,Mariana,2026-11-17T15:30:54+01:00,edcbd3d0798f0308,percent of posts containing a some type of misinformation
+ML.task,bot detection,Mariana,2026-11-17T17:03:19+01:00,edcbd3d0798f0308,
+CLI.domain,environmental engineering,Mariana,2026-11-17T17:52:36+01:00,3288cc3c6d074d76,
+DA.theme,environmental engineering,Mariana,2026-11-17T18:07:32+01:00,3288cc3c6d074d76,
+DA.platform,fact checking websites,Mariana,2026-11-18T17:45:15+01:00,2f00c62e68980c78,
+DA.size_unit,claims,Mariana,2026-11-18T17:46:13+01:00,2f00c62e68980c78,
+MIS.type,climate misinformation in general,Mariana,2026-11-18T18:05:54+01:00,2f00c62e68980c78,
+DA.annot_model,LLM with human-in-the-loop,Mariana,2026-11-18T18:15:16+01:00,2f00c62e68980c78,
+MIS.metrics,Percent of people that believe in false claims,Mariana,2026-11-18T18:45:12+01:00,2f00c62e68980c78,
+MIS.truth_status,fact checking websites,Mariana,2026-11-18T18:46:35+01:00,2f00c62e68980c78,
+ML.task,claim classification,Mariana,2026-11-18T19:33:27+01:00,d15f3c120c8e5f2a,
+DA.platform,think-tank articles,Mariana,2026-11-18T19:35:19+01:00,d15f3c120c8e5f2a,
