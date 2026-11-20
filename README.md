@@ -21,7 +21,6 @@ inclusion criteria, and in the second round they reached an agreement of 0.93 (K
 A single annotator then screened the remaining 116 papers. **81** papers were selected for the
 full-text assessment, for which a questionnaire of **68 questions** and its respective web application were created. The full-text assessment phase is currently on going. 
 
----
 
 ## Contents
 
@@ -34,7 +33,7 @@ full-text assessment, for which a questionnaire of **68 questions** and its resp
 7. [Step 5: Full-text assessment (in progress)](#7-step-5-full-text-assessment-in-progress)
 8. [Repository map](#8-repository-map)
 
----
+
 
 ## 1. Motivations
 
@@ -44,14 +43,15 @@ One of the central research questions the DeCODA-LM project aims to answer is to
 
 **Small intersections**
 We hypothesized that the papers that jointly analyse climate misinformation and polarization on social media using NLP methods are scarce. Our first exploratory searches supported this idea: 
+
 - In the journal *WIREs Climate Change*, we looked at articles of type *Advanced Review* or *Systematic Review* that mention climate. Of **442** such reviews, 72 mention NLP or AI terms, 19 mention misinformation and 31 mention polarization. Only **2** combine NLP, misinformation and polarization. The pairwise overlaps are also small: NLP and misinformation 3, NLP and polarization 4, misinformation and polarization 5. (See figure below.)
+
 <p align="center">
     <img src="img/WIRE.png" alt="WIRE" width="400">
 </p>
 
-- The large literature databases show the same pattern. The chart and image below we show the number of papers found for each topic in Semantic Scholar and the ACL anthology. For instance, notice that althought there are millions of papers related to social media or NLP, and thousands about climate, polarization or misinformation (blue bars in the chart), only 4 papers combine all five topics (purple bar in the chart). 
+- The large literature databases show the same pattern. The chart and image below we show the number of papers found for each topic in Semantic Scholar and the ACL anthology (published from January 2010 to April 2026). For instance, notice that althought there are millions of papers related to social media or NLP, and thousands about climate, polarization or misinformation (blue bars in the chart), only 4 papers combine all five topics (purple bar in the chart). 
 
-(publication from January 2010 to April 2026):
 
 | Papers mentioning… | Semantic Scholar | ACL Anthology |
 |---|---:|---:|
@@ -84,7 +84,7 @@ Given that the DeCODA-LM project inhabits different research communities (e.g., 
 **Language models and stablishing the grouth truth**
 Beside the motivations above, this literature review also quantifies the traditional aspects of a survey in NLP, such as the datasets and the machine learning models used. But most importantly, we want to understand the role of language models in the annotation of data, and how truth is established in the context of climate misinformation. 
 
----
+
 
 ## 2. Progress at a glance
 
@@ -124,7 +124,7 @@ flowchart TD
 | 4. Retrieving full texts | Done: all 81 PDFs found |
 | 5. Full-text assessment | In progress |
 
----
+
 
 ## 3. Step 1: Literature search
 
@@ -171,9 +171,9 @@ Differences between the databases that affect the results:
 - **Wildcards** (`*`) behave differently in each database. For example, Semantic Scholar only applies them to single words, and Web of Science and ACM do not apply them inside quoted phrases. We adjusted the query for each database.
 - **Dates.** The ACL Anthology only records the year of publication, so for that source the date filter works by year.
 
-Besides the main query, the notebook also counts every combination of the five topics in Semantic Scholar and the ACL Anthology. These counts are the ones in the [Introduction](#1-introduction) table.
+Besides the main query, the notebook also counts every combination of the five topics in Semantic Scholar and the ACL Anthology. These counts are the ones in the [Motivations](#1-motivations) table.
 
----
+
 
 ## 4. Step 2: Merging and removing duplicates
 
@@ -189,7 +189,7 @@ The same paper often appears in several databases. We combined the 303 records a
 
 This left **186 unique papers**: 111 were found in only one database, 35 in two, 38 in three and 2 in all four. The merged list is stored in [data/processed/merged_minimal.jsonl](data/processed/merged_minimal.jsonl). The same notebook also drew the random samples used to measure agreement between annotators (see Step 3) and prepared the screening spreadsheets.
 
----
+
 
 ## 5. Step 3: Title and abstract screening
 
@@ -247,7 +247,6 @@ Results: [data/processed/screening/screening_consolidated.xlsx](data/processed/s
 The individual annotation sheets are in [data/processed/iaa/](data/processed/iaa/) and
 [data/processed/screening/](data/processed/screening/).
 
----
 
 ## 6. Step 4: Retrieving the full texts
 
@@ -261,7 +260,6 @@ In notebook [notebooks/05_pdf_retrieval.ipynb](notebooks/05_pdf_retrieval.ipynb)
 [data/processed/retrieval/retrieval_tracking.xlsx](data/processed/retrieval/retrieval_tracking.xlsx).
 The PDFs themselves are not stored in this repository, for copyright reasons.
 
----
 
 ## 7. Step 5: Full-text assessment (in progress)
 
@@ -301,7 +299,7 @@ The answers are saved in
 [data/processed/full_text_assessment/](data/processed/full_text_assessment/) (mainly `papers.csv` and,
 for dataset-level questions, `datasets.csv`). This step is ongoing.
 
----
+
 
 ## 8. Repository map
 
@@ -310,7 +308,7 @@ for dataset-level questions, `datasets.csv`). This step is ongoing.
 | [notebooks/](notebooks/) | The analysis for each step, numbered in order (00–06). Each notebook describes its step and shows the results. |
 | [src/](src/) | The code behind the notebooks (database searches, merging, PDF retrieval, the annotation tool). |
 | [data/search_query/](data/search_query/) | The search keywords. |
-| [data/raw/](data/raw/) | The search results as downloaded from each database, including the topic-combination counts used in the [Introduction](#1-introduction) table. |
+| [data/raw/](data/raw/) | The search results as downloaded from each database, including the topic-combination counts used in the [Motivations](#1-motivations) table. |
 | [data/processed/](data/processed/) | Results of each step: the merged paper list, [annotator agreement](data/processed/iaa/), [screening](data/processed/screening/), [full-text retrieval](data/processed/retrieval/) and [full-text assessment](data/processed/full_text_assessment/). |
 | [documents/](documents/) | The screening criteria and the full-text assessment codebook. |
 | [tests/](tests/) | Automated checks for the annotation tool. |
